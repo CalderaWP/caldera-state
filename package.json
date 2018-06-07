@@ -1,0 +1,24 @@
+{
+  "name": "caldera-state",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-wp-scripts": "0.2.0"
+  },
+  "scripts": {
+    "start": "react-wp-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@wordpress/data": "^1.0.0-alpha.0",
+    "@wordpress/element": "^1.0.0-alpha.0",
+    "jest": "^23.1.0",
+    "jest-cli": "^23.1.0",
+    "react-redux": "^5.0.7",
+    "react-test-renderer": "^16.4.0"
+  }
+}
