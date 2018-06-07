@@ -1,5 +1,5 @@
 {
-  "name": "caldera-state",
+  "name": "@caldera-labs/state",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
