@@ -17,7 +17,7 @@ Requires git and npm
 * See "Available Scripts" below for more information on development
 
 ## What Is This?
-This package provides Redux(-like) state managment for Caldera Forms configurations and other things that need their state managed in a React app, such as Gutenberg.
+This package provides Redux(-like) state management for Caldera Forms configurations and other things that need their state managed in a React app, such as Gutenberg.
 
 Also, an example app and test coverage for all of that.
 
@@ -26,7 +26,7 @@ Also, an example app and test coverage for all of that.
 * Once source of single source of state
 - We need to state management in CF core, pro, and add-ons.
 * Isolated testing.
-- This package has 28 tests at intial commit. CF core does not have Jest setup yet.
+- This package has 28 tests at initial commit. CF core does not have Jest setup yet.
 
 ## Current Status
 * ✔️ State management for forms.

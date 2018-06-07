@@ -1,6 +1,7 @@
 {
   "name": "@caldera-labs/state",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "repository": "https://github.com/CalderaWP/caldera-state/",
   "scripts": {
     "start": "react-wp-scripts start",
     "build": "react-scripts build",
@@ -17,5 +18,8 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-wp-scripts": "0.2.0"
-  }
+  },
+  "files": [
+    "src/state"
+  ]
 }
