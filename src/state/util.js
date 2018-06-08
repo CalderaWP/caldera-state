@@ -114,3 +114,24 @@ export const generateId = (generateFor) =>{
 
     return `${prefix}${id}`;
 };
+
+export const setFormInState = (state,form) => {
+    if( ! Array.isArray( state.forms) || ! state.forms.length) {
+        return {
+            ...state,
+            forms: [form]
+        }
+    }else{
+        const index = findFormIndexById(state.forms, form.ID);
+        if (-1 <= index) {
+            state.forms.splice(index, 1, form);
+        } else {
+            state.forms.push(form);
+        }
+
+    }
+    return {
+        ...state,
+        forms:state.forms
+    };
+}

@@ -1,4 +1,3 @@
-
 import {
     SET_FORMS,
     SET_FORM,
@@ -6,8 +5,10 @@ import {
     NEW_FORM
 } from "./actions";
 
+import {SET_FORM_PRIVACY_SETTINGS} from "./actions.privacy";
+
 import {
-    findFormIndexById
+    setFormInState
 } from "./util";
 
 
@@ -34,16 +35,16 @@ export const initialStateWithForms = (forms) => {
     return Object.assign({}, {forms:forms},DEFAULT_STATE );
 };
 
+
 /**
  * Reducer for form(s) state
  *
- * @param state
- * @param action
+ * @param {Object}state
+ * @param {Object} action
  * @returns {*}
  */
 export const formsReducer = (state = DEFAULT_STATE, action) => {
     switch (action.type) {
-
         case SET_FORMS:
             return {
                 ...state,
@@ -56,24 +57,7 @@ export const formsReducer = (state = DEFAULT_STATE, action) => {
                 formPreviews: state.formPreviews
             };
         case SET_FORM :
-            if( ! Array.isArray( state.forms) || ! state.forms.length) {
-                return {
-                    ...state,
-                    forms: [action.form]
-                }
-            }else{
-                const index = findFormIndexById(state.forms, action.form.ID);
-                if (-1 <= index) {
-                    state.forms.splice(index, 1, action.form);
-                } else {
-                    state.forms.push(action.form);
-                }
-
-            }
-            return {
-                ...state,
-                forms:state.forms
-            };
+            return( setFormInState(state,action.form));
         case NEW_FORM:
             const newForm = {
                 ID: '11',
@@ -86,4 +70,22 @@ export const formsReducer = (state = DEFAULT_STATE, action) => {
             return state;
     }
 
+};
+
+/**
+ * Reducer for form privacy settings state
+ *
+ * @param {Object}state
+ * @param {Object} action
+ * @returns {*}
+ */
+export const privacySettingsReducer = ( state = {
+    ...DEFAULT_STATE
+}, action ) => {
+    switch (action.type){
+        case SET_FORM_PRIVACY_SETTINGS :
+            return setFormInState(state, action.form);
+        default:
+            return state;
+    }
 };

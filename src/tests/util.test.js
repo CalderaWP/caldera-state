@@ -3,6 +3,7 @@ import {
     findFormById,
     findFormIndexById,
     generateId,
+    setFormInState,
     getFormId,
     mapArrayOfFormsToObject
 } from "../state/util";
@@ -92,5 +93,19 @@ describe( 'Utility functions', () => {
             expect( mapArrayOfFormsToObject(collection3)).toEqual({});
         });
 
+    });
+
+    describe( 'setFormInState', () => {
+        it( 'adds form', () => {
+            const state = setFormInState( {forms: []}, {name:'Hats'});
+            expect(state.forms.length).toBe(1);
+        });
+
+        it( 'updates form', () => {
+            let state = setFormInState( {forms: []}, {ID:'CF1'});
+            state = setFormInState( state, {ID:'CF1',name:'Form One'});
+            expect(state.forms.length).toBe(1);
+            expect(state.forms[0]).toHaveProperty('name');
+        });
     });
 });

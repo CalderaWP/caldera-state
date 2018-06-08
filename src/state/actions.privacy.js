@@ -1,5 +1,7 @@
 export const SET_EDIT_FORM = 'SET_EDIT_FORM';
 export const UNSET_EDIT_FORM = 'UNSET_EDIT_FORM';
+export const SET_FORM_PRIVACY_SETTINGS = 'SET_FORM_PRIVACY_SETTINGS';
+
 /**
  * Set the current form to edit in privacy settings
  *
@@ -16,12 +18,23 @@ export const setEditForm = (formId ) => {
 /**
  * Unset the current form to edit in privacy settings
  *
- * @since 1.7.0
- *
  * @returns {{type: string}}
  */
 export const unsetEditForm = () => {
     return {
         type: UNSET_EDIT_FORM,
+    }
+};
+
+/**
+ * Set privacy form settings
+ *
+ * @param settings
+ * @returns {{type: string, form: *}}
+ */
+export const setFormPrivacyForm = (settings) => {
+    return {
+        type: SET_FORM_PRIVACY_SETTINGS,
+        form: settings
     }
 };

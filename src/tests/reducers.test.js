@@ -10,8 +10,14 @@ import {
 import {
     formsReducer,
     initialStateWithForms,
-    DEFAULT_STATE
+    DEFAULT_STATE,
+    privacySettingsReducer
 } from "../state/reducers";
+
+import {
+    SET_FORM_PRIVACY_SETTINGS,
+    setFormPrivacyForm
+} from "../state/actions.privacy";
 
 describe('Main form reducer', () => {
     const formOne = {
@@ -67,5 +73,34 @@ describe('Main form reducer', () => {
             expect(initialStateWithForms([formOne,formThree])).toHaveProperty('forms');
         });
     });
+});
+
+describe( 'Privacy settings reducer', () => {
+    const settings = {
+        ID: "CF5b19489a0e09f",
+        emailIdentifyingFields: [],
+        fields: {
+            fld_6544758:
+                {
+                    ID: "fld_6544758",
+                    name: "Multiple Mailer Not Add To Media",
+                    type: "advanced_file"
+                }
+        },
+        name: "File Multiple Upload",
+        piiFields: ["fld_6544758"],
+        privacyExporterEnabled: true
+    };
+
+    it( 'Adds the settings', () => {
+        const action = setFormPrivacyForm(settings);
+        expect(
+                privacySettingsReducer({
+                forms:[]
+            },action)
+        ).toEqual({
+            forms: [settings]
+        });
+    })
 });
 
