@@ -5,7 +5,7 @@ import {
     generateId,
     getFormId,
     mapArrayOfFormsToObject
-} from "./util";
+} from "../state/util";
 
 describe( 'Utility functions', () => {
     const formOne = {

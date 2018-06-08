@@ -3,9 +3,9 @@ import  {
     getForms,
     getFormPreview,
     getFormPreviews,
-} from "./selectors";
+} from "../state/selectors";
 
-import {mapArrayOfFormsToObject} from "./util";
+import {mapArrayOfFormsToObject} from "../state/util";
 
 describe( 'Form selectors', () => {
     const formOne = {

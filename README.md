@@ -28,6 +28,24 @@ Also, an example app and test coverage for all of that.
 * Isolated testing.
 - This package has 28 tests at initial commit. CF core does not have Jest setup yet.
 
+
+## Usage
+### Import Into A webpack Managed Project
+
+`import * as cfStateWebpack from '@caldera-labs/state'`
+
+### Actions
+
+### Selectors
+
+### Using with API
+
+### Using With WordPress React and wp.data
+
+### Using With Redux
+
+
+
 ## Current Status
 * ✔️ State management for forms.
 * ✖️ Migrate CF Pro state from Vuex to Redux.

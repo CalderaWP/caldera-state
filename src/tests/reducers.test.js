@@ -2,15 +2,15 @@ import {
     newForm,
     setForm,
     setForms
-} from "./actions";
+} from "../state/actions";
 
 import {
     findFormIndexById
-} from "./util";
+} from "../state/util";
 import {
     formsReducer,
     DEFAULT_STATE
-} from "./reducers";
+} from "../state/reducers";
 
 describe('Main form reducer', () => {
     const formOne = {

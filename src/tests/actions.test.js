@@ -8,7 +8,7 @@ import {
     SET_CURRENT_FORM_ID,
     ADD_FORM_PREVIEW,
     NEW_FORM
-} from './actions';
+} from '../state/actions';
 
 
 describe('form actions', () => {
