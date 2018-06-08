@@ -11,13 +11,27 @@ import {
 } from "./util";
 
 
-const printedData = {
-    forms:[]
+/**
+ * Default state for formsReducer
+ *
+ * @type {{forms: Array, formPreviews: {}}}
+ */
+export const DEFAULT_STATE = {
+    forms: [],
+    formPreviews: {},
 };
 
-export const DEFAULT_STATE = {
-    forms: printedData.forms,
-    formPreviews: {},
+/**
+ * Create inertial state from an array of forms.
+ *
+ * @param {Object} forms
+ * @returns {{} & {forms: *} & {forms: Array, formPreviews: {}}}
+ */
+export const initialStateWithForms = (forms) => {
+    if( ! Array.isArray(forms) ){
+        throw new Exception( 'You must use an array of forms!' );
+    }
+    return Object.assign({}, {forms:forms},DEFAULT_STATE );
 };
 
 /**

@@ -9,6 +9,7 @@ import {
 } from "../state/util";
 import {
     formsReducer,
+    initialStateWithForms,
     DEFAULT_STATE
 } from "../state/reducers";
 
@@ -38,7 +39,7 @@ describe('Main form reducer', () => {
         const state = formsReducer(DEFAULT_STATE, addAction);
         expect(findFormIndexById(state.forms, 'CF1')).not.toBeFalsy();
         expect(findFormIndexById(state.forms, 'CF2')).toBeFalsy();
-    })
+    });
 
     it('Sets all forms in state', () => {
         const addAction = setForms(forms);
@@ -56,4 +57,15 @@ describe('Main form reducer', () => {
         formState = formsReducer(formState, action);
         expect(formState.forms.length).toEqual(2);
     });
+
+    describe( 'Form reducer from array', () => {
+        it( 'Still has form previews', () => {
+            expect(initialStateWithForms([formOne,formThree])).toHaveProperty('formPreviews');
+        });
+
+        it( 'Works with defaults', () => {
+            expect(initialStateWithForms([formOne,formThree])).toHaveProperty('forms');
+        });
+    });
 });
+
