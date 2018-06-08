@@ -17,6 +17,7 @@ import {
 //Reducers
 import {
     formsReducer,
+    initialStateWithForms
 } from "./reducers";
 
 /** State **/
@@ -45,7 +46,8 @@ module.exports  = {
             getFormPreviews
         },
         reducers: {
-            formsReducer
+            formsReducer,
+            initialStateWithForms
         }
     },
     state: {

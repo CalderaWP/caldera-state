@@ -29,7 +29,7 @@ export const DEFAULT_STATE = {
  */
 export const initialStateWithForms = (forms) => {
     if( ! Array.isArray(forms) ){
-        throw new Exception( 'You must use an array of forms!' );
+        throw 'You must use an array of forms!';
     }
     return Object.assign({}, {forms:forms},DEFAULT_STATE );
 };
