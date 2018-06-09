@@ -6,6 +6,12 @@ import {
     addFormPreview
 } from './actions'
 
+import {
+    setFormPrivacyForm,
+    setEditForm,
+    unsetEditForm
+} from "./actions.privacy";
+
 //Selectors
 import {
     getForm,
@@ -14,9 +20,14 @@ import {
     getFormPreviews
 } from "./selectors";
 
+import {
+    getFormPrivacySettings
+} from "./selectors.privacy";
+
 //Reducers
 import {
     formsReducer,
+    privacySettingsReducer,
     initialStateWithForms
 } from "./reducers";
 
@@ -37,17 +48,23 @@ module.exports  = {
         actions: {
             setForms,
             setForm,
-            addFormPreview
+            addFormPreview,
+            setFormPrivacyForm,
+            setEditForm,
+            unsetEditForm
         },
         selectors: {
             getForm,
             getForms,
             getFormPreview,
-            getFormPreviews
+            getFormPreviews,
+            getFormPrivacySettings
+
         },
         reducers: {
             formsReducer,
-            initialStateWithForms
+            initialStateWithForms,
+            privacySettingsReducer
         }
     },
     state: {
