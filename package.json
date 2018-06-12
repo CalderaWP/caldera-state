@@ -8,12 +8,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "prepublish": "npm run compile",
     "compile": "npm run compile:babel ",
     "compile:babel": "./node_modules/.bin/babel src/state --out-dir lib",
     "lint": "eslint src/state/**,src/tests/**",
     "lint:watch": "esw src/state/**,src/tests/** --fix --watch",
-    "lint:fix": "eslint src/state/**,src/tests/** --fix "
+    "lint:fix": "eslint src/state/**,src/tests/** --fix ",
+    "prepublish": "npm run compile",
+    "release": "npm run release:patch",
+    "release:minor": "npm version minor -m \"version %s\" && npm publish",
+    "release:patch": "npm version patch -m \"version %s\" && npm publish"
   },
   "devDependencies": {
     "@wordpress/data": "^1.0.0-alpha.0",

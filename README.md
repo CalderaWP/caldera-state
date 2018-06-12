@@ -14,7 +14,7 @@ import * as cfFormsState from '@caldera-labs/state';
 const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;
 ```
 
-### Reference Impimentations
+### Reference Implementations
 This module is used was added to Caldera Forms, first for block UI and privacy settings screen. [Pull request](https://github.com/CalderaWP/Caldera-Forms/pull/2611)
 
 ### Checkout For Development
@@ -54,10 +54,9 @@ Also, an example app and test coverage for all of that.
 
 ### Using With Redux
 
-
-
 ## Current Status
 * ✔️ State management for forms.
+* ✔️ State management for settings.
 * ✖️ Migrate CF Pro state from Vuex to Redux.
 * ✖️ Integration with wp.data. Blocked by https://github.com/WordPress/packages/pull/136
 * ✖️ Entries
@@ -86,3 +85,9 @@ Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
+
+
+### Release To npm
+Must be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)
+
+* `yarn release`
