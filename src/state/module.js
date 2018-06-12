@@ -50,7 +50,6 @@ import  {
 	mapArrayOfFormsToObject,
 	getFormId,
 	findFormIndexById,
-	generateId
 } from "./util";
 
 /**
@@ -94,7 +93,6 @@ module.exports  = {
 		generateId,
 		mapArrayOfFormsToObject,
 		getFormId,
-		findFormIndexById,
-		generateId
+		findFormIndexById
 	}
 };

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | Caldera State</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="JavaScript state management for Caldera Forms"><meta property="og:type" content="website"><meta property="og:url" content="http://calderalabs.org/caldera-state/"><meta property="og:site_name" content="Caldera State"><meta property="og:title" content="Caldera State"><meta property="og:image" content="https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"><meta property="og:description" content="JavaScript state management for Caldera Forms"><meta property="og:author" content="http://calderalabs.org"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Caldera State"><meta property="twitter:description" content="JavaScript state management for Caldera Forms"><meta property="twitter:image" content="https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.svg" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/calderawp/caldera-state"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Overview</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#add-to-a-project" data-ice="link">Add to a Project</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#import-with-webpack" data-ice="link">Import With webpack</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#reference-implementations" data-ice="link">Reference Implementations</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#checkout-for-development" data-ice="link">Checkout For Development</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#what-is-this-" data-ice="link">What Is This?</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#why-is-this-" data-ice="link">Why Is This?</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#import-into-a-webpack-managed-project" data-ice="link">Import Into A webpack Managed Project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#actions" data-ice="link">Actions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#selectors" data-ice="link">Selectors</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#using-with-api" data-ice="link">Using with API</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#using-with-wordpress-react-and-wp-data" data-ice="link">Using With WordPress React and wp.data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#using-with-redux" data-ice="link">Using With Redux</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#util-functions" data-ice="link">Util Functions</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/README.html"><a href="manual/README.html#find-the-form-with-a-specific-id-in-an-array-of-forms-" data-ice="link">Find the form with a specific ID in an array of forms.</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/README.html"><a href="manual/README.html#check-if-a--given-form-config-object-has-an-id" data-ice="link">Check if a  given form config object has an ID</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#current-status" data-ice="link">Current Status</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#available-scripts" data-ice="link">Available Scripts</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#-code-npm-start--code-" data-ice="link">npm start</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#-code-npm-test--code-" data-ice="link">npm test</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#-code-npm-run-build--code-" data-ice="link">npm run build</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#release-to-npm" data-ice="link">Release To npm</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><p>Redux(-like) state management for <a href="https://github.com/calderawp/caldera-forms">Caldera Forms</a>.</p>
+<h2 id="installation">Installation</h2><h3 id="add-to-a-project">Add to a Project</h3><p>Requires npm</p>
+<p><code>npm i -D caldera-state</code></p>
+<h2 id="usage">Usage</h2><h3 id="import-with-webpack">Import With webpack</h3><pre><code class="lang-js"><code class="source-code prettyprint">    import * as cfFormsState from &apos;@caldera-labs/state&apos;;
+    const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;</code>
+</code></pre>
+<h3 id="reference-implementations">Reference Implementations</h3><p>This module is used was added to Caldera Forms, first for block UI and privacy settings screen. <a href="https://github.com/CalderaWP/Caldera-Forms/pull/2611">Pull request</a></p>
+<h3 id="checkout-for-development">Checkout For Development</h3><p>Requires git and npm</p>
+<ul>
+<li>Clone from Github<ul>
+<li><code>git clone git@github.com:calderawp/caldera-state.git</code></li>
+</ul>
+</li>
+<li>Install<ul>
+<li><code>cd caldera-state &amp;&amp; npm install</code></li>
+</ul>
+</li>
+<li>See &quot;Available Scripts&quot; below for more information on development</li>
+</ul>
+<h2 id="what-is-this-">What Is This?</h2><p>This package provides Redux(-like) state management for Caldera Forms configurations and other things that need their state managed in a React app, such as Gutenberg.</p>
+<p>Also, an example app and test coverage for all of that.</p>
+<h2 id="why-is-this-">Why Is This?</h2><ul>
+<li><a href="https://github.com/CalderaWP/Caldera-Forms/issues/2564">https://github.com/CalderaWP/Caldera-Forms/issues/2564</a></li>
+<li>Once source of single source of state<ul>
+<li>We need to state management in CF core, pro, and add-ons.</li>
+</ul>
+</li>
+<li>Isolated testing.<ul>
+<li>This package had 28 tests at initial commit.</li>
+<li>Test basic functionality with mocks here.</li>
+<li>Test that it actually works with CF REST API in CF.</li>
+</ul>
+</li>
+</ul>
+<h2 id="usage">Usage</h2><h3 id="import-into-a-webpack-managed-project">Import Into A webpack Managed Project</h3><p><code>import * as cfStateWebpack from &apos;@caldera-labs/state&apos;</code></p>
+<h3 id="actions">Actions</h3><h3 id="selectors">Selectors</h3><h3 id="using-with-api">Using with API</h3><h3 id="using-with-wordpress-react-and-wp-data">Using With WordPress React and wp.data</h3><h3 id="using-with-redux">Using With Redux</h3><h3 id="util-functions">Util Functions</h3><h4 id="find-the-form-with-a-specific-id-in-an-array-of-forms-">Find the form with a specific ID in an array of forms.</h4><p><code>cfFormsState.util.findFormById(Array,&apos;cf123456&apos;);</code></p>
+<h4 id="check-if-a--given-form-config-object-has-an-id">Check if a  given form config object has an ID</h4><p><code>cfFormsState.util.formHasId(Object,&apos;cf123456&apos;);</code></p>
+<h2 id="current-status">Current Status</h2><ul>
+<li>&#x2714;&#xFE0F; State management for forms.</li>
+<li>&#x2714;&#xFE0F; State management for settings.</li>
+<li>&#x2716;&#xFE0F; Migrate CF Pro state from Vuex to Redux.</li>
+<li>&#x2716;&#xFE0F; Integration with wp.data. Blocked by <a href="https://github.com/WordPress/packages/pull/136">https://github.com/WordPress/packages/pull/136</a></li>
+<li>&#x2716;&#xFE0F; Entries</li>
+</ul>
+<h2 id="available-scripts">Available Scripts</h2><p>In the project directory, you can run:</p>
+<h3 id="-code-npm-start--code-"><code>npm start</code></h3><p>Runs the app in the development mode.<br>
+Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser.</p>
+<p>The page will reload if you make edits.<br>
+You will also see any lint errors in the console.</p>
+<p>This shows the example app that uses this to show and update a list of forms.</p>
+<h3 id="-code-npm-test--code-"><code>npm test</code></h3><p>Launches the test runner in the interactive watch mode.<br></p>
+<h3 id="-code-npm-run-build--code-"><code>npm run build</code></h3><p>Builds the app for production to the <code>build</code> folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.</p>
+<p>The build is minified and the filenames include the hashes.<br></p>
+<h3 id="release-to-npm">Release To npm</h3><p>Must be <a href="https://docs.npmjs.com/cli/adduser">logged in as project maintainer via npm cli</a></p>
+<ul>
+<li><p>Patch release:</p>
+<ul>
+<li><code>yarn release</code></li>
+</ul>
+</li>
+<li><p>Minor release:</p>
+<ul>
+<li><code>yarn release:minor</code></li>
+</ul>
+</li>
+<li><p>Major release:</p>
+<ul>
+<li><code>yarn release:major</code></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

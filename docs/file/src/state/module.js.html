@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/state/module.js | Caldera State</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="JavaScript state management for Caldera Forms"><meta property="og:type" content="website"><meta property="og:url" content="http://calderalabs.org/caldera-state/"><meta property="og:site_name" content="Caldera State"><meta property="og:title" content="Caldera State"><meta property="og:image" content="https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"><meta property="og:description" content="JavaScript state management for Caldera Forms"><meta property="og:author" content="http://calderalabs.org"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Caldera State"><meta property="twitter:description" content="JavaScript state management for Caldera Forms"><meta property="twitter:image" content="https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.svg" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/calderawp/caldera-state"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Form">Form</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-FormList">FormList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-register">register</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-unregister">unregister</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#state">state</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-addFormPreview">addFormPreview</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-newForm">newForm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setForm">setForm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setForms">setForms</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setEditForm">setEditForm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setFormPrivacyForm">setFormPrivacyForm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-unsetEditForm">unsetEditForm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-formsReducer">formsReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-initialStateWithForms">initialStateWithForms</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-privacySettingsReducer">privacySettingsReducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getForm">getForm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFormPreview">getFormPreview</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFormPreviews">getFormPreviews</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getForms">getForms</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFormPrivacySettings">getFormPrivacySettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-findFormById">findFormById</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-findFormIndexById">findFormIndexById</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-formHasId">formHasId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-generateId">generateId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFormId">getFormId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-mapArrayOfFormsToObject">mapArrayOfFormsToObject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setFormInState">setFormInState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ADD_FORM_PREVIEW">ADD_FORM_PREVIEW</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-NEW_FORM">NEW_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SET_FORM">SET_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SET_FORMS">SET_FORMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SET_EDIT_FORM">SET_EDIT_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SET_FORM_PRIVACY_SETTINGS">SET_FORM_PRIVACY_SETTINGS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UNSET_EDIT_FORM">UNSET_EDIT_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CALDERA_FORMS_STORE_SLUG">CALDERA_FORMS_STORE_SLUG</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-calderaFormsFormState">calderaFormsFormState</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-calderaFormsReduxStore">calderaFormsReduxStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEFAULT_STATE">DEFAULT_STATE</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/state/module.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*eslint no-undef: &quot;error&quot;*/
+/*eslint-env node*/
+
+/** Store**/
+//Actions
+import {
+	setForms,
+	setForm,
+	addFormPreview
+} from &apos;./actions&apos;;
+
+import {
+	setFormPrivacyForm,
+	setEditForm,
+	unsetEditForm
+} from &apos;./actions.privacy&apos;;
+
+//Selectors
+import {
+	getForm,
+	getForms,
+	getFormPreview,
+	getFormPreviews
+} from &apos;./selectors&apos;;
+
+import {
+	getFormPrivacySettings
+} from &apos;./selectors.privacy&apos;;
+
+//Reducers
+import {
+	formsReducer,
+	privacySettingsReducer,
+	initialStateWithForms
+} from &apos;./reducers&apos;;
+
+/** State **/
+import {
+	CALDERA_FORMS_STORE_SLUG,
+	calderaFormsFormState,
+	calderaFormsReduxStore
+} from &apos;./index&apos;;
+
+/** Util **/
+import  {
+	formHasId,
+	findFormById,
+	setFormInState,
+	generateId,
+	mapArrayOfFormsToObject,
+	getFormId,
+	findFormIndexById,
+} from &quot;./util&quot;;
+
+/**
+ * All of the package in one export
+ *
+ * @type {{store: {actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}, reducers: {formsReducer: formsReducer}}, state: {CALDERA_FORMS_STORE_SLUG: string, calderaFormsFormState: {reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}, calderaFormsReduxStore}}}
+ */
+module.exports  = {
+	store : {
+		actions: {
+			setForms,
+			setForm,
+			addFormPreview,
+			setFormPrivacyForm,
+			setEditForm,
+			unsetEditForm
+		},
+		selectors: {
+			getForm,
+			getForms,
+			getFormPreview,
+			getFormPreviews,
+			getFormPrivacySettings
+
+		},
+		reducers: {
+			formsReducer,
+			initialStateWithForms,
+			privacySettingsReducer
+		}
+	},
+	state: {
+		CALDERA_FORMS_STORE_SLUG,
+		calderaFormsFormState,
+		calderaFormsReduxStore
+	},
+	util: {
+		formHasId,
+		findFormById,
+		setFormInState,
+		generateId,
+		mapArrayOfFormsToObject,
+		getFormId,
+		findFormIndexById
+	}
+};</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

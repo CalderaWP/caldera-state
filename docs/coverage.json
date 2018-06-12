@@ -1,0 +1,93 @@
+{
+  "coverage": "50%",
+  "expectCount": 46,
+  "actualCount": 23,
+  "files": {
+    "src/App.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        16,
+        43,
+        52
+      ]
+    },
+    "src/Form.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        2
+      ]
+    },
+    "src/FormList.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/registerServiceWorker.js": {
+      "expectCount": 5,
+      "actualCount": 0,
+      "undocumentLines": [
+        11,
+        21,
+        46,
+        75,
+        102
+      ]
+    },
+    "src/state/actions.js": {
+      "expectCount": 8,
+      "actualCount": 4,
+      "undocumentLines": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "src/state/actions.privacy.js": {
+      "expectCount": 6,
+      "actualCount": 3,
+      "undocumentLines": [
+        1,
+        2,
+        3
+      ]
+    },
+    "src/state/index.js": {
+      "expectCount": 6,
+      "actualCount": 1,
+      "undocumentLines": [
+        23,
+        29,
+        37,
+        49,
+        52
+      ]
+    },
+    "src/state/reducers.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/state/selectors.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/state/selectors.privacy.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/state/util.js": {
+      "expectCount": 7,
+      "actualCount": 6,
+      "undocumentLines": [
+        118
+      ]
+    }
+  }
+}
