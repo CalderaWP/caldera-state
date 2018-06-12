@@ -1,6 +1,5 @@
 Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/caldera-forms).
 
-
 ## Installation
 ### Add to a Project
 Requires npm
@@ -10,8 +9,8 @@ Requires npm
 ## Usage
 ### Import With webpack
 ```js
-import * as cfFormsState from '@caldera-labs/state';
-const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;
+    import * as cfFormsState from '@caldera-labs/state';
+    const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;
 ```
 
 ### Reference Implementations
@@ -21,9 +20,9 @@ This module is used was added to Caldera Forms, first for block UI and privacy s
 Requires git and npm
 
 * Clone from Github
-- `git clone git@github.com:calderawp/caldera-state.git`
+    - `git clone git@github.com:calderawp/caldera-state.git`
 * Install
-- `cd caldera-state && npm install`
+    - `cd caldera-state && npm install`
 * See "Available Scripts" below for more information on development
 
 ## What Is This?
@@ -34,9 +33,11 @@ Also, an example app and test coverage for all of that.
 ## Why Is This?
 * https://github.com/CalderaWP/Caldera-Forms/issues/2564
 * Once source of single source of state
-- We need to state management in CF core, pro, and add-ons.
+    - We need to state management in CF core, pro, and add-ons.
 * Isolated testing.
-- This package has 28 tests at initial commit. CF core does not have Jest setup yet.
+    - This package had 28 tests at initial commit.
+    - Test basic functionality with mocks here.
+    - Test that it actually works with CF REST API in CF.
 
 
 ## Usage
@@ -53,6 +54,13 @@ Also, an example app and test coverage for all of that.
 ### Using With WordPress React and wp.data
 
 ### Using With Redux
+
+### Util Functions
+#### Find the form with a specific ID in an array of forms.
+`cfFormsState.util.findFormById(Array,'cf123456');`
+
+#### Check if a  given form config object has an ID
+`cfFormsState.util.formHasId(Object,'cf123456');`
 
 ## Current Status
 * ✔️ State management for forms.
@@ -90,4 +98,11 @@ The build is minified and the filenames include the hashes.<br>
 ### Release To npm
 Must be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)
 
-* `yarn release`
+* Patch release:
+    - `yarn release`
+
+* Minor release:
+    - `yarn release:minor`
+
+* Major release:
+    - `yarn release:major`
