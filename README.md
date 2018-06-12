@@ -7,6 +7,16 @@ Requires npm
 
 `npm i -D caldera-state`
 
+## Usage
+### Import With webpack
+```js
+import * as cfFormsState from '@caldera-labs/state';
+const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;
+```
+
+### Reference Impimentations
+This module is used was added to Caldera Forms, first for block UI and privacy settings screen. [Pull request](https://github.com/CalderaWP/Caldera-Forms/pull/2611)
+
 ### Checkout For Development
 Requires git and npm
 
