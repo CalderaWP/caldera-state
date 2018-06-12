@@ -41,6 +41,18 @@ import {
 	calderaFormsReduxStore
 } from './index';
 
+/** Util **/
+import  {
+	formHasId,
+	findFormById,
+	setFormInState,
+	generateId,
+	mapArrayOfFormsToObject,
+	getFormId,
+	findFormIndexById,
+	generateId
+} from "./util";
+
 /**
  * All of the package in one export
  *
@@ -74,5 +86,15 @@ module.exports  = {
 		CALDERA_FORMS_STORE_SLUG,
 		calderaFormsFormState,
 		calderaFormsReduxStore
+	},
+	util: {
+		formHasId,
+		findFormById,
+		setFormInState,
+		generateId,
+		mapArrayOfFormsToObject,
+		getFormId,
+		findFormIndexById,
+		generateId
 	}
 };
