@@ -6,16 +6,16 @@
  * @return {boolean}
  */
 export const formHasId = ( form, formId ) => {
-    if( 'object' !== typeof  form ){
-        return false;
-    }
-    if( form.hasOwnProperty('ID') ){
-        return formId === form.ID;
-    }
-    if( form.hasOwnProperty('formId') ){
-        return formId === form.formId;
-    }
-    return false;
+	if( 'object' !== typeof  form ){
+		return false;
+	}
+	if( form.hasOwnProperty('ID') ){
+		return formId === form.ID;
+	}
+	if( form.hasOwnProperty('formId') ){
+		return formId === form.formId;
+	}
+	return false;
 };
 
 /**
@@ -25,13 +25,13 @@ export const formHasId = ( form, formId ) => {
  * @returns {String|bool}
  */
 export const getFormId = (form) => {
-    if( form.hasOwnProperty('ID') ){
-        return form.ID;
-    }
-    if( form.hasOwnProperty('formId') ){
-        return form.formId;
-    }
-    return false;
+	if( form.hasOwnProperty('ID') ){
+		return form.ID;
+	}
+	if( form.hasOwnProperty('formId') ){
+		return form.formId;
+	}
+	return false;
 };
 
 /**
@@ -42,21 +42,21 @@ export const getFormId = (form) => {
  */
 export const mapArrayOfFormsToObject = (forms ) => {
 
-    if (Array.isArray(forms)) {
-        let preparedForms = {};
-        forms.map((form) => {
-            if (false !== getFormId(form)) {
-                preparedForms[getFormId(form)] = form;
-            }
-            return true;
-        });
+	if (Array.isArray(forms)) {
+		let preparedForms = {};
+		forms.map((form) => {
+			if (false !== getFormId(form)) {
+				preparedForms[getFormId(form)] = form;
+			}
+			return true;
+		});
 
-        return preparedForms;
-    }else if( 'object' === typeof forms ){
-        return forms;
-    }else{
-        return {};
-    }
+		return preparedForms;
+	}else if( 'object' === typeof forms ){
+		return forms;
+	}else{
+		return {};
+	}
 
 };
 
@@ -67,12 +67,12 @@ export const mapArrayOfFormsToObject = (forms ) => {
  * @param {String} formId
  */
 export const findFormById = (forms, formId,) => {
-    if(!Array.isArray(forms) || ! forms.length ){
-        return false;
-    }
-    return forms.find(form => {
-        return formHasId(form,formId);
-    });
+	if(!Array.isArray(forms) || ! forms.length ){
+		return false;
+	}
+	return forms.find(form => {
+		return formHasId(form,formId);
+	});
 };
 
 /**
@@ -82,12 +82,12 @@ export const findFormById = (forms, formId,) => {
  * @param {String} formId
  */
 export const findFormIndexById = (forms, formId) => {
-    if(!Array.isArray(forms) || ! forms.length ){
-        return false;
-    }
-    return forms.findIndex(form => {
-        return formHasId(form,formId);
-    });
+	if(!Array.isArray(forms) || ! forms.length ){
+		return false;
+	}
+	return forms.findIndex(form => {
+		return formHasId(form,formId);
+	});
 };
 
 /**
@@ -97,41 +97,41 @@ export const findFormIndexById = (forms, formId) => {
  * @returns {string}
  */
 export const generateId = (generateFor) =>{
-    const id =  Math.round( Math.random() * 10000000 );
-    let prefix = 'cf_';
-    switch (generateFor) {
-        case 'row':
-            prefix = 'row_';
-            break;
-        case 'column':
-            prefix = 'col_';
-            break;
-        default:
-            prefix = 'cf_';
-            break;
+	const id =  Math.round( Math.random() * 10000000 );
+	let prefix = 'cf_';
+	switch (generateFor) {
+	case 'row':
+		prefix = 'row_';
+		break;
+	case 'column':
+		prefix = 'col_';
+		break;
+	default:
+		prefix = 'cf_';
+		break;
 
-    }
+	}
 
-    return `${prefix}${id}`;
+	return `${prefix}${id}`;
 };
 
 export const setFormInState = (state,form) => {
-    if( ! Array.isArray( state.forms) || ! state.forms.length) {
-        return {
-            ...state,
-            forms: [form]
-        }
-    }else{
-        const index = findFormIndexById(state.forms, form.ID);
-        if (-1 <= index) {
-            state.forms.splice(index, 1, form);
-        } else {
-            state.forms.push(form);
-        }
+	if( ! Array.isArray( state.forms) || ! state.forms.length) {
+		return {
+			...state,
+			forms: [form]
+		};
+	}else{
+		const index = findFormIndexById(state.forms, form.ID);
+		if (-1 <= index) {
+			state.forms.splice(index, 1, form);
+		} else {
+			state.forms.push(form);
+		}
 
-    }
-    return {
-        ...state,
-        forms:state.forms
-    };
-}
+	}
+	return {
+		...state,
+		forms:state.forms
+	};
+};

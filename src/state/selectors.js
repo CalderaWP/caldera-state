@@ -1,7 +1,7 @@
 import {
-    findFormById,
-    mapArrayOfFormsToObject
-} from "./util";
+	findFormById,
+	mapArrayOfFormsToObject
+} from './util';
 
 /**
  * Selector to find forms in state
@@ -11,7 +11,7 @@ import {
  * @returns {boolean|*}
  */
 export const getForm = ( state, formId )  => {
-    return findFormById(state.forms, formId);
+	return findFormById(state.forms, formId);
 };
 
 /**
@@ -21,13 +21,13 @@ export const getForm = ( state, formId )  => {
  * @returns {*}
  */
 export const getForms = ( state ) => {
-    let forms = {};
-    if( Array.isArray(state.forms)&&state.forms.length){
-        forms = mapArrayOfFormsToObject(state.forms);
-    }else{
-        forms = state.forms;
-    }
-    return forms;
+	let forms = {};
+	if( Array.isArray(state.forms)&&state.forms.length){
+		forms = mapArrayOfFormsToObject(state.forms);
+	}else{
+		forms = state.forms;
+	}
+	return forms;
 };
 
 
@@ -39,9 +39,9 @@ export const getForms = ( state ) => {
  * @returns {string}
  */
 export const getFormPreview = ( state,formId ) => {
-    return state.formPreviews.hasOwnProperty( formId )
-        ?state.formPreviews[ formId ]
-        : '';
+	return state.formPreviews.hasOwnProperty( formId )
+		?state.formPreviews[ formId ]
+		: '';
 
 };
 
@@ -52,5 +52,5 @@ export const getFormPreview = ( state,formId ) => {
  * @returns {{}|DEFAULT_STATE.formPreviews|formPreviews|{CF2}}
  */
 export const getFormPreviews = (state) => {
-    return state.formPreviews;
+	return state.formPreviews;
 };

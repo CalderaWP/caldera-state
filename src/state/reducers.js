@@ -1,15 +1,15 @@
 import {
-    SET_FORMS,
-    SET_FORM,
-    ADD_FORM_PREVIEW,
-    NEW_FORM
-} from "./actions";
+	SET_FORMS,
+	SET_FORM,
+	ADD_FORM_PREVIEW,
+	NEW_FORM
+} from './actions';
 
-import {SET_FORM_PRIVACY_SETTINGS} from "./actions.privacy";
+import {SET_FORM_PRIVACY_SETTINGS} from './actions.privacy';
 
 import {
-    setFormInState
-} from "./util";
+	setFormInState
+} from './util';
 
 
 /**
@@ -18,8 +18,8 @@ import {
  * @type {{forms: Array, formPreviews: {}}}
  */
 export const DEFAULT_STATE = {
-    forms: [],
-    formPreviews: {},
+	forms: [],
+	formPreviews: {},
 };
 
 /**
@@ -29,10 +29,10 @@ export const DEFAULT_STATE = {
  * @returns {{} & {forms: *} & {forms: Array, formPreviews: {}}}
  */
 export const initialStateWithForms = (forms) => {
-    if( ! Array.isArray(forms) ){
-        throw 'You must use an array of forms!';
-    }
-    return Object.assign({}, {forms:forms},DEFAULT_STATE );
+	if( ! Array.isArray(forms) ){
+		throw 'You must use an array of forms!';
+	}
+	return Object.assign({}, {forms:forms},DEFAULT_STATE );
 };
 
 
@@ -44,31 +44,31 @@ export const initialStateWithForms = (forms) => {
  * @returns {*}
  */
 export const formsReducer = (state = DEFAULT_STATE, action) => {
-    switch (action.type) {
-        case SET_FORMS:
-            return {
-                ...state,
-                forms:action.forms
-            };
-        case ADD_FORM_PREVIEW:
-            state.formPreviews[action.formId] = action.preview;
-            return {
-                ...state,
-                formPreviews: state.formPreviews
-            };
-        case SET_FORM :
-            return( setFormInState(state,action.form));
-        case NEW_FORM:
-            const newForm = {
-                ID: '11',
-                name: '...'
-            };
-            state.forms.push(newForm);
-            return Object.assign({},state);
+	switch (action.type) {
+	case SET_FORMS:
+		return {
+			...state,
+			forms:action.forms
+		};
+	case ADD_FORM_PREVIEW:
+		state.formPreviews[action.formId] = action.preview;
+		return {
+			...state,
+			formPreviews: state.formPreviews
+		};
+	case SET_FORM :
+		return( setFormInState(state,action.form));
+	case NEW_FORM:
+		const newForm = {
+			ID: '11',
+			name: '...'
+		};
+		state.forms.push(newForm);
+		return Object.assign({},state);
 
-        default:
-            return state;
-    }
+	default:
+		return state;
+	}
 
 };
 
@@ -80,12 +80,12 @@ export const formsReducer = (state = DEFAULT_STATE, action) => {
  * @returns {*}
  */
 export const privacySettingsReducer = ( state = {
-    ...DEFAULT_STATE
+	...DEFAULT_STATE
 }, action ) => {
-    switch (action.type){
-        case SET_FORM_PRIVACY_SETTINGS :
-            return setFormInState(state, action.form);
-        default:
-            return state;
-    }
+	switch (action.type){
+	case SET_FORM_PRIVACY_SETTINGS :
+		return setFormInState(state, action.form);
+	default:
+		return state;
+	}
 };

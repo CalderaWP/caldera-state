@@ -9,10 +9,10 @@ export const SET_FORM_PRIVACY_SETTINGS = 'SET_FORM_PRIVACY_SETTINGS';
  * @returns {{type: string, formId: *}}
  */
 export const setEditForm = (formId ) => {
-    return {
-        type: SET_EDIT_FORM,
-        formId: formId
-    }
+	return {
+		type: SET_EDIT_FORM,
+		formId: formId
+	};
 };
 
 /**
@@ -21,9 +21,9 @@ export const setEditForm = (formId ) => {
  * @returns {{type: string}}
  */
 export const unsetEditForm = () => {
-    return {
-        type: UNSET_EDIT_FORM,
-    }
+	return {
+		type: UNSET_EDIT_FORM,
+	};
 };
 
 /**
@@ -33,8 +33,8 @@ export const unsetEditForm = () => {
  * @returns {{type: string, form: *}}
  */
 export const setFormPrivacyForm = (settings) => {
-    return {
-        type: SET_FORM_PRIVACY_SETTINGS,
-        form: settings
-    }
+	return {
+		type: SET_FORM_PRIVACY_SETTINGS,
+		form: settings
+	};
 };

@@ -10,10 +10,10 @@ export const NEW_FORM = 'NEW_FORM';
  * @returns {{type: string, form: *}}
  */
 export const setForm = (form) => {
-    return {
-        type: SET_FORM,
-        form: form
-    }
+	return {
+		type: SET_FORM,
+		form: form
+	};
 };
 
 /**
@@ -23,10 +23,10 @@ export const setForm = (form) => {
  * @returns {{type: string, forms: *}}
  */
 export const setForms = ( forms ) => {
-    return {
-        type: SET_FORMS,
-        forms:forms
-    };
+	return {
+		type: SET_FORMS,
+		forms:forms
+	};
 };
 
 /**
@@ -37,11 +37,11 @@ export const setForms = ( forms ) => {
  * @returns {{type: string, formId: *, preview: *}}
  */
 export const  addFormPreview = (formId,preview)=> {
-    return {
-        type: ADD_FORM_PREVIEW,
-        formId: formId,
-        preview:preview
-    }
+	return {
+		type: ADD_FORM_PREVIEW,
+		formId: formId,
+		preview:preview
+	};
 };
 
 
@@ -51,7 +51,7 @@ export const  addFormPreview = (formId,preview)=> {
  * @returns {{type: string}}
  */
 export const newForm = () => {
-    return {
-        type: NEW_FORM
-    }
-}
+	return {
+		type: NEW_FORM
+	};
+};

@@ -1,4 +1,4 @@
-import {findFormById} from "./util";
+import {findFormById} from './util';
 
 /**
  * Get all of a form's privacy settings.
@@ -8,7 +8,7 @@ import {findFormById} from "./util";
  * @returns {*}
  */
 export const getFormPrivacySettings = (formId,state) =>{
-    const settings = findFormById(state.forms, formId);
-    return 'object' === typeof settings ? settings : false;
+	const settings = findFormById(state.forms, formId);
+	return 'object' === typeof settings ? settings : false;
 };
 
