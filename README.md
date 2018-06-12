@@ -1,5 +1,6 @@
 Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/caldera-forms).
 
+🌋 👀[Documentation](http://calderalabs.org/caldera-state/)
 ## Installation
 ### Add to a Project
 Requires npm
@@ -45,17 +46,16 @@ Also, an example app and test coverage for all of that.
 
 `import * as cfStateWebpack from '@caldera-labs/state'`
 
-### Actions
+This import exposes three keys: store,state, and util.
+### [`store` - Pure functions for storing state](http://calderalabs.org/caldera-state/identifiers.html#store)
+* [Actions]()
+* [Selectors]()
+* [Reducers]()
 
-### Selectors
+### [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)
 
-### Using with API
+### [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)
 
-### Using With WordPress React and wp.data
-
-### Using With Redux
-
-### Util Functions
 #### Find the form with a specific ID in an array of forms.
 `cfFormsState.util.findFormById(Array,'cf123456');`
 
