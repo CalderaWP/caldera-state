@@ -47,12 +47,9 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#why-is-this-" data-ice="link">Why Is This?</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#usage" data-ice="link">Usage</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#import-into-a-webpack-managed-project" data-ice="link">Import Into A webpack Managed Project</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#actions" data-ice="link">Actions</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#selectors" data-ice="link">Selectors</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#using-with-api" data-ice="link">Using with API</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#using-with-wordpress-react-and-wp-data" data-ice="link">Using With WordPress React and wp.data</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#using-with-redux" data-ice="link">Using With Redux</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#util-functions" data-ice="link">Util Functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-store---code-store--code----pure-functions-for-storing-state--a-" data-ice="link">store - Pure functions for storing state</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-" data-ice="link">state - Interactions with Redux or wp.data</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-" data-ice="link">util - Utility functions</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/README.html"><a href="manual/README.html#find-the-form-with-a-specific-id-in-an-array-of-forms-" data-ice="link">Find the form with a specific ID in an array of forms.</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/README.html"><a href="manual/README.html#check-if-a--given-form-config-object-has-an-id" data-ice="link">Check if a  given form config object has an ID</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#current-status" data-ice="link">Current Status</a></li>
@@ -67,6 +64,7 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><p>Redux(-like) state management for <a href="https://github.com/calderawp/caldera-forms">Caldera Forms</a>.</p>
+<p>&#x1F30B; &#x1F440;<a href="http://calderalabs.org/caldera-state/">Documentation</a></p>
 <h2 id="installation">Installation</h2><h3 id="add-to-a-project">Add to a Project</h3><p>Requires npm</p>
 <p><code>npm i -D caldera-state</code></p>
 <h2 id="usage">Usage</h2><h3 id="import-with-webpack">Import With webpack</h3><pre><code class="lang-js"><code class="source-code prettyprint">    import * as cfFormsState from &apos;@caldera-labs/state&apos;;
@@ -101,7 +99,13 @@
 </li>
 </ul>
 <h2 id="usage">Usage</h2><h3 id="import-into-a-webpack-managed-project">Import Into A webpack Managed Project</h3><p><code>import * as cfStateWebpack from &apos;@caldera-labs/state&apos;</code></p>
-<h3 id="actions">Actions</h3><h3 id="selectors">Selectors</h3><h3 id="using-with-api">Using with API</h3><h3 id="using-with-wordpress-react-and-wp-data">Using With WordPress React and wp.data</h3><h3 id="using-with-redux">Using With Redux</h3><h3 id="util-functions">Util Functions</h3><h4 id="find-the-form-with-a-specific-id-in-an-array-of-forms-">Find the form with a specific ID in an array of forms.</h4><p><code>cfFormsState.util.findFormById(Array,&apos;cf123456&apos;);</code></p>
+<p>This import exposes three keys: store,state, and util.</p>
+<h3 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-store---code-store--code----pure-functions-for-storing-state--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#store"><code>store</code> - Pure functions for storing state</a></h3><ul>
+<li><a href="">Actions</a></li>
+<li><a href="">Selectors</a></li>
+<li><a href="">Reducers</a></li>
+</ul>
+<h3 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#state"><code>state</code> - Interactions with Redux or wp.data</a></h3><h3 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#util"><code>util</code> - Utility functions</a></h3><h4 id="find-the-form-with-a-specific-id-in-an-array-of-forms-">Find the form with a specific ID in an array of forms.</h4><p><code>cfFormsState.util.findFormById(Array,&apos;cf123456&apos;);</code></p>
 <h4 id="check-if-a--given-form-config-object-has-an-id">Check if a  given form config object has an ID</h4><p><code>cfFormsState.util.formHasId(Object,&apos;cf123456&apos;);</code></p>
 <h2 id="current-status">Current Status</h2><ul>
 <li>&#x2714;&#xFE0F; State management for forms.</li>
