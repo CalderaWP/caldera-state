@@ -1,6 +1,6 @@
 Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/caldera-forms).
 
-🌋 👀[Documentation](http://calderalabs.org/caldera-state/)
+🌋 👀[Documentation](https://calderalabs.org/caldera-state/)
 ## Installation
 ### Add to a Project
 Requires npm
