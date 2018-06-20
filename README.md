@@ -53,6 +53,17 @@ This import exposes three keys: store,state, and util.
 * [Reducers]()
 
 ### [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)
+````js
+import * as cfFormsState from '@caldera-labs/state';
+export const STORE = {
+    reducer( state = DEFAULT_STATE, action ) {
+        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);
+    },
+    actions: cfFormsState.store.actions,
+    selectors: cfFormsState.store.selectors,
+};
+
+```
 
 ### [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)
 
