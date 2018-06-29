@@ -53,7 +53,7 @@ This import exposes three keys: store,state, and util.
 * [Reducers]()
 
 ### [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)
-````js
+```js
 import * as cfFormsState from '@caldera-labs/state';
 export const STORE = {
     reducer( state = DEFAULT_STATE, action ) {
@@ -64,6 +64,7 @@ export const STORE = {
 };
 
 ```
+
 
 ### [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)
 
@@ -77,7 +78,7 @@ export const STORE = {
 * ✔️ State management for forms.
 * ✔️ State management for settings.
 * ✖️ Migrate CF Pro state from Vuex to Redux.
-* ✖️ Integration with wp.data. Blocked by https://github.com/WordPress/packages/pull/136
+* ✔️ Integration with wp.data. 
 * ✖️ Entries
 
 ## Available Scripts
