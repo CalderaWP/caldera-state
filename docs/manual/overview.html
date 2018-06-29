@@ -31,7 +31,13 @@
 <div data-ice="manual">
     <ul class="manual-toc">
       
-    <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Overview</a></li>
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Usage Overview Overview</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#import-into-a-webpack-managed-project" data-ice="link">Import Into A webpack Managed Project</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-store---code-store--code----pure-functions-for-storing-state--a-" data-ice="link">store - Pure functions for storing state</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-" data-ice="link">state - Interactions with Redux or wp.data</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-" data-ice="link">util - Utility functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#find-the-form-with-a-specific-id-in-an-array-of-forms-" data-ice="link">Find the form with a specific ID in an array of forms.</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#check-if-a--given-form-config-object-has-an-id" data-ice="link">Check if a  given form config object has an ID</a></li>
 </ul>
   </div>
 <div data-ice="manual">
@@ -63,7 +69,26 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="overview">Overview</h1></div>
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="usage-overview-overview">Usage Overview Overview</h1><h2 id="import-into-a-webpack-managed-project">Import Into A webpack Managed Project</h2><p><code>import * as cfStateWebpack from &apos;@caldera-labs/state&apos;</code></p>
+<p>This import exposes three keys: store,state, and util.</p>
+<h2 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-store---code-store--code----pure-functions-for-storing-state--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#store"><code>store</code> - Pure functions for storing state</a></h2><ul>
+<li><a href="">Actions</a></li>
+<li><a href="">Selectors</a></li>
+<li><a href="">Reducers</a></li>
+</ul>
+<h2 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#state"><code>state</code> - Interactions with Redux or wp.data</a></h2><pre><code class="lang-js"><code class="source-code prettyprint">import * as cfFormsState from &apos;@caldera-labs/state&apos;;
+export const STORE = {
+    reducer( state = DEFAULT_STATE, action ) {
+        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);
+    },
+    actions: cfFormsState.store.actions,
+    selectors: cfFormsState.store.selectors,
+};
+</code>
+</code></pre>
+<h2 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#util"><code>util</code> - Utility functions</a></h2><h3 id="find-the-form-with-a-specific-id-in-an-array-of-forms-">Find the form with a specific ID in an array of forms.</h3><p><code>cfFormsState.util.findFormById(Array,&apos;cf123456&apos;);</code></p>
+<h3 id="check-if-a--given-form-config-object-has-an-id">Check if a  given form config object has an ID</h3><p><code>cfFormsState.util.formHasId(Object,&apos;cf123456&apos;);</code></p>
+</div>
 </div>
 
 <footer class="footer">

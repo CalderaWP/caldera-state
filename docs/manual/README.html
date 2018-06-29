@@ -31,7 +31,13 @@
 <div data-ice="manual">
     <ul class="manual-toc">
       
-    <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Overview</a></li>
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Usage Overview Overview</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#import-into-a-webpack-managed-project" data-ice="link">Import Into A webpack Managed Project</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-store---code-store--code----pure-functions-for-storing-state--a-" data-ice="link">store - Pure functions for storing state</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-" data-ice="link">state - Interactions with Redux or wp.data</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-" data-ice="link">util - Utility functions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#find-the-form-with-a-specific-id-in-an-array-of-forms-" data-ice="link">Find the form with a specific ID in an array of forms.</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#check-if-a--given-form-config-object-has-an-id" data-ice="link">Check if a  given form config object has an ID</a></li>
 </ul>
   </div>
 <div data-ice="manual">
@@ -105,13 +111,23 @@
 <li><a href="">Selectors</a></li>
 <li><a href="">Reducers</a></li>
 </ul>
-<h3 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#state"><code>state</code> - Interactions with Redux or wp.data</a></h3><h3 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#util"><code>util</code> - Utility functions</a></h3><h4 id="find-the-form-with-a-specific-id-in-an-array-of-forms-">Find the form with a specific ID in an array of forms.</h4><p><code>cfFormsState.util.findFormById(Array,&apos;cf123456&apos;);</code></p>
+<h3 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#state"><code>state</code> - Interactions with Redux or wp.data</a></h3><pre><code class="lang-js"><code class="source-code prettyprint">import * as cfFormsState from &apos;@caldera-labs/state&apos;;
+export const STORE = {
+    reducer( state = DEFAULT_STATE, action ) {
+        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);
+    },
+    actions: cfFormsState.store.actions,
+    selectors: cfFormsState.store.selectors,
+};
+</code>
+</code></pre>
+<h3 id="-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-"><a href="http://calderalabs.org/caldera-state/identifiers.html#util"><code>util</code> - Utility functions</a></h3><h4 id="find-the-form-with-a-specific-id-in-an-array-of-forms-">Find the form with a specific ID in an array of forms.</h4><p><code>cfFormsState.util.findFormById(Array,&apos;cf123456&apos;);</code></p>
 <h4 id="check-if-a--given-form-config-object-has-an-id">Check if a  given form config object has an ID</h4><p><code>cfFormsState.util.formHasId(Object,&apos;cf123456&apos;);</code></p>
 <h2 id="current-status">Current Status</h2><ul>
 <li>&#x2714;&#xFE0F; State management for forms.</li>
 <li>&#x2714;&#xFE0F; State management for settings.</li>
 <li>&#x2716;&#xFE0F; Migrate CF Pro state from Vuex to Redux.</li>
-<li>&#x2716;&#xFE0F; Integration with wp.data. Blocked by <a href="https://github.com/WordPress/packages/pull/136">https://github.com/WordPress/packages/pull/136</a></li>
+<li>&#x2714;&#xFE0F; Integration with wp.data. </li>
 <li>&#x2716;&#xFE0F; Entries</li>
 </ul>
 <h2 id="available-scripts">Available Scripts</h2><p>In the project directory, you can run:</p>
