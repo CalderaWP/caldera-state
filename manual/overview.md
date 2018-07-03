@@ -30,4 +30,4 @@ export const STORE = {
 `cfFormsState.util.findFormById(Array,'cf123456');`
 
 ### Check if a  given form config object has an ID
-`cfFormsState.util.formHasId(Object,'cf123456');`
+`cfFormsState.util.fo rmHasId(Object,'cf123456');`
