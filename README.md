@@ -1,5 +1,11 @@
 Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/caldera-forms).
 
+
+[![Build Status](https://travis-ci.org/CalderaWP/caldera-state.svg?branch=master)](https://travis-ci.org/CalderaWP/caldera-state)
+[![Documentation Status](./docs/badge.svg)](https://calderalabs.org/caldera-state/source.html)
+[![Coverage Status](https://coveralls.io/repos/github/CalderaWP/caldera-state/badge.svg?branch=master)](https://coveralls.io/github/CalderaWP/caldera-state?branch=master)
+
+
 🌋 👀[Documentation](https://calderalabs.org/caldera-state/)
 ## Installation
 ### Add to a Project
