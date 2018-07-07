@@ -10,6 +10,100 @@ This import exposes three keys: store,state, and util.
 * [Selectors]()
 * [Reducers]()
 
+## Using In React + Redux App
+
+### App.js injecting state into the app.
+```js
+import React from 'react';
+import { connect } from 'react-redux';
+import {state,store} from '@caldera-labs/state';
+const {CALDERA_FORMS_STORE_SLUG} = state;
+const  {getForms} = store.selectors;
+const {
+	setForms,
+	setForm,
+	newForm
+} = store.actions;
+
+const App = (props) => {
+	return (
+		<div>
+            <select
+                onChange={(newValue) => {
+                    props.setForm(newValue);
+                }}
+            >
+                {Object.values(props.forms).map(form => {
+                    return (
+                        <option 
+                            value="form.ID"
+                        >
+                        {form.label}
+                    </option>
+                    )
+                })}
+            </select>	
+            <button
+                onClick={props.addForm}
+            >
+                Add Form
+            </button>
+
+		</div>
+	);
+
+};
+
+const mapStateToProps = state => {
+	state = state[CALDERA_FORMS_STORE_SLUG];
+	let appState = {
+		forms: getForms(state)
+
+	};
+	return appState;
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		setForms: (forms) => {
+			dispatch(setForms(forms));
+		},
+		setForm:(form) => {
+			dispatch(setForm(form));
+		},
+		addForm(){
+			dispatch(newForm());
+		}
+	};
+};
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(App);
+```
+
+### Index.js Wrapping `<App>` In State
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
+import {state} from '@caldera-labs/state';
+const {calderaFormsReduxStore} = state;
+
+ReactDOM.render(
+	<Provider store={calderaFormsReduxStore}>
+		<App />
+	</Provider>,
+	document.getElementById('root')
+);
+registerServiceWorker();
+```
+
+
 ## [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)
 ```js
 import * as cfFormsState from '@caldera-labs/state';
