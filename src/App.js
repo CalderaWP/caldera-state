@@ -39,7 +39,6 @@ const App = (props) => {
 
 };
 
-
 const mapStateToProps = state => {
 	state = state[CALDERA_FORMS_STORE_SLUG];
 	let appState = {
