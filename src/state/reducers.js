@@ -10,6 +10,7 @@ import {SET_FORM_PRIVACY_SETTINGS} from './actions.privacy';
 import {
 	setFormInState
 } from './util';
+import {CLOSE_STATUS_INDICATOR, START_SPIN, STOP_SPIN, UPDATE_STATUS_INDICATOR} from "./actions.status";
 
 
 /**
@@ -88,4 +89,52 @@ export const privacySettingsReducer = ( state = {
 	default:
 		return state;
 	}
+};
+
+export const STATUS_DEFULT_STATE = {
+	show:false,
+	message: '',
+	success: true,
+	spin: false,
+};
+
+
+/**
+ * Reducer for redux(-like) store managing spinner and success
+ *
+ * @param {Object} state
+ * @param {Object} action
+ * @returns {*}
+ */
+export const statusReducer = (state = STATUS_DEFULT_STATE, action ) => {
+	switch (action.type){
+		case START_SPIN :
+			return {
+				...state,
+				spin: true
+			};
+		case STOP_SPIN : {
+			return {
+				...state,
+				spin: false
+			};
+		}
+		case CLOSE_STATUS_INDICATOR: {
+			return {
+				...state,
+				show: false
+			};
+		}
+		case UPDATE_STATUS_INDICATOR: {
+			return {
+				...state,
+				show:action.show,
+				message: action.message,
+				success: action.success,
+			};
+		}
+		default:
+			return state;
+	}
+
 };
