@@ -12,7 +12,6 @@ import {
 } from './util';
 import {CLOSE_STATUS_INDICATOR, START_SPIN, STOP_SPIN, UPDATE_STATUS_INDICATOR} from "./actions.status";
 
-
 /**
  * Default state for formsReducer
  *
@@ -138,3 +137,4 @@ export const statusReducer = (state = STATUS_DEFULT_STATE, action ) => {
 	}
 
 };
+
