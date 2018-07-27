@@ -31,14 +31,15 @@ import {
 import {
 	formsReducer,
 	privacySettingsReducer,
-	initialStateWithForms
+	initialStateWithForms,
 } from './reducers';
 
 /** State **/
 import {
 	CALDERA_FORMS_STORE_SLUG,
 	calderaFormsFormState,
-	calderaFormsReduxStore
+	calderaFormsReduxStore,
+	reducers
 } from './index';
 
 /** Util **/
@@ -84,7 +85,8 @@ module.exports  = {
 	state: {
 		CALDERA_FORMS_STORE_SLUG,
 		calderaFormsFormState,
-		calderaFormsReduxStore
+		calderaFormsReduxStore,
+		reducers
 	},
 	util: {
 		formHasId,
