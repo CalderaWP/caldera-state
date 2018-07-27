@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490e1a86-72c6-4b3e-86ab-43bf0ca8fc43" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tests/export.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manual/overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/manual/overview.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,20 +13,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.62646264">
+    <splitter split-orientation="horizontal" split-proportion="0.8981481">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="FormList.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/FormList.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -58,11 +46,40 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="export.test.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="export.test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/tests/export.test.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="15">
                   <caret line="1" selection-start-line="1" selection-end-line="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="47">
+                    <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="overview.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/manual/overview.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="16">
+                    <caret line="107" column="128" selection-start-line="107" selection-start-column="128" selection-end-line="107" selection-end-column="128" />
+                    <folding>
+                      <element signature="e#0#26#0" expanded="true" />
+                      <element signature="e#0#26#0" expanded="true" />
+                      <element signature="e#0#49#0" expanded="true" />
+                    </folding>
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -108,15 +125,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="580">
                   <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/App.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -187,13 +195,11 @@
         <option value="$PROJECT_DIR$/src/state/selectors.js" />
         <option value="$PROJECT_DIR$/manual/index.md" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/App.test.js" />
         <option value="$PROJECT_DIR$/src/FormList.test.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/manual/overview.md" />
         <option value="$PROJECT_DIR$/src/state/actions.status.js" />
         <option value="$PROJECT_DIR$/src/state/selectors.status.js" />
         <option value="$PROJECT_DIR$/src/tests/actions.test.js" />
@@ -204,6 +210,8 @@
         <option value="$PROJECT_DIR$/src/state/index.js" />
         <option value="$PROJECT_DIR$/src/state/module.js" />
         <option value="$PROJECT_DIR$/src/tests/export.test.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/manual/overview.md" />
       </list>
     </option>
   </component>
@@ -244,19 +252,7 @@
             <path>
               <item name="state" type="b2602c69:ProjectViewProjectNode" />
               <item name="state" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="state" type="b2602c69:ProjectViewProjectNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="state" type="b2602c69:ProjectViewProjectNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="manual" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -311,12 +307,12 @@
       <workItem from="1530659998570" duration="805000" />
       <workItem from="1530736647547" duration="1759000" />
       <workItem from="1530995780504" duration="1109000" />
-      <workItem from="1532715104797" duration="4361000" />
+      <workItem from="1532715104797" duration="4713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35097000" />
+    <option name="totallyTimeSpent" value="35449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="487" y="219" width="1433" height="825" extended-state="0" />
@@ -328,8 +324,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32916668" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.38186812" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8288889" visible="true" weight="0.14593817" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.38186812" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8288889" visible="true" weight="0.14593817" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
@@ -527,16 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="330">
-            <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -562,16 +548,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manual/overview.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/state/selectors.privacy.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -697,6 +673,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="47">
+            <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manual/overview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="16">
+            <caret line="107" column="128" selection-start-line="107" selection-start-column="128" selection-end-line="107" selection-end-column="128" />
+            <folding>
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#49#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

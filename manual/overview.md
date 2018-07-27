@@ -84,6 +84,7 @@ export default connect(
 ```
 
 ### Index.js Wrapping `<App>` In State
+`state.calderaFormsReduxStore` exports a Redux-store. This object contains the return value of Redux's [`createStore` function](https://redux.js.org/api-reference/createstore) 
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -103,6 +104,32 @@ ReactDOM.render(
 registerServiceWorker();
 ```
 
+### Create Redux Store From Reducers
+The object `state.reducers` contains an object of reducers, indexed by their standard identifiers. It is designed to be used with Redux's [`combineReducers`](https://redux.js.org/api-reference/combinereducers) and [`createStore`](https://redux.js.org/api-reference/createstore) functions.
+
+While `state.calderaFormsReduxStore` does this for you automatically, you might want to add other reducers first. For example:
+
+```js
+import {state}  from '@caldera-labs/state';
+import {createStore,combineReducers} from 'redux';
+
+//Add one new reducer to set
+const myReducers = {
+	...reducers,
+	roy: (state = { mike:true}, action ) => {
+		switch (action.type) {
+			default:
+				return state;
+		}
+	}
+};
+
+//Export store with normal and custom reducers
+export const store = createStore(
+	combineReducers(myReducers),
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+```
 
 ## [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)
 ```js
