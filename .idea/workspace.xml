@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490e1a86-72c6-4b3e-86ab-43bf0ca8fc43" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/state/actions.proLocalSettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/state/module.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/state/module.js.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/state/reducers.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/state/reducers.js.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/coverage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/App.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/App.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/Form.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/Form.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/FormList.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/FormList.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/index.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/index.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/registerServiceWorker.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/registerServiceWorker.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/actions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/actions.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/actions.privacy.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/actions.privacy.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/actions.status.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/actions.status.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/index.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/index.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/module.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/module.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/reducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/reducers.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/selectors.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/selectors.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/selectors.privacy.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/selectors.privacy.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/state/util.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/util.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/function/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/function/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/identifiers.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/identifiers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/search_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script/search_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/variable/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/variable/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/actions.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/actions.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/selectors.proLocalSettings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/selectors.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/selectors.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +19,20 @@
           <file leaf-file-name="actions.status.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/state/actions.status.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="702">
-                  <caret line="50" selection-start-line="50" selection-end-line="50" />
+                <state relative-caret-position="325">
+                  <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="selectors.test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="294">
+                  <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+                  <folding>
+                    <element signature="e#0#93#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -72,7 +58,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="actions.test.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="actions.test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/tests/actions.test.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="374">
@@ -146,11 +132,20 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="actions.proLocalSettings.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="actions.proLocalSettings.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/state/actions.proLocalSettings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="selectors.proLocalSettings.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/state/selectors.proLocalSettings.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -211,6 +206,8 @@
         <option value="$PROJECT_DIR$/src/state/reducers.js" />
         <option value="$PROJECT_DIR$/src/tests/actions.test.js" />
         <option value="$PROJECT_DIR$/src/state/actions.proLocalSettings.js" />
+        <option value="$PROJECT_DIR$/src/state/selectors.proLocalSettings.js" />
+        <option value="$PROJECT_DIR$/src/tests/selectors.test.js" />
       </list>
     </option>
   </component>
@@ -328,7 +325,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36334000" />
+    <option name="totallyTimeSpent" value="36880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="340" y="86" width="1580" height="742" extended-state="0" />
@@ -402,13 +399,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -462,13 +452,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/actions.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/babel-cli/lib/_babel-node.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -568,13 +551,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/selectors.privacy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/state/selectors.status.js" />
     <entry file="file://$PROJECT_DIR$/src/tests/reducers.test.js">
@@ -701,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/actions.status.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/actions.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -718,10 +687,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/actions.status.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/selectors.privacy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/state/actions.proLocalSettings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="240">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/selectors.proLocalSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

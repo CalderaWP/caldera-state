@@ -11,6 +11,31 @@ import {
 	getFormPrivacySettings
 } from '../state/selectors.privacy';
 
+import {
+	getCfProFormSetting,
+	getCfProSettings
+} from "../state/selectors.proLocalSettings";
+
+describe( 'CF Pro local settings selectors', () => {
+	const mockState = {
+		settings:{
+			connected: false,
+		},
+		forms: [
+			{
+				ID: 'CF1'
+			}
+		]
+	};
+
+	it( 'selects settings', () => {
+		expect(getCfProSettings(mockState)).toEqual(mockState.settings);
+	});
+
+	it( 'selects a form by ID', () => {
+		expect(getCfProFormSetting('CF1',mockState)).toEqual(mockState.forms[0]);
+	});
+});
 describe('Form selectors', () => {
 	const formOne = {
 		ID: 'CF1',
