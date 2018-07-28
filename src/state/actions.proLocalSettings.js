@@ -2,13 +2,13 @@
  *
  * @type {string}
  */
-export const UPDATE_PRO_SETTINGS = 'CALDERA_FORMS/PRO/SETTINGS/UPDATE';
+export const UPDATE_PRO_SETTINGS = 'CALDERA_FORMS/PRO/SETTINGS';
 
 /**
  *
  * @type {string}
  */
-export const UPDATE_PRO_FORM_SETTINGS = 'CALDERA_FORMS/PRO/SETTINGS/FORM/UPDATE';
+export const UPDATE_PRO_FORM_SETTINGS = 'CALDERA_FORMS/PRO/SETTINGS/FORM';
 
 /**
  * Action creator for updating the CF Pro settings

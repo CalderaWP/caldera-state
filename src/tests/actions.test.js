@@ -37,6 +37,31 @@ import {
 	UPDATE_PRO_FORM_SETTINGS
 } from "../state/actions.proLocalSettings";
 
+import {
+	updateStyleIncludes,
+	updateOtherSettings,
+	SETTINGS_STYLE_INCLUDES,
+	SETTINGS_OTHER,
+}from "../state/actions.settings";
+
+describe( 'settings actions', () => {
+	it( 'creates updateStyleIncludes with the right type', () => {
+		expect(updateStyleIncludes({}).type).toEqual(SETTINGS_STYLE_INCLUDES);
+	});
+	it( 'creates updateOtherSettings with the right type', () => {
+		expect(updateOtherSettings({}).type).toEqual(SETTINGS_OTHER);
+	});
+
+	const update = {
+		cdnEnabled:true,
+	};
+	it( 'creates updateStyleIncludes with the right payload', () => {
+		expect(updateStyleIncludes(update).styleIncludes).toEqual(update);
+	});
+	it( 'creates updateOtherSettings with the right type', () => {
+		expect(updateOtherSettings(update).settingsOther).toEqual(update);
+	});
+});
 describe( 'Pro local settings actions', () => {
 
 	const formSettings = {
