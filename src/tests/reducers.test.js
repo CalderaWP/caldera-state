@@ -14,7 +14,8 @@ import {
 	privacySettingsReducer,
 	statusReducer,
 	STATUS_DEFULT_STATE,
-	proLocalSettingsReducer
+	proLocalSettingsReducer,
+	settingsReducer
 } from '../state/reducers';
 
 import {
@@ -34,6 +35,34 @@ import {
 	updateCfProSettings
 } from "../state/actions.proLocalSettings";
 
+import {
+	updateStyleIncludes,
+	updateOtherSettings
+} from "../state/actions.settings";
+
+
+describe( 'settingsReducer', () => {
+	it( 'updates styleIncludes settings', () => {
+		expect(settingsReducer({}, updateStyleIncludes(
+			{forms: false}
+		)).styleIncludes.forms).toEqual(false);
+	});
+
+	it( 'updates other settings', () => {
+		expect(settingsReducer({}, updateOtherSettings(
+			{cdnEnable: false}
+		)).other.cdnEnable).toEqual(false);
+	});
+
+	it( 'Does nothing to state when other actions are passed', () => {
+		const mockState = {
+			other:{
+				cdnEnable:true
+			}
+		}
+		expect(settingsReducer(mockState, {type: 'hiRoy'})).toEqual(mockState);
+	});
+});
 
 describe( 'proLocalSettingsReducer', () => {
 	const formOne = {
@@ -63,7 +92,11 @@ describe( 'proLocalSettingsReducer', () => {
 		expect( proLocalSettingsReducer(
 			mockState, updateCfProFormSetting('CF2', {sendLocal:true})
 		).forms.find(form => 'CF2' === form.ID ).sendLocal).toEqual(true);
-	})
+	});
+
+	it( 'Does nothing to state when other actions are passed', () => {
+		expect(proLocalSettingsReducer(mockState, {type: 'hiRoy'})).toEqual(mockState);
+	});
 });
 describe('Main form reducer', () => {
 	const formOne = {

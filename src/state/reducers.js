@@ -21,6 +21,7 @@ import {
 	UPDATE_PRO_FORM_SETTINGS,
 	UPDATE_PRO_SETTINGS
 } from "./actions.proLocalSettings";
+import {SETTINGS_OTHER, SETTINGS_STYLE_INCLUDES} from "./actions.settings";
 
 /**
  * Default state for formsReducer
@@ -170,6 +171,33 @@ export const proLocalSettingsReducer = (state = {
 				...action.settings,
 				ID: action.formId,
 			});
+		default:
+			return state;
+	}
+};
+
+
+/**
+ * Reducer for global for settings
+ * @param {Object} state Current state
+ * @param {Object} action
+ * @return {{styleIncludes: {}, other: {}}}
+ */
+export const settingsReducer = (state = {
+	styleIncludes: {},
+	other: {}
+}, action ) => {
+	switch (action.type){
+		case SETTINGS_STYLE_INCLUDES:
+			return {
+				...state,
+				styleIncludes: action.styleIncludes
+			};
+		case SETTINGS_OTHER:
+			return {
+				...state,
+				other: action.settingsOther
+			};
 		default:
 			return state;
 	}
