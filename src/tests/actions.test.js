@@ -30,6 +30,44 @@ import {
 	setFormPrivacyForm
 } from '../state/actions.privacy';
 
+import {
+	updateCfProFormSetting,
+	updateCfProSettings,
+	UPDATE_PRO_SETTINGS,
+	UPDATE_PRO_FORM_SETTINGS
+} from "../state/actions.proLocalSettings";
+
+describe( 'Pro local settings actions', () => {
+
+	const formSettings = {
+		sendLocal: true,
+		emailLayout: 5
+	}
+	it('creates updateCfProSettings action with the right type', () => {
+		const action = updateCfProSettings({});
+		expect(action.type).toBe(UPDATE_PRO_SETTINGS);
+	});
+	it('creates setForm action with the right data', () => {
+		const data = {
+			apikeys: {}
+		};
+		const action = updateCfProSettings(data);
+		expect(action.settings).toEqual(data);
+
+	});
+	it('creates setForm action with the right type', () => {
+		const action = updateCfProFormSetting('CF1', formSettings);
+		expect(action.type).toBe(UPDATE_PRO_FORM_SETTINGS);
+	});
+	it('creates setForm action with the right data', () => {
+		const action = updateCfProFormSetting('CF2', formSettings);
+		expect(action.settings).toEqual(formSettings);
+		expect(action.formId).toEqual('CF2');
+	});
+
+
+
+});
 
 describe('form actions', () => {
 	const data = {ID: 1};
