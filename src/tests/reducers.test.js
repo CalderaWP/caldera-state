@@ -11,8 +11,17 @@ import {
 	formsReducer,
 	initialStateWithForms,
 	DEFAULT_STATE,
-	privacySettingsReducer
+	privacySettingsReducer,
+	statusReducer,
+	STATUS_DEFULT_STATE
 } from '../state/reducers';
+
+import {
+	stopSpinner,
+	startSpinner,
+	closeStatus,
+	updateStatus
+} from "../state/actions.status";
 
 import {
 	setFormPrivacyForm
@@ -103,3 +112,28 @@ describe( 'Privacy settings reducer', () => {
 	});
 });
 
+describe('Status reducer', () => {
+	it( 'starts spinner', () => {
+		expect(statusReducer(STATUS_DEFULT_STATE,startSpinner()).spin).toEqual(true);
+	});
+
+	it( 'stops spinner', () => {
+		const defaultState = {
+			...STATUS_DEFULT_STATE,
+			spin:true,
+		}
+		expect(statusReducer(defaultState,stopSpinner()).spin).toEqual(false);
+	});
+
+	it( 'close status indicator', () => {
+		expect(statusReducer(STATUS_DEFULT_STATE,closeStatus()).show).toEqual(false);
+	});
+	it( 'Creates error status', () => {
+		const state = statusReducer(STATUS_DEFULT_STATE,updateStatus(
+			'Fail', false,true
+		));
+		expect(state.show).toEqual(true);
+		expect(state.success).toEqual(false);
+		expect(state.message).toEqual('Fail');
+	});
+});

@@ -16,8 +16,8 @@ Requires npm
 ## Usage
 ### Import With webpack
 ```js
-    import * as cfFormsState from '@caldera-labs/state';
-    const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;
+    import {state} from '@caldera-labs/state';
+    const STORE_SLUG = state.CALDERA_FORMS_STORE_SLUG;
 ```
 
 ### Reference Implementations

@@ -9,6 +9,17 @@ import {
 	NEW_FORM
 } from '../state/actions';
 
+import {
+	START_SPIN,
+	STOP_SPIN,
+	CLOSE_STATUS_INDICATOR,
+	UPDATE_STATUS_INDICATOR,
+	startSpinner,
+	stopSpinner,
+	closeStatus,
+	updateStatus
+} from "../state/actions.status";
+
 
 import {
 	SET_EDIT_FORM,
@@ -74,4 +85,46 @@ describe('privacy settings actions', () => {
 		expect(Object.keys(action)).toHaveLength(2);
 		expect(action.form).toBe(settings);
 	});
+});
+
+describe( 'Status indicator actions', () => {
+	it( 'creates START_SPIN action with the right type', () => {
+		expect(startSpinner().type).toBe(START_SPIN);
+	});
+
+	it( 'creates STOP_SPIN action with the right type', () => {
+		expect(stopSpinner().type).toBe(STOP_SPIN);
+	});
+
+	it( 'creates CLOSE_STATUS_INDICATOR action with the right type', () => {
+		expect(closeStatus().type).toBe(CLOSE_STATUS_INDICATOR);
+	});
+
+	it( 'creates UPDATE_STATUS_INDICATOR action with the right type', () => {
+		expect(updateStatus({
+			message: 'Hi Roy'
+		}).type).toBe(UPDATE_STATUS_INDICATOR);
+	});
+
+	it( 'creates UPDATE_STATUS_INDICATOR action with the nessage ', () => {
+		expect(updateStatus('Hi Roy').message).toBe('Hi Roy');
+	});
+
+	it( 'creates UPDATE_STATUS_INDICATOR action with the right details ', () => {
+		const data = {
+			message: 'fails',
+			show: true,
+			success: false,
+		}
+
+		expect(updateStatus(
+			data.message,
+			data.success,
+			data.show
+		)).toEqual({
+			type:UPDATE_STATUS_INDICATOR,
+			...data
+		});
+	});
+
 });
