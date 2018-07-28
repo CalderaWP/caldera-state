@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/App.js",
-    "content": "import React from 'react';\nimport logo from './logo.svg';\nimport './App.css';\nimport {FormList} from './FormList';\nimport { connect } from 'react-redux';\nimport {CALDERA_FORMS_STORE_SLUG} from './state';\nimport  {\n\tgetForms,\n} from './state/selectors';\nimport {\n\tsetForms,\n\tsetForm,\n\tnewForm\n} from './state/actions';\n\nconst App = (props) => {\n\treturn (\n\t\t<div className=\"App\">\n\t\t\t<header className=\"App-header\">\n\t\t\t\t<img src={logo} className=\"App-logo\" alt=\"logo\" />\n\t\t\t\t<h1 className=\"App-title\">Caldera State Example</h1>\n\t\t\t</header>\n\t\t\t<div>\n\t\t\t\t<FormList\n\t\t\t\t\tforms={props.forms}\n\t\t\t\t\tsetForms={props.setForms}\n\t\t\t\t\tonFormUpdate={(newValue) => {\n\t\t\t\t\t\tprops.setForm(newValue);\n\t\t\t\t\t}}\n\t\t\t\t/>\n\t\t\t\t<button\n\t\t\t\t\tonClick={props.addForm}\n\t\t\t\t>\n                Add Form\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t</div>\n\t);\n\n};\n\n\nconst mapStateToProps = state => {\n\tstate = state[CALDERA_FORMS_STORE_SLUG];\n\tlet appState = {\n\t\tforms: getForms(state)\n\n\t};\n\treturn appState;\n};\n\nconst mapDispatchToProps = (dispatch) => {\n\treturn {\n\t\tsetForms: (forms) => {\n\t\t\tdispatch(setForms(forms));\n\t\t},\n\t\tsetForm:(form) => {\n\t\t\tdispatch(setForm(form));\n\t\t},\n\t\taddForm(){\n\t\t\tdispatch(newForm());\n\t\t}\n\t};\n};\n\n\n\nexport default connect(\n\tmapStateToProps,\n\tmapDispatchToProps\n)(App);\n\n",
+    "content": "import React from 'react';\nimport logo from './logo.svg';\nimport './App.css';\nimport {FormList} from './FormList';\nimport { connect } from 'react-redux';\nimport {CALDERA_FORMS_STORE_SLUG} from './state';\nimport  {\n\tgetForms,\n} from './state/selectors';\nimport {\n\tsetForms,\n\tsetForm,\n\tnewForm\n} from './state/actions';\n\nconst App = (props) => {\n\treturn (\n\t\t<div className=\"App\">\n\t\t\t<header className=\"App-header\">\n\t\t\t\t<img src={logo} className=\"App-logo\" alt=\"logo\" />\n\t\t\t\t<h1 className=\"App-title\">Caldera State Example</h1>\n\t\t\t</header>\n\t\t\t<div>\n\t\t\t\t<FormList\n\t\t\t\t\tforms={props.forms}\n\t\t\t\t\tsetForms={props.setForms}\n\t\t\t\t\tonFormUpdate={(newValue) => {\n\t\t\t\t\t\tprops.setForm(newValue);\n\t\t\t\t\t}}\n\t\t\t\t/>\n\t\t\t\t<button\n\t\t\t\t\tonClick={props.addForm}\n\t\t\t\t>\n                Add Form\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t</div>\n\t);\n\n};\n\nconst mapStateToProps = state => {\n\tstate = state[CALDERA_FORMS_STORE_SLUG];\n\tlet appState = {\n\t\tforms: getForms(state)\n\n\t};\n\treturn appState;\n};\n\nconst mapDispatchToProps = (dispatch) => {\n\treturn {\n\t\tsetForms: (forms) => {\n\t\t\tdispatch(setForms(forms));\n\t\t},\n\t\tsetForm:(form) => {\n\t\t\tdispatch(setForm(form));\n\t\t},\n\t\taddForm(){\n\t\t\tdispatch(newForm());\n\t\t}\n\t};\n};\n\n\n\nexport default connect(\n\tmapStateToProps,\n\tmapDispatchToProps\n)(App);\n\n",
     "static": true,
     "longname": "/Users/josh/caldera-js/state/src/App.js",
     "access": "public",
@@ -619,7 +619,7 @@
     "importPath": "@caldera-labs/state/src/App.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 43,
+    "lineNumber": 42,
     "undocument": true,
     "params": [
       {
@@ -650,7 +650,7 @@
     "importPath": "@caldera-labs/state/src/App.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 52,
+    "lineNumber": 51,
     "undocument": true,
     "params": [
       {
@@ -1331,8 +1331,254 @@
   {
     "__docId__": 79,
     "kind": "file",
+    "name": "src/state/actions.status.js",
+    "content": "export const START_SPIN = 'START_SPIN';\nexport const STOP_SPIN = 'STOP_SPIN';\nexport const CLOSE_STATUS_INDICATOR = 'CLOSE_STATUS_INDICATOR';\nexport const UPDATE_STATUS_INDICATOR = 'UPDATE_STATUS_INDICATOR';\n\n/**\n * Dispatch action to start spinner\n * @returns {{type: string}}\n */\nexport const startSpinner = () => {\n\treturn {\n\t\ttype: START_SPIN\n\t}\n};\n\n/**\n * Dispatch action to stop spinner\n *\n *\n * @returns {{type: string}}\n */\nexport const stopSpinner = () => {\n\treturn {\n\t\ttype: STOP_SPIN\n\t}\n};\n\n/**\n * Dispatch action to close (hide) status indicator\n *\n * @returns {{type: string}}\n */\nexport const closeStatus = () => {\n\treturn {\n\t\ttype: CLOSE_STATUS_INDICATOR\n\t}\n};\n\n/**\n * Update the status indicator\n * \n * @param {String} message Message to show in status indicator\n * @param {Boolean} success Optional. If true, the default, background is green for success. If false, red for failure.\n * @param {Boolean} show Optional. If true, the default, status indicator will show\n * @returns {{type: string, message: *, show: boolean, success: boolean}}\n */\nexport const updateStatus = (message, success = true, show = true) => {\n\tif( ! message ){\n\t\tmessage = !success ? 'Error' : 'Success';\n\t}\n\n\treturn {\n\t\ttype: UPDATE_STATUS_INDICATOR,\n\t\tmessage,\n\t\tshow,\n\t\tsuccess\n\t}\n};",
+    "static": true,
+    "longname": "/Users/josh/caldera-js/state/src/state/actions.status.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "variable",
+    "name": "START_SPIN",
+    "memberof": "src/state/actions.status.js",
+    "static": true,
+    "longname": "src/state/actions.status.js~START_SPIN",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.status.js",
+    "importStyle": "{START_SPIN}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "variable",
+    "name": "STOP_SPIN",
+    "memberof": "src/state/actions.status.js",
+    "static": true,
+    "longname": "src/state/actions.status.js~STOP_SPIN",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.status.js",
+    "importStyle": "{STOP_SPIN}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "variable",
+    "name": "CLOSE_STATUS_INDICATOR",
+    "memberof": "src/state/actions.status.js",
+    "static": true,
+    "longname": "src/state/actions.status.js~CLOSE_STATUS_INDICATOR",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.status.js",
+    "importStyle": "{CLOSE_STATUS_INDICATOR}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "variable",
+    "name": "UPDATE_STATUS_INDICATOR",
+    "memberof": "src/state/actions.status.js",
+    "static": true,
+    "longname": "src/state/actions.status.js~UPDATE_STATUS_INDICATOR",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.status.js",
+    "importStyle": "{UPDATE_STATUS_INDICATOR}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "function",
+    "name": "startSpinner",
+    "memberof": "src/state/actions.status.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/state/actions.status.js~startSpinner",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.status.js",
+    "importStyle": "{startSpinner}",
+    "description": "Dispatch action to start spinner",
+    "lineNumber": 10,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{type: string}}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "{type: string}"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 85,
+    "kind": "function",
+    "name": "stopSpinner",
+    "memberof": "src/state/actions.status.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/state/actions.status.js~stopSpinner",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.status.js",
+    "importStyle": "{stopSpinner}",
+    "description": "Dispatch action to stop spinner",
+    "lineNumber": 22,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{type: string}}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "{type: string}"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 86,
+    "kind": "function",
+    "name": "closeStatus",
+    "memberof": "src/state/actions.status.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/state/actions.status.js~closeStatus",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.status.js",
+    "importStyle": "{closeStatus}",
+    "description": "Dispatch action to close (hide) status indicator",
+    "lineNumber": 33,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{type: string}}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "{type: string}"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 87,
+    "kind": "function",
+    "name": "updateStatus",
+    "memberof": "src/state/actions.status.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/state/actions.status.js~updateStatus",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.status.js",
+    "importStyle": "{updateStatus}",
+    "description": "Update the status indicator",
+    "lineNumber": 47,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{{type: string, message: *, show: boolean, success: boolean}}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "Message to show in status indicator"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "success",
+        "description": "Optional. If true, the default, background is green for success. If false, red for failure."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "show",
+        "description": "Optional. If true, the default, status indicator will show"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "{type: string, message: *, show: boolean, success: boolean}"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "file",
     "name": "src/state/index.js",
-    "content": "import {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n} from './actions';\n\nimport {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n} from './selectors';\n\nimport {\n\tformsReducer,\n} from './reducers';\n\n\nimport {\n\tcombineReducers,createStore\n} from 'redux';\n\nconst actionFunctions = {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n};\n\nconst selectorFunctions = {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n};\n\n\nexport const CALDERA_FORMS_STORE_SLUG = 'CALDERA_FORMS/FORMS';\n/**\n * Caldera Forms Redux-store\n *\n * @type {{reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}}\n */\nexport const calderaFormsFormState = {\n\treducer: formsReducer,\n\tactions: actionFunctions,\n\tselectors: selectorFunctions,\n};\n\nconst reducers = {};\nreducers[CALDERA_FORMS_STORE_SLUG] = calderaFormsFormState.reducer;\n\nexport const calderaFormsReduxStore = createStore(\n\tcombineReducers(reducers),\n\twindow.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()\n);\n\n",
+    "content": "import {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n} from './actions';\n\nimport {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n} from './selectors';\n\nimport {\n\tformsReducer, privacySettingsReducer, statusReducer,\n} from './reducers';\n\n\nimport {\n\tcombineReducers,createStore\n} from 'redux';\n\nconst actionFunctions = {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n};\n\nconst selectorFunctions = {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n};\n\n/**\n * The reducer key for the main forms store\n * @type {string}\n */\nexport const CALDERA_FORMS_STORE_SLUG = 'CALDERA_FORMS/FORMS';\n/**\n * The reducer key for the privacy settings store\n * @type {string}\n */\nexport const CALDERA_FORMS_PRIVACY_STORE_SLUG = `${CALDERA_FORMS_STORE_SLUG}/PRIVACY`;\n/**\n * The reducer key for the status store\n * @type {string}\n */\nexport const CALDERA_FORMS_STATUS_STORE_SLUG = `${CALDERA_FORMS_STORE_SLUG}/STATUS`;\n/**\n * Caldera Forms Redux-store\n *\n * @type {{reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}}\n */\nexport const calderaFormsFormState = {\n\treducer: formsReducer,\n\tactions: actionFunctions,\n\tselectors: selectorFunctions,\n};\n\n/**\n * All reducers combined to one indexed object\n *\n * Designed to be passed to redux's combineReducers\n * @type {{}}\n */\nexport const reducers = {};\nreducers[CALDERA_FORMS_STORE_SLUG] = formsReducer;\nreducers[CALDERA_FORMS_PRIVACY_STORE_SLUG] = privacySettingsReducer;\nreducers[CALDERA_FORMS_STATUS_STORE_SLUG] = statusReducer;\n\n/**\n * Redux store with all reducers combined\n *\n * @type {Store<any>}\n */\nexport const calderaFormsReduxStore = createStore(\n\tcombineReducers(reducers),\n\twindow.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()\n);\n\n",
     "static": true,
     "longname": "/Users/josh/caldera-js/state/src/state/index.js",
     "access": "public",
@@ -1340,7 +1586,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 80,
+    "__docId__": 89,
     "kind": "variable",
     "name": "actionFunctions",
     "memberof": "src/state/index.js",
@@ -1361,7 +1607,7 @@
     "ignore": true
   },
   {
-    "__docId__": 81,
+    "__docId__": 90,
     "kind": "variable",
     "name": "selectorFunctions",
     "memberof": "src/state/index.js",
@@ -1382,7 +1628,7 @@
     "ignore": true
   },
   {
-    "__docId__": 82,
+    "__docId__": 91,
     "kind": "variable",
     "name": "CALDERA_FORMS_STORE_SLUG",
     "memberof": "src/state/index.js",
@@ -1392,17 +1638,63 @@
     "export": true,
     "importPath": "@caldera-labs/state/src/state/index.js",
     "importStyle": "{CALDERA_FORMS_STORE_SLUG}",
-    "description": null,
-    "lineNumber": 37,
-    "undocument": true,
+    "description": "The reducer key for the main forms store",
+    "lineNumber": 40,
     "type": {
+      "nullable": null,
       "types": [
         "string"
-      ]
+      ],
+      "spread": false,
+      "description": null
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 92,
+    "kind": "variable",
+    "name": "CALDERA_FORMS_PRIVACY_STORE_SLUG",
+    "memberof": "src/state/index.js",
+    "static": true,
+    "longname": "src/state/index.js~CALDERA_FORMS_PRIVACY_STORE_SLUG",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/index.js",
+    "importStyle": "{CALDERA_FORMS_PRIVACY_STORE_SLUG}",
+    "description": "The reducer key for the privacy settings store",
+    "lineNumber": 45,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 93,
+    "kind": "variable",
+    "name": "CALDERA_FORMS_STATUS_STORE_SLUG",
+    "memberof": "src/state/index.js",
+    "static": true,
+    "longname": "src/state/index.js~CALDERA_FORMS_STATUS_STORE_SLUG",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/index.js",
+    "importStyle": "{CALDERA_FORMS_STATUS_STORE_SLUG}",
+    "description": "The reducer key for the status store",
+    "lineNumber": 50,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 94,
     "kind": "variable",
     "name": "calderaFormsFormState",
     "memberof": "src/state/index.js",
@@ -1413,7 +1705,7 @@
     "importPath": "@caldera-labs/state/src/state/index.js",
     "importStyle": "{calderaFormsFormState}",
     "description": "Caldera Forms Redux-store",
-    "lineNumber": 43,
+    "lineNumber": 56,
     "type": {
       "nullable": null,
       "types": [
@@ -1424,28 +1716,29 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 95,
     "kind": "variable",
     "name": "reducers",
     "memberof": "src/state/index.js",
     "static": true,
     "longname": "src/state/index.js~reducers",
     "access": "public",
-    "export": false,
+    "export": true,
     "importPath": "@caldera-labs/state/src/state/index.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 49,
-    "undocument": true,
+    "importStyle": "{reducers}",
+    "description": "All reducers combined to one indexed object\n\nDesigned to be passed to redux's combineReducers",
+    "lineNumber": 68,
     "type": {
+      "nullable": null,
       "types": [
         "{}"
-      ]
-    },
-    "ignore": true
+      ],
+      "spread": false,
+      "description": null
+    }
   },
   {
-    "__docId__": 85,
+    "__docId__": 96,
     "kind": "variable",
     "name": "calderaFormsReduxStore",
     "memberof": "src/state/index.js",
@@ -1455,20 +1748,22 @@
     "export": true,
     "importPath": "@caldera-labs/state/src/state/index.js",
     "importStyle": "{calderaFormsReduxStore}",
-    "description": null,
-    "lineNumber": 52,
-    "undocument": true,
+    "description": "Redux store with all reducers combined",
+    "lineNumber": 78,
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Store<any>"
+      ],
+      "spread": false,
+      "description": null
     }
   },
   {
-    "__docId__": 86,
+    "__docId__": 97,
     "kind": "file",
     "name": "src/state/module.js",
-    "content": "/*eslint no-undef: \"error\"*/\n/*eslint-env node*/\n\n/** Store**/\n//Actions\nimport {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n} from './actions';\n\nimport {\n\tsetFormPrivacyForm,\n\tsetEditForm,\n\tunsetEditForm\n} from './actions.privacy';\n\n//Selectors\nimport {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n} from './selectors';\n\nimport {\n\tgetFormPrivacySettings\n} from './selectors.privacy';\n\n//Reducers\nimport {\n\tformsReducer,\n\tprivacySettingsReducer,\n\tinitialStateWithForms\n} from './reducers';\n\n/** State **/\nimport {\n\tCALDERA_FORMS_STORE_SLUG,\n\tcalderaFormsFormState,\n\tcalderaFormsReduxStore\n} from './index';\n\n/** Util **/\nimport  {\n\tformHasId,\n\tfindFormById,\n\tsetFormInState,\n\tgenerateId,\n\tmapArrayOfFormsToObject,\n\tgetFormId,\n\tfindFormIndexById,\n} from \"./util\";\n\n/**\n * All of the package in one export\n *\n * @type {{store: {actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}, reducers: {formsReducer: formsReducer}}, state: {CALDERA_FORMS_STORE_SLUG: string, calderaFormsFormState: {reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}, calderaFormsReduxStore}}}\n */\nmodule.exports  = {\n\tstore : {\n\t\tactions: {\n\t\t\tsetForms,\n\t\t\tsetForm,\n\t\t\taddFormPreview,\n\t\t\tsetFormPrivacyForm,\n\t\t\tsetEditForm,\n\t\t\tunsetEditForm\n\t\t},\n\t\tselectors: {\n\t\t\tgetForm,\n\t\t\tgetForms,\n\t\t\tgetFormPreview,\n\t\t\tgetFormPreviews,\n\t\t\tgetFormPrivacySettings\n\n\t\t},\n\t\treducers: {\n\t\t\tformsReducer,\n\t\t\tinitialStateWithForms,\n\t\t\tprivacySettingsReducer\n\t\t}\n\t},\n\tstate: {\n\t\tCALDERA_FORMS_STORE_SLUG,\n\t\tcalderaFormsFormState,\n\t\tcalderaFormsReduxStore\n\t},\n\tutil: {\n\t\tformHasId,\n\t\tfindFormById,\n\t\tsetFormInState,\n\t\tgenerateId,\n\t\tmapArrayOfFormsToObject,\n\t\tgetFormId,\n\t\tfindFormIndexById\n\t}\n};",
+    "content": "/*eslint no-undef: \"error\"*/\n/*eslint-env node*/\n\n/** Store**/\n//Actions\nimport {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n} from './actions';\n\nimport {\n\tsetFormPrivacyForm,\n\tsetEditForm,\n\tunsetEditForm\n} from './actions.privacy';\n\n//Selectors\nimport {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n} from './selectors';\n\nimport {\n\tgetFormPrivacySettings\n} from './selectors.privacy';\n\n//Reducers\nimport {\n\tformsReducer,\n\tprivacySettingsReducer,\n\tinitialStateWithForms,\n} from './reducers';\n\n/** State **/\nimport {\n\tCALDERA_FORMS_STORE_SLUG,\n\tcalderaFormsFormState,\n\tcalderaFormsReduxStore,\n\treducers\n} from './index';\n\n/** Util **/\nimport  {\n\tformHasId,\n\tfindFormById,\n\tsetFormInState,\n\tgenerateId,\n\tmapArrayOfFormsToObject,\n\tgetFormId,\n\tfindFormIndexById,\n} from \"./util\";\n\n/**\n * All of the package in one export\n *\n * @type {{store: {actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}, reducers: {formsReducer: formsReducer}}, state: {CALDERA_FORMS_STORE_SLUG: string, calderaFormsFormState: {reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}, calderaFormsReduxStore}}}\n */\nmodule.exports  = {\n\tstore : {\n\t\tactions: {\n\t\t\tsetForms,\n\t\t\tsetForm,\n\t\t\taddFormPreview,\n\t\t\tsetFormPrivacyForm,\n\t\t\tsetEditForm,\n\t\t\tunsetEditForm\n\t\t},\n\t\tselectors: {\n\t\t\tgetForm,\n\t\t\tgetForms,\n\t\t\tgetFormPreview,\n\t\t\tgetFormPreviews,\n\t\t\tgetFormPrivacySettings\n\n\t\t},\n\t\treducers: {\n\t\t\tformsReducer,\n\t\t\tinitialStateWithForms,\n\t\t\tprivacySettingsReducer\n\t\t}\n\t},\n\tstate: {\n\t\tCALDERA_FORMS_STORE_SLUG,\n\t\tcalderaFormsFormState,\n\t\tcalderaFormsReduxStore,\n\t\treducers\n\t},\n\tutil: {\n\t\tformHasId,\n\t\tfindFormById,\n\t\tsetFormInState,\n\t\tgenerateId,\n\t\tmapArrayOfFormsToObject,\n\t\tgetFormId,\n\t\tfindFormIndexById\n\t}\n};",
     "static": true,
     "longname": "/Users/josh/caldera-js/state/src/state/module.js",
     "access": "public",
@@ -1476,10 +1771,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 87,
+    "__docId__": 98,
     "kind": "file",
     "name": "src/state/reducers.js",
-    "content": "import {\n\tSET_FORMS,\n\tSET_FORM,\n\tADD_FORM_PREVIEW,\n\tNEW_FORM\n} from './actions';\n\nimport {SET_FORM_PRIVACY_SETTINGS} from './actions.privacy';\n\nimport {\n\tsetFormInState\n} from './util';\n\n\n/**\n * Default state for formsReducer\n *\n * @type {{forms: Array, formPreviews: {}}}\n */\nexport const DEFAULT_STATE = {\n\tforms: [],\n\tformPreviews: {},\n};\n\n/**\n * Create inertial state from an array of forms.\n *\n * @param {Object} forms\n * @returns {{} & {forms: *} & {forms: Array, formPreviews: {}}}\n */\nexport const initialStateWithForms = (forms) => {\n\tif( ! Array.isArray(forms) ){\n\t\tthrow 'You must use an array of forms!';\n\t}\n\treturn Object.assign({}, {forms:forms},DEFAULT_STATE );\n};\n\n\n/**\n * Reducer for form(s) state\n *\n * @param {Object}state\n * @param {Object} action\n * @returns {*}\n */\nexport const formsReducer = (state = DEFAULT_STATE, action) => {\n\tswitch (action.type) {\n\tcase SET_FORMS:\n\t\treturn {\n\t\t\t...state,\n\t\t\tforms:action.forms\n\t\t};\n\tcase ADD_FORM_PREVIEW:\n\t\tstate.formPreviews[action.formId] = action.preview;\n\t\treturn {\n\t\t\t...state,\n\t\t\tformPreviews: state.formPreviews\n\t\t};\n\tcase SET_FORM :\n\t\treturn( setFormInState(state,action.form));\n\tcase NEW_FORM:\n\t\tconst newForm = {\n\t\t\tID: '11',\n\t\t\tname: '...'\n\t\t};\n\t\tstate.forms.push(newForm);\n\t\treturn Object.assign({},state);\n\n\tdefault:\n\t\treturn state;\n\t}\n\n};\n\n/**\n * Reducer for form privacy settings state\n *\n * @param {Object}state\n * @param {Object} action\n * @returns {*}\n */\nexport const privacySettingsReducer = ( state = {\n\t...DEFAULT_STATE\n}, action ) => {\n\tswitch (action.type){\n\tcase SET_FORM_PRIVACY_SETTINGS :\n\t\treturn setFormInState(state, action.form);\n\tdefault:\n\t\treturn state;\n\t}\n};",
+    "content": "import {\n\tSET_FORMS,\n\tSET_FORM,\n\tADD_FORM_PREVIEW,\n\tNEW_FORM\n} from './actions';\n\nimport {SET_FORM_PRIVACY_SETTINGS} from './actions.privacy';\n\nimport {\n\tsetFormInState\n} from './util';\nimport {CLOSE_STATUS_INDICATOR, START_SPIN, STOP_SPIN, UPDATE_STATUS_INDICATOR} from \"./actions.status\";\n\n/**\n * Default state for formsReducer\n *\n * @type {{forms: Array, formPreviews: {}}}\n */\nexport const DEFAULT_STATE = {\n\tforms: [],\n\tformPreviews: {},\n};\n\n/**\n * Create inertial state from an array of forms.\n *\n * @param {Object} forms\n * @returns {{} & {forms: *} & {forms: Array, formPreviews: {}}}\n */\nexport const initialStateWithForms = (forms) => {\n\tif( ! Array.isArray(forms) ){\n\t\tthrow 'You must use an array of forms!';\n\t}\n\treturn Object.assign({}, {forms:forms},DEFAULT_STATE );\n};\n\n\n/**\n * Reducer for form(s) state\n *\n * @param {Object}state\n * @param {Object} action\n * @returns {*}\n */\nexport const formsReducer = (state = DEFAULT_STATE, action) => {\n\tswitch (action.type) {\n\tcase SET_FORMS:\n\t\treturn {\n\t\t\t...state,\n\t\t\tforms:action.forms\n\t\t};\n\tcase ADD_FORM_PREVIEW:\n\t\tstate.formPreviews[action.formId] = action.preview;\n\t\treturn {\n\t\t\t...state,\n\t\t\tformPreviews: state.formPreviews\n\t\t};\n\tcase SET_FORM :\n\t\treturn( setFormInState(state,action.form));\n\tcase NEW_FORM:\n\t\tconst newForm = {\n\t\t\tID: '11',\n\t\t\tname: '...'\n\t\t};\n\t\tstate.forms.push(newForm);\n\t\treturn Object.assign({},state);\n\n\tdefault:\n\t\treturn state;\n\t}\n\n};\n\n/**\n * Reducer for form privacy settings state\n *\n * @param {Object}state\n * @param {Object} action\n * @returns {*}\n */\nexport const privacySettingsReducer = ( state = {\n\t...DEFAULT_STATE\n}, action ) => {\n\tswitch (action.type){\n\tcase SET_FORM_PRIVACY_SETTINGS :\n\t\treturn setFormInState(state, action.form);\n\tdefault:\n\t\treturn state;\n\t}\n};\n\nexport const STATUS_DEFULT_STATE = {\n\tshow:false,\n\tmessage: '',\n\tsuccess: true,\n\tspin: false,\n};\n\n\n/**\n * Reducer for redux(-like) store managing spinner and success\n *\n * @param {Object} state\n * @param {Object} action\n * @returns {*}\n */\nexport const statusReducer = (state = STATUS_DEFULT_STATE, action ) => {\n\tswitch (action.type){\n\t\tcase START_SPIN :\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tspin: true\n\t\t\t};\n\t\tcase STOP_SPIN : {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tspin: false\n\t\t\t};\n\t\t}\n\t\tcase CLOSE_STATUS_INDICATOR: {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tshow: false\n\t\t\t};\n\t\t}\n\t\tcase UPDATE_STATUS_INDICATOR: {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tshow:action.show,\n\t\t\t\tmessage: action.message,\n\t\t\t\tsuccess: action.success,\n\t\t\t};\n\t\t}\n\t\tdefault:\n\t\t\treturn state;\n\t}\n\n};\n\n",
     "static": true,
     "longname": "/Users/josh/caldera-js/state/src/state/reducers.js",
     "access": "public",
@@ -1487,7 +1782,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 88,
+    "__docId__": 99,
     "kind": "variable",
     "name": "DEFAULT_STATE",
     "memberof": "src/state/reducers.js",
@@ -1509,7 +1804,7 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 100,
     "kind": "function",
     "name": "initialStateWithForms",
     "memberof": "src/state/reducers.js",
@@ -1551,7 +1846,7 @@
     }
   },
   {
-    "__docId__": 90,
+    "__docId__": 101,
     "kind": "function",
     "name": "formsReducer",
     "memberof": "src/state/reducers.js",
@@ -1603,7 +1898,7 @@
     }
   },
   {
-    "__docId__": 91,
+    "__docId__": 102,
     "kind": "function",
     "name": "privacySettingsReducer",
     "memberof": "src/state/reducers.js",
@@ -1655,7 +1950,79 @@
     }
   },
   {
-    "__docId__": 92,
+    "__docId__": 103,
+    "kind": "variable",
+    "name": "STATUS_DEFULT_STATE",
+    "memberof": "src/state/reducers.js",
+    "static": true,
+    "longname": "src/state/reducers.js~STATUS_DEFULT_STATE",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/reducers.js",
+    "importStyle": "{STATUS_DEFULT_STATE}",
+    "description": null,
+    "lineNumber": 93,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"show\": *, \"message\": *, \"success\": boolean, \"spin\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "function",
+    "name": "statusReducer",
+    "memberof": "src/state/reducers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/state/reducers.js~statusReducer",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/reducers.js",
+    "importStyle": "{statusReducer}",
+    "description": "Reducer for redux(-like) store managing spinner and success",
+    "lineNumber": 108,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{*}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "state",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "action",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 105,
     "kind": "file",
     "name": "src/state/selectors.js",
     "content": "import {\n\tfindFormById,\n\tmapArrayOfFormsToObject\n} from './util';\n\n/**\n * Selector to find forms in state\n *\n * @param {Object}state\n * @param {String}formId\n * @returns {boolean|*}\n */\nexport const getForm = ( state, formId )  => {\n\treturn findFormById(state.forms, formId);\n};\n\n/**\n * Selector to get all forms in state\n *\n * @param {Object} state\n * @returns {*}\n */\nexport const getForms = ( state ) => {\n\tlet forms = {};\n\tif( Array.isArray(state.forms)&&state.forms.length){\n\t\tforms = mapArrayOfFormsToObject(state.forms);\n\t}else{\n\t\tforms = state.forms;\n\t}\n\treturn forms;\n};\n\n\n/**\n * Get a form preview from state\n *\n * @param {Object}state\n * @param {String}formId\n * @returns {string}\n */\nexport const getFormPreview = ( state,formId ) => {\n\treturn state.formPreviews.hasOwnProperty( formId )\n\t\t?state.formPreviews[ formId ]\n\t\t: '';\n\n};\n\n/**\n * Get all form previews in state\n *\n * @param {Object}state\n * @returns {{}|DEFAULT_STATE.formPreviews|formPreviews|{CF2}}\n */\nexport const getFormPreviews = (state) => {\n\treturn state.formPreviews;\n};\n",
@@ -1666,7 +2033,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 93,
+    "__docId__": 106,
     "kind": "function",
     "name": "getForm",
     "memberof": "src/state/selectors.js",
@@ -1719,7 +2086,7 @@
     }
   },
   {
-    "__docId__": 94,
+    "__docId__": 107,
     "kind": "function",
     "name": "getForms",
     "memberof": "src/state/selectors.js",
@@ -1761,7 +2128,7 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 108,
     "kind": "function",
     "name": "getFormPreview",
     "memberof": "src/state/selectors.js",
@@ -1813,7 +2180,7 @@
     }
   },
   {
-    "__docId__": 96,
+    "__docId__": 109,
     "kind": "function",
     "name": "getFormPreviews",
     "memberof": "src/state/selectors.js",
@@ -1855,7 +2222,7 @@
     }
   },
   {
-    "__docId__": 97,
+    "__docId__": 110,
     "kind": "file",
     "name": "src/state/selectors.privacy.js",
     "content": "import {findFormById} from './util';\n\n/**\n * Get all of a form's privacy settings.\n\n * @param {String} formId\n * @param {Object} state\n * @returns {*}\n */\nexport const getFormPrivacySettings = (formId,state) =>{\n\tconst settings = findFormById(state.forms, formId);\n\treturn 'object' === typeof settings ? settings : false;\n};\n\n",
@@ -1866,7 +2233,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 98,
+    "__docId__": 111,
     "kind": "function",
     "name": "getFormPrivacySettings",
     "memberof": "src/state/selectors.privacy.js",
@@ -1918,7 +2285,7 @@
     }
   },
   {
-    "__docId__": 99,
+    "__docId__": 112,
     "kind": "file",
     "name": "src/state/util.js",
     "content": "/**\n * Check if a form has the provided ID\n *\n * @param {Object} form Form config\n * @param {String} formId\n * @return {boolean}\n */\nexport const formHasId = ( form, formId ) => {\n\tif( 'object' !== typeof  form ){\n\t\treturn false;\n\t}\n\tif( form.hasOwnProperty('ID') ){\n\t\treturn formId === form.ID;\n\t}\n\tif( form.hasOwnProperty('formId') ){\n\t\treturn formId === form.formId;\n\t}\n\treturn false;\n};\n\n/**\n * Get form ID\n *\n * @param {Object} form\n * @returns {String|bool}\n */\nexport const getFormId = (form) => {\n\tif( form.hasOwnProperty('ID') ){\n\t\treturn form.ID;\n\t}\n\tif( form.hasOwnProperty('formId') ){\n\t\treturn form.formId;\n\t}\n\treturn false;\n};\n\n/**\n * Makes sure forms are an array keyed by ID\n *\n * @param {Object|Array}forms\n * @returns {Object}\n */\nexport const mapArrayOfFormsToObject = (forms ) => {\n\n\tif (Array.isArray(forms)) {\n\t\tlet preparedForms = {};\n\t\tforms.map((form) => {\n\t\t\tif (false !== getFormId(form)) {\n\t\t\t\tpreparedForms[getFormId(form)] = form;\n\t\t\t}\n\t\t\treturn true;\n\t\t});\n\n\t\treturn preparedForms;\n\t}else if( 'object' === typeof forms ){\n\t\treturn forms;\n\t}else{\n\t\treturn {};\n\t}\n\n};\n\n/**\n * Find form by form ID ID in an array of forms\n *\n * @param {Array} forms\n * @param {String} formId\n */\nexport const findFormById = (forms, formId,) => {\n\tif(!Array.isArray(forms) || ! forms.length ){\n\t\treturn false;\n\t}\n\treturn forms.find(form => {\n\t\treturn formHasId(form,formId);\n\t});\n};\n\n/**\n * Find array index  in an array of forms by form ID\n *\n * @param {Array} forms\n * @param {String} formId\n */\nexport const findFormIndexById = (forms, formId) => {\n\tif(!Array.isArray(forms) || ! forms.length ){\n\t\treturn false;\n\t}\n\treturn forms.findIndex(form => {\n\t\treturn formHasId(form,formId);\n\t});\n};\n\n/**\n * Generate ID for things\n *\n * @param {String} generateFor\n * @returns {string}\n */\nexport const generateId = (generateFor) =>{\n\tconst id =  Math.round( Math.random() * 10000000 );\n\tlet prefix = 'cf_';\n\tswitch (generateFor) {\n\tcase 'row':\n\t\tprefix = 'row_';\n\t\tbreak;\n\tcase 'column':\n\t\tprefix = 'col_';\n\t\tbreak;\n\tdefault:\n\t\tprefix = 'cf_';\n\t\tbreak;\n\n\t}\n\n\treturn `${prefix}${id}`;\n};\n\nexport const setFormInState = (state,form) => {\n\tif( ! Array.isArray( state.forms) || ! state.forms.length) {\n\t\treturn {\n\t\t\t...state,\n\t\t\tforms: [form]\n\t\t};\n\t}else{\n\t\tconst index = findFormIndexById(state.forms, form.ID);\n\t\tif (-1 <= index) {\n\t\t\tstate.forms.splice(index, 1, form);\n\t\t} else {\n\t\t\tstate.forms.push(form);\n\t\t}\n\n\t}\n\treturn {\n\t\t...state,\n\t\tforms:state.forms\n\t};\n};",
@@ -1929,7 +2296,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 100,
+    "__docId__": 113,
     "kind": "function",
     "name": "formHasId",
     "memberof": "src/state/util.js",
@@ -1975,7 +2342,7 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 114,
     "kind": "function",
     "name": "getFormId",
     "memberof": "src/state/util.js",
@@ -2018,7 +2385,7 @@
     }
   },
   {
-    "__docId__": 102,
+    "__docId__": 115,
     "kind": "function",
     "name": "mapArrayOfFormsToObject",
     "memberof": "src/state/util.js",
@@ -2060,7 +2427,7 @@
     }
   },
   {
-    "__docId__": 103,
+    "__docId__": 116,
     "kind": "function",
     "name": "findFormById",
     "memberof": "src/state/util.js",
@@ -2103,7 +2470,7 @@
     }
   },
   {
-    "__docId__": 104,
+    "__docId__": 117,
     "kind": "function",
     "name": "findFormIndexById",
     "memberof": "src/state/util.js",
@@ -2146,7 +2513,7 @@
     }
   },
   {
-    "__docId__": 105,
+    "__docId__": 118,
     "kind": "function",
     "name": "generateId",
     "memberof": "src/state/util.js",
@@ -2188,7 +2555,7 @@
     }
   },
   {
-    "__docId__": 106,
+    "__docId__": 119,
     "kind": "function",
     "name": "setFormInState",
     "memberof": "src/state/util.js",
@@ -2225,7 +2592,7 @@
   },
   {
     "kind": "index",
-    "content": "Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/caldera-forms).\n\n🌋 👀[Documentation](https://calderalabs.org/caldera-state/)\n## Installation\n### Add to a Project\nRequires npm\n\n`npm i -D caldera-state`\n\n## Usage\n### Import With webpack\n```js\n    import * as cfFormsState from '@caldera-labs/state';\n    const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;\n```\n\n### Reference Implementations\nThis module is used was added to Caldera Forms, first for block UI and privacy settings screen. [Pull request](https://github.com/CalderaWP/Caldera-Forms/pull/2611)\n\n### Checkout For Development\nRequires git and npm\n\n* Clone from Github\n    - `git clone git@github.com:calderawp/caldera-state.git`\n* Install\n    - `cd caldera-state && npm install`\n* See \"Available Scripts\" below for more information on development\n\n## What Is This?\nThis package provides Redux(-like) state management for Caldera Forms configurations and other things that need their state managed in a React app, such as Gutenberg.\n\nAlso, an example app and test coverage for all of that.\n\n## Why Is This?\n* https://github.com/CalderaWP/Caldera-Forms/issues/2564\n* Once source of single source of state\n    - We need to state management in CF core, pro, and add-ons.\n* Isolated testing.\n    - This package had 28 tests at initial commit.\n    - Test basic functionality with mocks here.\n    - Test that it actually works with CF REST API in CF.\n\n\n## Usage\n### Import Into A webpack Managed Project\n\n`import * as cfStateWebpack from '@caldera-labs/state'`\n\nThis import exposes three keys: store,state, and util.\n### [`store` - Pure functions for storing state](http://calderalabs.org/caldera-state/identifiers.html#store)\n* [Actions]()\n* [Selectors]()\n* [Reducers]()\n\n### [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)\n```js\nimport * as cfFormsState from '@caldera-labs/state';\nexport const STORE = {\n    reducer( state = DEFAULT_STATE, action ) {\n        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);\n    },\n    actions: cfFormsState.store.actions,\n    selectors: cfFormsState.store.selectors,\n};\n\n```\n\n\n### [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)\n\n#### Find the form with a specific ID in an array of forms.\n`cfFormsState.util.findFormById(Array,'cf123456');`\n\n#### Check if a  given form config object has an ID\n`cfFormsState.util.formHasId(Object,'cf123456');`\n\n## Current Status\n* ✔️ State management for forms.\n* ✔️ State management for settings.\n* ✖️ Migrate CF Pro state from Vuex to Redux.\n* ✔️ Integration with wp.data. \n* ✖️ Entries\n\n## Available Scripts\n\nIn the project directory, you can run:\n\n### `npm start`\n\nRuns the app in the development mode.<br>\nOpen [http://localhost:3000](http://localhost:3000) to view it in the browser.\n\nThe page will reload if you make edits.<br>\nYou will also see any lint errors in the console.\n\nThis shows the example app that uses this to show and update a list of forms.\n\n### `npm test`\n\nLaunches the test runner in the interactive watch mode.<br>\n\n### `npm run build`\n\nBuilds the app for production to the `build` folder.<br>\nIt correctly bundles React in production mode and optimizes the build for the best performance.\n\nThe build is minified and the filenames include the hashes.<br>\n\n\n### Release To npm\nMust be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)\n\n* Patch release:\n    - `yarn release`\n\n* Minor release:\n    - `yarn release:minor`\n\n* Major release:\n    - `yarn release:major`\n",
+    "content": "Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/caldera-forms).\n\n\n[![Build Status](https://travis-ci.org/CalderaWP/caldera-state.svg?branch=master)](https://travis-ci.org/CalderaWP/caldera-state)\n[![Documentation Status](./docs/badge.svg)](https://calderalabs.org/caldera-state/source.html)\n[![Coverage Status](https://coveralls.io/repos/github/CalderaWP/caldera-state/badge.svg?branch=master)](https://coveralls.io/github/CalderaWP/caldera-state?branch=master)\n\n\n🌋 👀[Documentation](https://calderalabs.org/caldera-state/)\n## Installation\n### Add to a Project\nRequires npm\n\n`npm i -D caldera-state`\n\n## Usage\n### Import With webpack\n```js\n    import {state} from '@caldera-labs/state';\n    const STORE_SLUG = state.CALDERA_FORMS_STORE_SLUG;\n```\n\n### Reference Implementations\nThis module is used was added to Caldera Forms, first for block UI and privacy settings screen. [Pull request](https://github.com/CalderaWP/Caldera-Forms/pull/2611)\n\n### Checkout For Development\nRequires git and npm\n\n* Clone from Github\n    - `git clone git@github.com:calderawp/caldera-state.git`\n* Install\n    - `cd caldera-state && npm install`\n* See \"Available Scripts\" below for more information on development\n\n## What Is This?\nThis package provides Redux(-like) state management for Caldera Forms configurations and other things that need their state managed in a React app, such as Gutenberg.\n\nAlso, an example app and test coverage for all of that.\n\n## Why Is This?\n* https://github.com/CalderaWP/Caldera-Forms/issues/2564\n* Once source of single source of state\n    - We need to state management in CF core, pro, and add-ons.\n* Isolated testing.\n    - This package had 28 tests at initial commit.\n    - Test basic functionality with mocks here.\n    - Test that it actually works with CF REST API in CF.\n\n\n## Usage\n### Import Into A webpack Managed Project\n\n`import * as cfStateWebpack from '@caldera-labs/state'`\n\nThis import exposes three keys: store,state, and util.\n### [`store` - Pure functions for storing state](http://calderalabs.org/caldera-state/identifiers.html#store)\n* [Actions]()\n* [Selectors]()\n* [Reducers]()\n\n### [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)\n```js\nimport * as cfFormsState from '@caldera-labs/state';\nexport const STORE = {\n    reducer( state = DEFAULT_STATE, action ) {\n        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);\n    },\n    actions: cfFormsState.store.actions,\n    selectors: cfFormsState.store.selectors,\n};\n\n```\n\n\n### [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)\n\n#### Find the form with a specific ID in an array of forms.\n`cfFormsState.util.findFormById(Array,'cf123456');`\n\n#### Check if a  given form config object has an ID\n`cfFormsState.util.formHasId(Object,'cf123456');`\n\n## Current Status\n* ✔️ State management for forms.\n* ✔️ State management for settings.\n* ✖️ Migrate CF Pro state from Vuex to Redux.\n* ✔️ Integration with wp.data. \n* ✖️ Entries\n\n## Available Scripts\n\nIn the project directory, you can run:\n\n### `npm start`\n\nRuns the app in the development mode.<br>\nOpen [http://localhost:3000](http://localhost:3000) to view it in the browser.\n\nThe page will reload if you make edits.<br>\nYou will also see any lint errors in the console.\n\nThis shows the example app that uses this to show and update a list of forms.\n\n### `npm test`\n\nLaunches the test runner in the interactive watch mode.<br>\n\n### `npm run build`\n\nBuilds the app for production to the `build` folder.<br>\nIt correctly bundles React in production mode and optimizes the build for the best performance.\n\nThe build is minified and the filenames include the hashes.<br>\n\n\n### Release To npm\nMust be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)\n\n* Patch release:\n    - `yarn release`\n\n* Minor release:\n    - `yarn release:minor`\n\n* Major release:\n    - `yarn release:major`\n",
     "longname": "/Users/josh/caldera-js/state/README.md",
     "name": "./README.md",
     "static": true,
@@ -2233,7 +2600,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@caldera-labs/state\",\n  \"version\": \"0.7.0\",\n  \"repository\": \"https://github.com/CalderaWP/caldera-state/\",\n  \"main\": \"lib/module.js\",\n  \"scripts\": {\n    \"start\": \"react-wp-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test --env=jsdom\",\n    \"test:once\": \"CI=true react-scripts test --env=jsdom\",\n    \"test:coverage\": \"npm test -- --coverage\",\n    \"coveralls\": \"cat ./coverage/lcov.info | node node_modules/.bin/coveralls\",\n    \"eject\": \"react-scripts eject\",\n    \"compile\": \"npm run compile:babel\",\n    \"compile:babel\": \"./node_modules/.bin/babel src/state --out-dir lib\",\n    \"lint\": \"eslint src/state/**,src/tests/**\",\n    \"lint:watch\": \"esw src/state/**,src/tests/** --fix --watch\",\n    \"lint:fix\": \"eslint src/state/**,src/tests/** --fix \",\n    \"prepublish\": \"npm run compile && npm run document\",\n    \"release\": \"npm run release:patch\",\n    \"release:minor\": \"npm version minor -m \\\"version %s\\\" && npm publish\",\n    \"release:patch\": \"npm version patch -m \\\"version %s\\\" && npm publish\",\n    \"document\": \"./node_modules/.bin/esdoc\"\n  },\n  \"devDependencies\": {\n    \"@wordpress/data\": \"^1.0.0-alpha.1\",\n    \"@wordpress/element\": \"^1.0.0-alpha.1\",\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-plugin-transform-es2015-modules-commonjs\": \"^6.26.2\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"babel-preset-stage-0\": \"^6.24.1\",\n    \"babel-preset-stage-3\": \"^6.24.1\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-plugin-jest\": \"^21.17.0\",\n    \"react\": \"^16.4.0\",\n    \"react-dom\": \"^16.4.0\",\n    \"react-redux\": \"^5.0.7\",\n    \"react-test-renderer\": \"^16.4.0\",\n    \"react-wp-scripts\": \"0.2.0\"\n  },\n  \"files\": [\n    \"lib\"\n  ]\n}\n",
+    "content": "{\n  \"name\": \"@caldera-labs/state\",\n  \"version\": \"0.7.0\",\n  \"repository\": \"https://github.com/CalderaWP/caldera-state/\",\n  \"main\": \"lib/module.js\",\n  \"scripts\": {\n    \"start\": \"react-wp-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test --env=jsdom\",\n    \"test:once\": \"CI=true react-scripts test --env=jsdom\",\n    \"test:coverage\": \"npm test -- --coverage\",\n    \"coveralls\": \"cat ./coverage/lcov.info | node node_modules/.bin/coveralls\",\n    \"eject\": \"react-scripts eject\",\n    \"compile\": \"npm run compile:babel\",\n    \"compile:babel\": \"./node_modules/.bin/babel src/state --out-dir lib\",\n    \"lint\": \"eslint src/state/**,src/tests/**\",\n    \"lint:watch\": \"esw src/state/**,src/tests/** --fix --watch\",\n    \"lint:fix\": \"eslint src/state/**,src/tests/** --fix \",\n    \"prepublish\": \"npm run compile && npm run document\",\n    \"release\": \"npm run release:patch\",\n    \"release:minor\": \"npm version minor -m \\\"version %s\\\" && npm publish\",\n    \"release:patch\": \"npm version patch -m \\\"version %s\\\" && npm publish\",\n    \"document\": \"./node_modules/.bin/esdoc\"\n  },\n  \"devDependencies\": {\n    \"@wordpress/data\": \"^1.0.0-alpha.1\",\n    \"@wordpress/element\": \"^1.0.0-alpha.1\",\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-plugin-transform-es2015-modules-commonjs\": \"^6.26.2\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"babel-preset-stage-0\": \"^6.24.1\",\n    \"babel-preset-stage-3\": \"^6.24.1\",\n    \"coveralls\": \"^3.0.2\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-plugin-jest\": \"^21.17.0\",\n    \"react\": \"^16.4.0\",\n    \"react-dom\": \"^16.4.0\",\n    \"react-redux\": \"^5.0.7\",\n    \"react-test-renderer\": \"^16.4.0\",\n    \"react-wp-scripts\": \"0.2.0\"\n  },\n  \"files\": [\n    \"lib\"\n  ]\n}\n",
     "longname": "/Users/josh/caldera-js/state/package.json",
     "name": "package.json",
     "static": true,
@@ -2252,7 +2619,7 @@
     "kind": "manual",
     "longname": "/Users/josh/caldera-js/state/manual/overview.md",
     "name": "./manual/overview.md",
-    "content": "# Usage Overview Overview\n\n## Import Into A webpack Managed Project\n\n`import * as cfStateWebpack from '@caldera-labs/state'`\n\nThis import exposes three keys: store,state, and util.\n## [`store` - Pure functions for storing state](http://calderalabs.org/caldera-state/identifiers.html#store)\n* [Actions]()\n* [Selectors]()\n* [Reducers]()\n\n## [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)\n```js\nimport * as cfFormsState from '@caldera-labs/state';\nexport const STORE = {\n    reducer( state = DEFAULT_STATE, action ) {\n        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);\n    },\n    actions: cfFormsState.store.actions,\n    selectors: cfFormsState.store.selectors,\n};\n\n```\n\n\n## [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)\n\n### Find the form with a specific ID in an array of forms.\n`cfFormsState.util.findFormById(Array,'cf123456');`\n\n### Check if a  given form config object has an ID\n`cfFormsState.util.fo rmHasId(Object,'cf123456');`",
+    "content": "# Usage Overview Overview\n\n## Import Into A webpack Managed Project\n\n`import * as cfStateWebpack from '@caldera-labs/state'`\n\nThis import exposes three keys: store,state, and util.\n## [`store` - Pure functions for storing state](http://calderalabs.org/caldera-state/identifiers.html#store)\n* [Actions]()\n* [Selectors]()\n* [Reducers]()\n\n## Using In React + Redux App\n\n### App.js injecting state into the app.\n```js\nimport React from 'react';\nimport { connect } from 'react-redux';\nimport {state,store} from '@caldera-labs/state';\nconst {CALDERA_FORMS_STORE_SLUG} = state;\nconst  {getForms} = store.selectors;\nconst {\n\tsetForms,\n\tsetForm,\n\tnewForm\n} = store.actions;\n\nconst App = (props) => {\n\treturn (\n\t\t<div>\n            <select\n                onChange={(newValue) => {\n                    props.setForm(newValue);\n                }}\n            >\n                {Object.values(props.forms).map(form => {\n                    return (\n                        <option \n                            value=\"form.ID\"\n                        >\n                        {form.label}\n                    </option>\n                    )\n                })}\n            </select>\t\n            <button\n                onClick={props.addForm}\n            >\n                Add Form\n            </button>\n\n\t\t</div>\n\t);\n\n};\n\nconst mapStateToProps = state => {\n\tstate = state[CALDERA_FORMS_STORE_SLUG];\n\tlet appState = {\n\t\tforms: getForms(state)\n\n\t};\n\treturn appState;\n};\n\nconst mapDispatchToProps = (dispatch) => {\n\treturn {\n\t\tsetForms: (forms) => {\n\t\t\tdispatch(setForms(forms));\n\t\t},\n\t\tsetForm:(form) => {\n\t\t\tdispatch(setForm(form));\n\t\t},\n\t\taddForm(){\n\t\t\tdispatch(newForm());\n\t\t}\n\t};\n};\n\nexport default connect(\n\tmapStateToProps,\n\tmapDispatchToProps\n)(App);\n```\n\n### Index.js Wrapping `<App>` In State\n`state.calderaFormsReduxStore` exports a Redux-store. This object contains the return value of Redux's [`createStore` function](https://redux.js.org/api-reference/createstore) \n```js\nimport React from 'react';\nimport ReactDOM from 'react-dom';\nimport './index.css';\nimport App from './App';\nimport registerServiceWorker from './registerServiceWorker';\nimport { Provider } from 'react-redux';\nimport {state} from '@caldera-labs/state';\nconst {calderaFormsReduxStore} = state;\n\nReactDOM.render(\n\t<Provider store={calderaFormsReduxStore}>\n\t\t<App />\n\t</Provider>,\n\tdocument.getElementById('root')\n);\nregisterServiceWorker();\n```\n\n### Create Redux Store From Reducers\nThe object `state.reducers` contains an object of reducers, indexed by their standard identifiers. It is designed to be used with Redux's [`combineReducers`](https://redux.js.org/api-reference/combinereducers) and [`createStore`](https://redux.js.org/api-reference/createstore) functions.\n\nWhile `state.calderaFormsReduxStore` does this for you automatically, you might want to add other reducers first. For example:\n\n```js\nimport {state}  from '@caldera-labs/state';\nimport {createStore,combineReducers} from 'redux';\n\n//Add one new reducer to set\nconst myReducers = {\n\t...reducers,\n\troy: (state = { mike:true}, action ) => {\n\t\tswitch (action.type) {\n\t\t\tdefault:\n\t\t\t\treturn state;\n\t\t}\n\t}\n};\n\n//Export store with normal and custom reducers\nexport const store = createStore(\n\tcombineReducers(myReducers),\n\twindow.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()\n);\n```\n\n## [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)\n```js\nimport * as cfFormsState from '@caldera-labs/state';\nexport const STORE = {\n    reducer( state = DEFAULT_STATE, action ) {\n        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);\n    },\n    actions: cfFormsState.store.actions,\n    selectors: cfFormsState.store.selectors,\n};\n\n```\n\n\n## [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)\n\n### Find the form with a specific ID in an array of forms.\n`cfFormsState.util.findFormById(Array,'cf123456');`\n\n### Check if a  given form config object has an ID\n`cfFormsState.util.fo rmHasId(Object,'cf123456');`",
     "static": true,
     "access": "public"
   },
@@ -2260,7 +2627,7 @@
     "kind": "manual",
     "longname": "/Users/josh/caldera-js/state/README.md",
     "name": "./README.md",
-    "content": "Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/caldera-forms).\n\n🌋 👀[Documentation](https://calderalabs.org/caldera-state/)\n## Installation\n### Add to a Project\nRequires npm\n\n`npm i -D caldera-state`\n\n## Usage\n### Import With webpack\n```js\n    import * as cfFormsState from '@caldera-labs/state';\n    const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;\n```\n\n### Reference Implementations\nThis module is used was added to Caldera Forms, first for block UI and privacy settings screen. [Pull request](https://github.com/CalderaWP/Caldera-Forms/pull/2611)\n\n### Checkout For Development\nRequires git and npm\n\n* Clone from Github\n    - `git clone git@github.com:calderawp/caldera-state.git`\n* Install\n    - `cd caldera-state && npm install`\n* See \"Available Scripts\" below for more information on development\n\n## What Is This?\nThis package provides Redux(-like) state management for Caldera Forms configurations and other things that need their state managed in a React app, such as Gutenberg.\n\nAlso, an example app and test coverage for all of that.\n\n## Why Is This?\n* https://github.com/CalderaWP/Caldera-Forms/issues/2564\n* Once source of single source of state\n    - We need to state management in CF core, pro, and add-ons.\n* Isolated testing.\n    - This package had 28 tests at initial commit.\n    - Test basic functionality with mocks here.\n    - Test that it actually works with CF REST API in CF.\n\n\n## Usage\n### Import Into A webpack Managed Project\n\n`import * as cfStateWebpack from '@caldera-labs/state'`\n\nThis import exposes three keys: store,state, and util.\n### [`store` - Pure functions for storing state](http://calderalabs.org/caldera-state/identifiers.html#store)\n* [Actions]()\n* [Selectors]()\n* [Reducers]()\n\n### [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)\n```js\nimport * as cfFormsState from '@caldera-labs/state';\nexport const STORE = {\n    reducer( state = DEFAULT_STATE, action ) {\n        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);\n    },\n    actions: cfFormsState.store.actions,\n    selectors: cfFormsState.store.selectors,\n};\n\n```\n\n\n### [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)\n\n#### Find the form with a specific ID in an array of forms.\n`cfFormsState.util.findFormById(Array,'cf123456');`\n\n#### Check if a  given form config object has an ID\n`cfFormsState.util.formHasId(Object,'cf123456');`\n\n## Current Status\n* ✔️ State management for forms.\n* ✔️ State management for settings.\n* ✖️ Migrate CF Pro state from Vuex to Redux.\n* ✔️ Integration with wp.data. \n* ✖️ Entries\n\n## Available Scripts\n\nIn the project directory, you can run:\n\n### `npm start`\n\nRuns the app in the development mode.<br>\nOpen [http://localhost:3000](http://localhost:3000) to view it in the browser.\n\nThe page will reload if you make edits.<br>\nYou will also see any lint errors in the console.\n\nThis shows the example app that uses this to show and update a list of forms.\n\n### `npm test`\n\nLaunches the test runner in the interactive watch mode.<br>\n\n### `npm run build`\n\nBuilds the app for production to the `build` folder.<br>\nIt correctly bundles React in production mode and optimizes the build for the best performance.\n\nThe build is minified and the filenames include the hashes.<br>\n\n\n### Release To npm\nMust be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)\n\n* Patch release:\n    - `yarn release`\n\n* Minor release:\n    - `yarn release:minor`\n\n* Major release:\n    - `yarn release:major`\n",
+    "content": "Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/caldera-forms).\n\n\n[![Build Status](https://travis-ci.org/CalderaWP/caldera-state.svg?branch=master)](https://travis-ci.org/CalderaWP/caldera-state)\n[![Documentation Status](./docs/badge.svg)](https://calderalabs.org/caldera-state/source.html)\n[![Coverage Status](https://coveralls.io/repos/github/CalderaWP/caldera-state/badge.svg?branch=master)](https://coveralls.io/github/CalderaWP/caldera-state?branch=master)\n\n\n🌋 👀[Documentation](https://calderalabs.org/caldera-state/)\n## Installation\n### Add to a Project\nRequires npm\n\n`npm i -D caldera-state`\n\n## Usage\n### Import With webpack\n```js\n    import {state} from '@caldera-labs/state';\n    const STORE_SLUG = state.CALDERA_FORMS_STORE_SLUG;\n```\n\n### Reference Implementations\nThis module is used was added to Caldera Forms, first for block UI and privacy settings screen. [Pull request](https://github.com/CalderaWP/Caldera-Forms/pull/2611)\n\n### Checkout For Development\nRequires git and npm\n\n* Clone from Github\n    - `git clone git@github.com:calderawp/caldera-state.git`\n* Install\n    - `cd caldera-state && npm install`\n* See \"Available Scripts\" below for more information on development\n\n## What Is This?\nThis package provides Redux(-like) state management for Caldera Forms configurations and other things that need their state managed in a React app, such as Gutenberg.\n\nAlso, an example app and test coverage for all of that.\n\n## Why Is This?\n* https://github.com/CalderaWP/Caldera-Forms/issues/2564\n* Once source of single source of state\n    - We need to state management in CF core, pro, and add-ons.\n* Isolated testing.\n    - This package had 28 tests at initial commit.\n    - Test basic functionality with mocks here.\n    - Test that it actually works with CF REST API in CF.\n\n\n## Usage\n### Import Into A webpack Managed Project\n\n`import * as cfStateWebpack from '@caldera-labs/state'`\n\nThis import exposes three keys: store,state, and util.\n### [`store` - Pure functions for storing state](http://calderalabs.org/caldera-state/identifiers.html#store)\n* [Actions]()\n* [Selectors]()\n* [Reducers]()\n\n### [`state` - Interactions with Redux or wp.data](http://calderalabs.org/caldera-state/identifiers.html#state)\n```js\nimport * as cfFormsState from '@caldera-labs/state';\nexport const STORE = {\n    reducer( state = DEFAULT_STATE, action ) {\n        return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);\n    },\n    actions: cfFormsState.store.actions,\n    selectors: cfFormsState.store.selectors,\n};\n\n```\n\n\n### [`util` - Utility functions](http://calderalabs.org/caldera-state/identifiers.html#util)\n\n#### Find the form with a specific ID in an array of forms.\n`cfFormsState.util.findFormById(Array,'cf123456');`\n\n#### Check if a  given form config object has an ID\n`cfFormsState.util.formHasId(Object,'cf123456');`\n\n## Current Status\n* ✔️ State management for forms.\n* ✔️ State management for settings.\n* ✖️ Migrate CF Pro state from Vuex to Redux.\n* ✔️ Integration with wp.data. \n* ✖️ Entries\n\n## Available Scripts\n\nIn the project directory, you can run:\n\n### `npm start`\n\nRuns the app in the development mode.<br>\nOpen [http://localhost:3000](http://localhost:3000) to view it in the browser.\n\nThe page will reload if you make edits.<br>\nYou will also see any lint errors in the console.\n\nThis shows the example app that uses this to show and update a list of forms.\n\n### `npm test`\n\nLaunches the test runner in the interactive watch mode.<br>\n\n### `npm run build`\n\nBuilds the app for production to the `build` folder.<br>\nIt correctly bundles React in production mode and optimizes the build for the best performance.\n\nThe build is minified and the filenames include the hashes.<br>\n\n\n### Release To npm\nMust be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)\n\n* Patch release:\n    - `yarn release`\n\n* Minor release:\n    - `yarn release:minor`\n\n* Major release:\n    - `yarn release:major`\n",
     "static": true,
     "access": "public"
   }

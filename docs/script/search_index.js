@@ -6,9 +6,27 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "@caldera-labs/state/src/state/index.js~caldera_forms_privacy_store_slug",
+    "variable/index.html#static-variable-CALDERA_FORMS_PRIVACY_STORE_SLUG",
+    "<span>CALDERA_FORMS_PRIVACY_STORE_SLUG</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/index.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/index.js~caldera_forms_status_store_slug",
+    "variable/index.html#static-variable-CALDERA_FORMS_STATUS_STORE_SLUG",
+    "<span>CALDERA_FORMS_STATUS_STORE_SLUG</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/index.js</span>",
+    "variable"
+  ],
+  [
     "@caldera-labs/state/src/state/index.js~caldera_forms_store_slug",
     "variable/index.html#static-variable-CALDERA_FORMS_STORE_SLUG",
     "<span>CALDERA_FORMS_STORE_SLUG</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/index.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.status.js~close_status_indicator",
+    "variable/index.html#static-variable-CLOSE_STATUS_INDICATOR",
+    "<span>CLOSE_STATUS_INDICATOR</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
     "variable"
   ],
   [
@@ -60,9 +78,33 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "@caldera-labs/state/src/state/actions.status.js~start_spin",
+    "variable/index.html#static-variable-START_SPIN",
+    "<span>START_SPIN</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/reducers.js~status_defult_state",
+    "variable/index.html#static-variable-STATUS_DEFULT_STATE",
+    "<span>STATUS_DEFULT_STATE</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/reducers.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.status.js~stop_spin",
+    "variable/index.html#static-variable-STOP_SPIN",
+    "<span>STOP_SPIN</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
+    "variable"
+  ],
+  [
     "@caldera-labs/state/src/state/actions.privacy.js~unset_edit_form",
     "variable/index.html#static-variable-UNSET_EDIT_FORM",
     "<span>UNSET_EDIT_FORM</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.privacy.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.status.js~update_status_indicator",
+    "variable/index.html#static-variable-UPDATE_STATUS_INDICATOR",
+    "<span>UPDATE_STATUS_INDICATOR</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
     "variable"
   ],
   [
@@ -82,6 +124,12 @@ window.esdocSearchIndex = [
     "variable/index.html#static-variable-calderaFormsReduxStore",
     "<span>calderaFormsReduxStore</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/index.js</span>",
     "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.status.js~closestatus",
+    "function/index.html#static-function-closeStatus",
+    "<span>closeStatus</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
+    "function"
   ],
   [
     "@caldera-labs/state/src/state/util.js~findformbyid",
@@ -174,6 +222,12 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@caldera-labs/state/src/state/index.js~reducers",
+    "variable/index.html#static-variable-reducers",
+    "<span>reducers</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/index.js</span>",
+    "variable"
+  ],
+  [
     "@caldera-labs/state/src/registerserviceworker.js~register",
     "function/index.html#static-function-register",
     "<span>register</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/registerServiceWorker.js</span>",
@@ -210,6 +264,24 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@caldera-labs/state/src/state/actions.status.js~startspinner",
+    "function/index.html#static-function-startSpinner",
+    "<span>startSpinner</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/reducers.js~statusreducer",
+    "function/index.html#static-function-statusReducer",
+    "<span>statusReducer</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/reducers.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.status.js~stopspinner",
+    "function/index.html#static-function-stopSpinner",
+    "<span>stopSpinner</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
+    "function"
+  ],
+  [
     "@caldera-labs/state/src/registerserviceworker.js~unregister",
     "function/index.html#static-function-unregister",
     "<span>unregister</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/registerServiceWorker.js</span>",
@@ -219,6 +291,12 @@ window.esdocSearchIndex = [
     "@caldera-labs/state/src/state/actions.privacy.js~unseteditform",
     "function/index.html#static-function-unsetEditForm",
     "<span>unsetEditForm</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.privacy.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.status.js~updatestatus",
+    "function/index.html#static-function-updateStatus",
+    "<span>updateStatus</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
     "function"
   ],
   [
@@ -543,6 +621,12 @@ window.esdocSearchIndex = [
     "src/state/actions.privacy.js",
     "file/src/state/actions.privacy.js.html",
     "src/state/actions.privacy.js",
+    "file"
+  ],
+  [
+    "src/state/actions.status.js",
+    "file/src/state/actions.status.js.html",
+    "src/state/actions.status.js",
     "file"
   ],
   [

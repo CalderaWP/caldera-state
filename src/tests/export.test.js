@@ -9,6 +9,14 @@ describe( 'root export', () => {
 			expect( typeof  calderaState.state.CALDERA_FORMS_STORE_SLUG).toBe('string');
 		});
 
+		it( 'state exports CALDERA_FORMS_PRIVACY_STORE_SLUG', () => {
+			expect( typeof  calderaState.state.CALDERA_FORMS_PRIVACY_STORE_SLUG).toBe('string');
+		});
+
+		it( 'state exports CALDERA_FORMS_STATUS_STORE_SLUG', () => {
+			expect( typeof  calderaState.state.CALDERA_FORMS_STATUS_STORE_SLUG).toBe('string');
+		});
+
 		it( 'state exports calderaFormsFormState', () => {
 			expect( typeof  calderaState.state.calderaFormsFormState ).toBe('object');
 		});

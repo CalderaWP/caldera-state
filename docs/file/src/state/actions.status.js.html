@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">src/state/selectors.js | Caldera State</title>
+  <title data-ice="title">src/state/actions.status.js | Caldera State</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -83,64 +83,65 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/state/selectors.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {
-	findFormById,
-	mapArrayOfFormsToObject
-} from &apos;./util&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">src/state/actions.status.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export const START_SPIN = &apos;START_SPIN&apos;;
+export const STOP_SPIN = &apos;STOP_SPIN&apos;;
+export const CLOSE_STATUS_INDICATOR = &apos;CLOSE_STATUS_INDICATOR&apos;;
+export const UPDATE_STATUS_INDICATOR = &apos;UPDATE_STATUS_INDICATOR&apos;;
 
 /**
- * Selector to find forms in state
- *
- * @param {Object}state
- * @param {String}formId
- * @returns {boolean|*}
+ * Dispatch action to start spinner
+ * @returns {{type: string}}
  */
-export const getForm = ( state, formId )  =&gt; {
-	return findFormById(state.forms, formId);
-};
-
-/**
- * Selector to get all forms in state
- *
- * @param {Object} state
- * @returns {*}
- */
-export const getForms = ( state ) =&gt; {
-	let forms = {};
-	if( Array.isArray(state.forms)&amp;&amp;state.forms.length){
-		forms = mapArrayOfFormsToObject(state.forms);
-	}else{
-		forms = state.forms;
+export const startSpinner = () =&gt; {
+	return {
+		type: START_SPIN
 	}
-	return forms;
-};
-
-
-/**
- * Get a form preview from state
- *
- * @param {Object}state
- * @param {String}formId
- * @returns {string}
- */
-export const getFormPreview = ( state,formId ) =&gt; {
-	return state.formPreviews.hasOwnProperty( formId )
-		?state.formPreviews[ formId ]
-		: &apos;&apos;;
-
 };
 
 /**
- * Get all form previews in state
+ * Dispatch action to stop spinner
  *
- * @param {Object}state
- * @returns {{}|DEFAULT_STATE.formPreviews|formPreviews|{CF2}}
+ *
+ * @returns {{type: string}}
  */
-export const getFormPreviews = (state) =&gt; {
-	return state.formPreviews;
+export const stopSpinner = () =&gt; {
+	return {
+		type: STOP_SPIN
+	}
 };
-</code></pre>
+
+/**
+ * Dispatch action to close (hide) status indicator
+ *
+ * @returns {{type: string}}
+ */
+export const closeStatus = () =&gt; {
+	return {
+		type: CLOSE_STATUS_INDICATOR
+	}
+};
+
+/**
+ * Update the status indicator
+ * 
+ * @param {String} message Message to show in status indicator
+ * @param {Boolean} success Optional. If true, the default, background is green for success. If false, red for failure.
+ * @param {Boolean} show Optional. If true, the default, status indicator will show
+ * @returns {{type: string, message: *, show: boolean, success: boolean}}
+ */
+export const updateStatus = (message, success = true, show = true) =&gt; {
+	if( ! message ){
+		message = !success ? &apos;Error&apos; : &apos;Success&apos;;
+	}
+
+	return {
+		type: UPDATE_STATUS_INDICATOR,
+		message,
+		show,
+		success
+	}
+};</code></pre>
 
 </div>
 

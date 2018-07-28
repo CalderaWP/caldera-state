@@ -34,6 +34,10 @@
     <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Usage Overview Overview</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#import-into-a-webpack-managed-project" data-ice="link">Import Into A webpack Managed Project</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-store---code-store--code----pure-functions-for-storing-state--a-" data-ice="link">store - Pure functions for storing state</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#using-in-react---redux-app" data-ice="link">Using In React + Redux App</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#app-js-injecting-state-into-the-app-" data-ice="link">App.js injecting state into the app.</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#index-js-wrapping--code--lt-app-gt---code--in-state" data-ice="link">Index.js Wrapping &lt;App&gt; In State</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#create-redux-store-from-reducers" data-ice="link">Create Redux Store From Reducers</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-" data-ice="link">state - Interactions with Redux or wp.data</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-" data-ice="link">util - Utility functions</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#find-the-form-with-a-specific-id-in-an-array-of-forms-" data-ice="link">Find the form with a specific ID in an array of forms.</a></li>
@@ -88,7 +92,109 @@
 <li><a href="">Actions</a></li>
 <li><a href="">Selectors</a></li>
 <li><a href="">Reducers</a></li>
-</ul><h2><a href="http://calderalabs.org/caldera-state/identifiers.html#state"><code>state</code> - Interactions with Redux or wp.data</a></h2><pre><code class="lang-js"><code class="source-code prettyprint">import * as cfFormsState from &apos;@caldera-labs/state&apos;;
+</ul><h2>Using In React + Redux App</h2><h3>App.js injecting state into the app.</h3><pre><code class="lang-js"><code class="source-code prettyprint">import React from &apos;react&apos;;
+import { connect } from &apos;react-redux&apos;;
+import {state,store} from &apos;@caldera-labs/state&apos;;
+const {CALDERA_FORMS_STORE_SLUG} = state;
+const  {getForms} = store.selectors;
+const {
+    setForms,
+    setForm,
+    newForm
+} = store.actions;
+
+const App = (props) =&gt; {
+    return (
+        &lt;div&gt;
+            &lt;select
+                onChange={(newValue) =&gt; {
+                    props.setForm(newValue);
+                }}
+            &gt;
+                {Object.values(props.forms).map(form =&gt; {
+                    return (
+                        &lt;option 
+                            value=&quot;form.ID&quot;
+                        &gt;
+                        {form.label}
+                    &lt;/option&gt;
+                    )
+                })}
+            &lt;/select&gt;    
+            &lt;button
+                onClick={props.addForm}
+            &gt;
+                Add Form
+            &lt;/button&gt;
+
+        &lt;/div&gt;
+    );
+
+};
+
+const mapStateToProps = state =&gt; {
+    state = state[CALDERA_FORMS_STORE_SLUG];
+    let appState = {
+        forms: getForms(state)
+
+    };
+    return appState;
+};
+
+const mapDispatchToProps = (dispatch) =&gt; {
+    return {
+        setForms: (forms) =&gt; {
+            dispatch(setForms(forms));
+        },
+        setForm:(form) =&gt; {
+            dispatch(setForm(form));
+        },
+        addForm(){
+            dispatch(newForm());
+        }
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);</code>
+</code></pre><h3>Index.js Wrapping <code>&lt;App&gt;</code> In State</h3><p><code>state.calderaFormsReduxStore</code> exports a Redux-store. This object contains the return value of Redux&apos;s <a href="https://redux.js.org/api-reference/createstore"><code>createStore</code> function</a> </p><pre><code class="lang-js"><code class="source-code prettyprint">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import &apos;./index.css&apos;;
+import App from &apos;./App&apos;;
+import registerServiceWorker from &apos;./registerServiceWorker&apos;;
+import { Provider } from &apos;react-redux&apos;;
+import {state} from &apos;@caldera-labs/state&apos;;
+const {calderaFormsReduxStore} = state;
+
+ReactDOM.render(
+    &lt;Provider store={calderaFormsReduxStore}&gt;
+        &lt;App /&gt;
+    &lt;/Provider&gt;,
+    document.getElementById(&apos;root&apos;)
+);
+registerServiceWorker();</code>
+</code></pre><h3>Create Redux Store From Reducers</h3><p>The object <code>state.reducers</code> contains an object of reducers, indexed by their standard identifiers. It is designed to be used with Redux&apos;s <a href="https://redux.js.org/api-reference/combinereducers"><code>combineReducers</code></a> and <a href="https://redux.js.org/api-reference/createstore"><code>createStore</code></a> functions.</p><p>While <code>state.calderaFormsReduxStore</code> does this for you automatically, you might want to add other reducers first. For example:</p><pre><code class="lang-js"><code class="source-code prettyprint">import {state}  from &apos;@caldera-labs/state&apos;;
+import {createStore,combineReducers} from &apos;redux&apos;;
+
+//Add one new reducer to set
+const myReducers = {
+    ...reducers,
+    roy: (state = { mike:true}, action ) =&gt; {
+        switch (action.type) {
+            default:
+                return state;
+        }
+    }
+};
+
+//Export store with normal and custom reducers
+export const store = createStore(
+    combineReducers(myReducers),
+    window.__REDUX_DEVTOOLS_EXTENSION__ &amp;&amp; window.__REDUX_DEVTOOLS_EXTENSION__()
+);</code>
+</code></pre><h2><a href="http://calderalabs.org/caldera-state/identifiers.html#state"><code>state</code> - Interactions with Redux or wp.data</a></h2><pre><code class="lang-js"><code class="source-code prettyprint">import * as cfFormsState from &apos;@caldera-labs/state&apos;;
 export const STORE = {
     reducer( state = DEFAULT_STATE, action ) {
         return cfFormsState.store.reducers.formsReducer(DEFAULT_STATE,action);

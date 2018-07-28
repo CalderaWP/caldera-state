@@ -37,6 +37,8 @@ import {
 /** State **/
 import {
 	CALDERA_FORMS_STORE_SLUG,
+	CALDERA_FORMS_STATUS_STORE_SLUG,
+	CALDERA_FORMS_PRIVACY_STORE_SLUG,
 	calderaFormsFormState,
 	calderaFormsReduxStore,
 	reducers
@@ -84,6 +86,8 @@ module.exports  = {
 	},
 	state: {
 		CALDERA_FORMS_STORE_SLUG,
+		CALDERA_FORMS_STATUS_STORE_SLUG,
+		CALDERA_FORMS_PRIVACY_STORE_SLUG,
 		calderaFormsFormState,
 		calderaFormsReduxStore,
 		reducers

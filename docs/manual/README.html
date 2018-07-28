@@ -34,6 +34,10 @@
     <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Usage Overview Overview</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#import-into-a-webpack-managed-project" data-ice="link">Import Into A webpack Managed Project</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-store---code-store--code----pure-functions-for-storing-state--a-" data-ice="link">store - Pure functions for storing state</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#using-in-react---redux-app" data-ice="link">Using In React + Redux App</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#app-js-injecting-state-into-the-app-" data-ice="link">App.js injecting state into the app.</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#index-js-wrapping--code--lt-app-gt---code--in-state" data-ice="link">Index.js Wrapping &lt;App&gt; In State</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#create-redux-store-from-reducers" data-ice="link">Create Redux Store From Reducers</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-state---code-state--code----interactions-with-redux-or-wp-data--a-" data-ice="link">state - Interactions with Redux or wp.data</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#-a-href--http---calderalabs-org-caldera-state-identifiers-html-util---code-util--code----utility-functions--a-" data-ice="link">util - Utility functions</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#find-the-form-with-a-specific-id-in-an-array-of-forms-" data-ice="link">Find the form with a specific ID in an array of forms.</a></li>
@@ -70,11 +74,14 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><p>Redux(-like) state management for <a href="https://github.com/calderawp/caldera-forms">Caldera Forms</a>.</p>
+<p><a href="https://travis-ci.org/CalderaWP/caldera-state"><img src="https://travis-ci.org/CalderaWP/caldera-state.svg?branch=master" alt="Build Status"></a>
+<a href="https://calderalabs.org/caldera-state/source.html"><img src="./manual/./docs/badge.svg" alt="Documentation Status"></a>
+<a href="https://coveralls.io/github/CalderaWP/caldera-state?branch=master"><img src="https://coveralls.io/repos/github/CalderaWP/caldera-state/badge.svg?branch=master" alt="Coverage Status"></a></p>
 <p>&#x1F30B; &#x1F440;<a href="https://calderalabs.org/caldera-state/">Documentation</a></p>
 <h2 id="installation">Installation</h2><h3 id="add-to-a-project">Add to a Project</h3><p>Requires npm</p>
 <p><code>npm i -D caldera-state</code></p>
-<h2 id="usage">Usage</h2><h3 id="import-with-webpack">Import With webpack</h3><pre><code class="lang-js"><code class="source-code prettyprint">    import * as cfFormsState from &apos;@caldera-labs/state&apos;;
-    const STORE_SLUG = cfFormsState.state.CALDERA_FORMS_STORE_SLUG;</code>
+<h2 id="usage">Usage</h2><h3 id="import-with-webpack">Import With webpack</h3><pre><code class="lang-js"><code class="source-code prettyprint">    import {state} from &apos;@caldera-labs/state&apos;;
+    const STORE_SLUG = state.CALDERA_FORMS_STORE_SLUG;</code>
 </code></pre>
 <h3 id="reference-implementations">Reference Implementations</h3><p>This module is used was added to Caldera Forms, first for block UI and privacy settings screen. <a href="https://github.com/CalderaWP/Caldera-Forms/pull/2611">Pull request</a></p>
 <h3 id="checkout-for-development">Checkout For Development</h3><p>Requires git and npm</p>

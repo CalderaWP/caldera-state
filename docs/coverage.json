@@ -1,15 +1,15 @@
 {
-  "coverage": "50%",
-  "expectCount": 46,
-  "actualCount": 23,
+  "coverage": "56.89%",
+  "expectCount": 58,
+  "actualCount": 33,
   "files": {
     "src/App.js": {
       "expectCount": 3,
       "actualCount": 0,
       "undocumentLines": [
         16,
-        43,
-        52
+        42,
+        51
       ]
     },
     "src/Form.js": {
@@ -56,21 +56,30 @@
         3
       ]
     },
+    "src/state/actions.status.js": {
+      "expectCount": 8,
+      "actualCount": 4,
+      "undocumentLines": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
     "src/state/index.js": {
-      "expectCount": 6,
-      "actualCount": 1,
+      "expectCount": 8,
+      "actualCount": 6,
       "undocumentLines": [
         23,
-        29,
-        37,
-        49,
-        52
+        29
       ]
     },
     "src/state/reducers.js": {
-      "expectCount": 4,
-      "actualCount": 4,
-      "undocumentLines": []
+      "expectCount": 6,
+      "actualCount": 5,
+      "undocumentLines": [
+        93
+      ]
     },
     "src/state/selectors.js": {
       "expectCount": 4,
