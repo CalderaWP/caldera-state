@@ -6,7 +6,8 @@
 import {
 	setForms,
 	setForm,
-	addFormPreview
+	addFormPreview,
+	newForm
 } from './actions';
 
 import {
@@ -92,6 +93,7 @@ module.exports  = {
 			setForms,
 			setForm,
 			addFormPreview,
+			newForm,
 			setFormPrivacyForm,
 			setEditForm,
 			unsetEditForm,
