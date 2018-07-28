@@ -35,8 +35,16 @@ describe( 'settings selectors', () => {
 		expect(getStyleIncludes(mockState)).toEqual(mockState.styleIncludes);
 	});
 
+	it( 'selects styleIncludes defaults', () => {
+		expect(getStyleIncludes({})).toEqual({});
+	});
+
 	it( 'selects other settings', () => {
 		expect(getOtherSettings(mockState)).toEqual(mockState.other);
+	});
+
+	it( 'selects other settings defaults', () => {
+		expect(getOtherSettings({})).toEqual({});
 	});
 
 });

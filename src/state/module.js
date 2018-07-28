@@ -16,6 +16,14 @@ import {
 	unsetEditForm
 } from './actions.privacy';
 
+
+import {
+	startSpinner,
+	stopSpinner,
+	closeStatus,
+	updateStatus
+} from "./actions.status";
+
 import {
 	updateStyleIncludes,
 	updateOtherSettings
@@ -56,7 +64,8 @@ import {
 	privacySettingsReducer,
 	initialStateWithForms,
 	settingsReducer,
-	proLocalSettingsReducer
+	proLocalSettingsReducer,
+	statusReducer
 } from './reducers';
 
 /** State **/
@@ -100,7 +109,11 @@ module.exports  = {
 			updateStyleIncludes,
 			updateOtherSettings,
 			updateCfProFormSetting,
-			updateCfProSettings
+			updateCfProSettings,
+			startSpinner,
+			stopSpinner,
+			closeStatus,
+			updateStatus
 		},
 		selectors: {
 			getForm,
@@ -118,7 +131,8 @@ module.exports  = {
 			initialStateWithForms,
 			privacySettingsReducer,
 			settingsReducer,
-			proLocalSettingsReducer
+			proLocalSettingsReducer,
+			statusReducer
 		}
 	},
 	state: {

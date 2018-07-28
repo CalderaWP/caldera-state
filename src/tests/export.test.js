@@ -1,48 +1,68 @@
 import * as calderaState from '../state/module';
-describe( 'root export', () => {
+import {closeStatus, startSpinner, stopSpinner, updateStatus} from "../state/actions.status";
 
-	describe( 'exports actions', () => {
+describe('root export', () => {
+
+	describe('exports actions', () => {
 		it('exports object of actions', () => {
-			expect( typeof calderaState.store.actions ).toBe('object');
+			expect(typeof calderaState.store.actions).toBe('object');
 		});
-		it( 'exports newForm action', () => {
-			expect( typeof calderaState.store.actions.newForm ).toBe('function');
+		it('exports newForm action', () => {
+			expect(typeof calderaState.store.actions.newForm).toBe('function');
+		});
+		it('exports startSpinner action', () => {
+			expect(typeof calderaState.store.actions.startSpinner).toBe('function');
+		});
+		it('exports stopSpinner action', () => {
+			expect(typeof calderaState.store.actions.stopSpinner).toBe('function');
+		});
+		it('exports closeStatus action', () => {
+			expect(typeof calderaState.store.actions.closeStatus).toBe('function');
+		});
+		it('exports updateStatus action', () => {
+			expect(typeof calderaState.store.actions.updateStatus).toBe('function');
 		});
 	});
-	describe( 'exports state', () => {
-		it( 'export has state property', () => {
-			expect( typeof  calderaState.state ).toBe('object');
+
+	describe( 'exports reducers', () => {
+		it( 'exports status reducer', () => {
+			expect(typeof calderaState.store.reducers.statusReducer).toBe('function');
+		});
+	});
+	describe('exports state', () => {
+		it('export has state property', () => {
+			expect(typeof  calderaState.state).toBe('object');
 		});
 
-		it( 'state exports CALDERA_FORMS_STORE_SLUG', () => {
-			expect( typeof  calderaState.state.CALDERA_FORMS_STORE_SLUG).toBe('string');
+		it('state exports CALDERA_FORMS_STORE_SLUG', () => {
+			expect(typeof  calderaState.state.CALDERA_FORMS_STORE_SLUG).toBe('string');
 		});
 
-		it( 'state exports CALDERA_FORMS_PRIVACY_STORE_SLUG', () => {
-			expect( typeof  calderaState.state.CALDERA_FORMS_PRIVACY_STORE_SLUG).toBe('string');
+		it('state exports CALDERA_FORMS_PRIVACY_STORE_SLUG', () => {
+			expect(typeof  calderaState.state.CALDERA_FORMS_PRIVACY_STORE_SLUG).toBe('string');
 		});
 
-		it( 'state exports CALDERA_FORMS_STATUS_STORE_SLUG', () => {
-			expect( typeof  calderaState.state.CALDERA_FORMS_STATUS_STORE_SLUG).toBe('string');
+		it('state exports CALDERA_FORMS_STATUS_STORE_SLUG', () => {
+			expect(typeof  calderaState.state.CALDERA_FORMS_STATUS_STORE_SLUG).toBe('string');
 		});
 
-		it( 'state exports CALDERA_FORMS_SETTINGS_SLUG', () => {
-			expect( typeof  calderaState.state.CALDERA_FORMS_SETTINGS_SLUG).toBe('string');
+		it('state exports CALDERA_FORMS_SETTINGS_SLUG', () => {
+			expect(typeof  calderaState.state.CALDERA_FORMS_SETTINGS_SLUG).toBe('string');
 		});
 
-		it( 'state exports CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG', () => {
-			expect( typeof  calderaState.state.CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG).toBe('string');
+		it('state exports CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG', () => {
+			expect(typeof  calderaState.state.CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG).toBe('string');
 		});
 
-		it( 'state exports calderaFormsFormState', () => {
-			expect( typeof  calderaState.state.calderaFormsFormState ).toBe('object');
+		it('state exports calderaFormsFormState', () => {
+			expect(typeof  calderaState.state.calderaFormsFormState).toBe('object');
 		});
 
-		it( 'state exports calderaFormsReduxStore', () => {
-			expect( typeof  calderaState.state.calderaFormsReduxStore ).toBe('object');
+		it('state exports calderaFormsReduxStore', () => {
+			expect(typeof  calderaState.state.calderaFormsReduxStore).toBe('object');
 		});
-		it( 'state exports reducers', () => {
-			expect( typeof  calderaState.state.reducers ).toBe('object');
+		it('state exports reducers', () => {
+			expect(typeof  calderaState.state.reducers).toBe('object');
 		});
 
 

@@ -45,5 +45,20 @@
   },
   "files": [
     "lib"
-  ]
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/state/*.js",
+      "src/tests/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 90,
+        "branches": 84,
+        "functions": 95,
+        "lines": 90
+      }
+    }
+
+  }
 }
