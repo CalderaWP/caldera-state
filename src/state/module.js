@@ -15,6 +15,18 @@ import {
 	unsetEditForm
 } from './actions.privacy';
 
+import {
+	updateStyleIncludes,
+	updateOtherSettings
+} from "./actions.settings";
+
+
+import {
+	updateCfProFormSetting,
+	updateCfProSettings
+} from "./actions.proLocalSettings";
+
+
 //Selectors
 import {
 	getForm,
@@ -27,11 +39,23 @@ import {
 	getFormPrivacySettings
 } from './selectors.privacy';
 
+import {
+	getStyleIncludes,
+	getOtherSettings
+} from "./selectors.settings";
+
+import {
+	getCfProFormSetting,
+	getCfProSettings
+} from "./selectors.proLocalSettings";
+
 //Reducers
 import {
 	formsReducer,
 	privacySettingsReducer,
 	initialStateWithForms,
+	settingsReducer,
+	proLocalSettingsReducer
 } from './reducers';
 
 /** State **/
@@ -39,6 +63,8 @@ import {
 	CALDERA_FORMS_STORE_SLUG,
 	CALDERA_FORMS_STATUS_STORE_SLUG,
 	CALDERA_FORMS_PRIVACY_STORE_SLUG,
+	CALDERA_FORMS_SETTINGS_SLUG,
+	CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG,
 	calderaFormsFormState,
 	calderaFormsReduxStore,
 	reducers
@@ -68,26 +94,37 @@ module.exports  = {
 			addFormPreview,
 			setFormPrivacyForm,
 			setEditForm,
-			unsetEditForm
+			unsetEditForm,
+			updateStyleIncludes,
+			updateOtherSettings,
+			updateCfProFormSetting,
+			updateCfProSettings
 		},
 		selectors: {
 			getForm,
 			getForms,
 			getFormPreview,
 			getFormPreviews,
-			getFormPrivacySettings
-
+			getFormPrivacySettings,
+			getStyleIncludes,
+			getOtherSettings,
+			getCfProFormSetting,
+			getCfProSettings
 		},
 		reducers: {
 			formsReducer,
 			initialStateWithForms,
-			privacySettingsReducer
+			privacySettingsReducer,
+			settingsReducer,
+			proLocalSettingsReducer
 		}
 	},
 	state: {
 		CALDERA_FORMS_STORE_SLUG,
 		CALDERA_FORMS_STATUS_STORE_SLUG,
 		CALDERA_FORMS_PRIVACY_STORE_SLUG,
+		CALDERA_FORMS_SETTINGS_SLUG,
+		CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG,
 		calderaFormsFormState,
 		calderaFormsReduxStore,
 		reducers

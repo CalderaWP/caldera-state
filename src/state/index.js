@@ -12,7 +12,11 @@ import {
 } from './selectors';
 
 import {
-	formsReducer, privacySettingsReducer, statusReducer,
+	formsReducer,
+	privacySettingsReducer,
+	proLocalSettingsReducer,
+	settingsReducer,
+	statusReducer,
 } from './reducers';
 
 
@@ -49,6 +53,16 @@ export const CALDERA_FORMS_PRIVACY_STORE_SLUG = `${CALDERA_FORMS_STORE_SLUG}/PRI
  */
 export const CALDERA_FORMS_STATUS_STORE_SLUG = `${CALDERA_FORMS_STORE_SLUG}/STATUS`;
 /**
+ * The reducer key for the CF Pro local settings store
+ * @type {string}
+ */
+export const CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG = `${CALDERA_FORMS_STORE_SLUG}/PRO/SETTINGS/LOCAL`;
+/**
+ * The reducer key for the general settings store
+ * @type {string}
+ */
+export const CALDERA_FORMS_SETTINGS_SLUG = `${CALDERA_FORMS_STORE_SLUG}/SETTINGS`;
+/**
  * Caldera Forms Redux-store
  *
  * @type {{reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}}
@@ -69,6 +83,8 @@ export const reducers = {};
 reducers[CALDERA_FORMS_STORE_SLUG] = formsReducer;
 reducers[CALDERA_FORMS_PRIVACY_STORE_SLUG] = privacySettingsReducer;
 reducers[CALDERA_FORMS_STATUS_STORE_SLUG] = statusReducer;
+reducers[CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG] = proLocalSettingsReducer;
+reducers[CALDERA_FORMS_SETTINGS_SLUG] = settingsReducer;
 
 /**
  * Redux store with all reducers combined
