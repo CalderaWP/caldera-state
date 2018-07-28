@@ -1,7 +1,7 @@
 {
-  "coverage": "52.38%",
-  "expectCount": 63,
-  "actualCount": 33,
+  "coverage": "66.21%",
+  "expectCount": 74,
+  "actualCount": 49,
   "files": {
     "src/App.js": {
       "expectCount": 3,
@@ -58,13 +58,13 @@
     },
     "src/state/actions.proLocalSettings.js": {
       "expectCount": 4,
-      "actualCount": 0,
-      "undocumentLines": [
-        2,
-        3,
-        4,
-        11
-      ]
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/state/actions.settings.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
     },
     "src/state/actions.status.js": {
       "expectCount": 8,
@@ -77,19 +77,18 @@
       ]
     },
     "src/state/index.js": {
-      "expectCount": 8,
-      "actualCount": 6,
+      "expectCount": 10,
+      "actualCount": 8,
       "undocumentLines": [
-        23,
-        29
+        27,
+        33
       ]
     },
     "src/state/reducers.js": {
-      "expectCount": 7,
-      "actualCount": 5,
+      "expectCount": 8,
+      "actualCount": 7,
       "undocumentLines": [
-        93,
-        142
+        104
       ]
     },
     "src/state/selectors.js": {
@@ -100,6 +99,16 @@
     "src/state/selectors.privacy.js": {
       "expectCount": 1,
       "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/state/selectors.proLocalSettings.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/state/selectors.settings.js": {
+      "expectCount": 2,
+      "actualCount": 2,
       "undocumentLines": []
     },
     "src/state/util.js": {

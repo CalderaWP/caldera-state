@@ -12,6 +12,18 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "@caldera-labs/state/src/state/index.js~caldera_forms_pro_local_settings_slug",
+    "variable/index.html#static-variable-CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG",
+    "<span>CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/index.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/index.js~caldera_forms_settings_slug",
+    "variable/index.html#static-variable-CALDERA_FORMS_SETTINGS_SLUG",
+    "<span>CALDERA_FORMS_SETTINGS_SLUG</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/index.js</span>",
+    "variable"
+  ],
+  [
     "@caldera-labs/state/src/state/index.js~caldera_forms_status_store_slug",
     "variable/index.html#static-variable-CALDERA_FORMS_STATUS_STORE_SLUG",
     "<span>CALDERA_FORMS_STATUS_STORE_SLUG</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/index.js</span>",
@@ -51,6 +63,18 @@ window.esdocSearchIndex = [
     "@caldera-labs/state/src/state/actions.js~new_form",
     "variable/index.html#static-variable-NEW_FORM",
     "<span>NEW_FORM</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.settings.js~settings_other",
+    "variable/index.html#static-variable-SETTINGS_OTHER",
+    "<span>SETTINGS_OTHER</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.settings.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.settings.js~settings_style_includes",
+    "variable/index.html#static-variable-SETTINGS_STYLE_INCLUDES",
+    "<span>SETTINGS_STYLE_INCLUDES</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.settings.js</span>",
     "variable"
   ],
   [
@@ -174,6 +198,18 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@caldera-labs/state/src/state/selectors.prolocalsettings.js~getcfproformsetting",
+    "function/index.html#static-function-getCfProFormSetting",
+    "<span>getCfProFormSetting</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/selectors.proLocalSettings.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/selectors.prolocalsettings.js~getcfprosettings",
+    "function/index.html#static-function-getCfProSettings",
+    "<span>getCfProSettings</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/selectors.proLocalSettings.js</span>",
+    "function"
+  ],
+  [
     "@caldera-labs/state/src/state/selectors.js~getform",
     "function/index.html#static-function-getForm",
     "<span>getForm</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/selectors.js</span>",
@@ -210,6 +246,18 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@caldera-labs/state/src/state/selectors.settings.js~getothersettings",
+    "function/index.html#static-function-getOtherSettings",
+    "<span>getOtherSettings</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/selectors.settings.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/selectors.settings.js~getstyleincludes",
+    "function/index.html#static-function-getStyleIncludes",
+    "<span>getStyleIncludes</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/selectors.settings.js</span>",
+    "function"
+  ],
+  [
     "@caldera-labs/state/src/state/reducers.js~initialstatewithforms",
     "function/index.html#static-function-initialStateWithForms",
     "<span>initialStateWithForms</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/reducers.js</span>",
@@ -231,6 +279,12 @@ window.esdocSearchIndex = [
     "@caldera-labs/state/src/state/reducers.js~privacysettingsreducer",
     "function/index.html#static-function-privacySettingsReducer",
     "<span>privacySettingsReducer</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/reducers.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/reducers.js~prolocalsettingsreducer",
+    "function/index.html#static-function-proLocalSettingsReducer",
+    "<span>proLocalSettingsReducer</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/reducers.js</span>",
     "function"
   ],
   [
@@ -276,6 +330,12 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@caldera-labs/state/src/state/reducers.js~settingsreducer",
+    "function/index.html#static-function-settingsReducer",
+    "<span>settingsReducer</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/reducers.js</span>",
+    "function"
+  ],
+  [
     "@caldera-labs/state/src/state/actions.status.js~startspinner",
     "function/index.html#static-function-startSpinner",
     "<span>startSpinner</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
@@ -318,9 +378,21 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@caldera-labs/state/src/state/actions.settings.js~updateothersettings",
+    "function/index.html#static-function-updateOtherSettings",
+    "<span>updateOtherSettings</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.settings.js</span>",
+    "function"
+  ],
+  [
     "@caldera-labs/state/src/state/actions.status.js~updatestatus",
     "function/index.html#static-function-updateStatus",
     "<span>updateStatus</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.settings.js~updatestyleincludes",
+    "function/index.html#static-function-updateStyleIncludes",
+    "<span>updateStyleIncludes</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.settings.js</span>",
     "function"
   ],
   [
@@ -654,6 +726,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/state/actions.settings.js",
+    "file/src/state/actions.settings.js.html",
+    "src/state/actions.settings.js",
+    "file"
+  ],
+  [
     "src/state/actions.status.js",
     "file/src/state/actions.status.js.html",
     "src/state/actions.status.js",
@@ -687,6 +765,18 @@ window.esdocSearchIndex = [
     "src/state/selectors.privacy.js",
     "file/src/state/selectors.privacy.js.html",
     "src/state/selectors.privacy.js",
+    "file"
+  ],
+  [
+    "src/state/selectors.prolocalsettings.js",
+    "file/src/state/selectors.proLocalSettings.js.html",
+    "src/state/selectors.proLocalSettings.js",
+    "file"
+  ],
+  [
+    "src/state/selectors.settings.js",
+    "file/src/state/selectors.settings.js.html",
+    "src/state/selectors.settings.js",
     "file"
   ],
   [

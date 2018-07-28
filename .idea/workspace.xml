@@ -2,10 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490e1a86-72c6-4b3e-86ab-43bf0ca8fc43" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/state/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/export.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/export.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/state.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/state.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/state/actions.proLocalSettings.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/state/actions.proLocalSettings.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/state/actions.status.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/state/actions.status.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/state/index.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/state/index.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/state/module.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/state/module.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/state/reducers.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/state/reducers.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/coverage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/App.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/App.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/Form.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/Form.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/FormList.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/FormList.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/index.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/index.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/registerServiceWorker.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/registerServiceWorker.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/actions.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/actions.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/actions.privacy.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/actions.privacy.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/actions.proLocalSettings.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/actions.proLocalSettings.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/actions.status.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/actions.status.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/index.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/index.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/module.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/module.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/reducers.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/reducers.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/selectors.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/selectors.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/selectors.privacy.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/selectors.privacy.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/state/util.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/state/util.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/function/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/function/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/identifiers.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/identifiers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/lint.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/lint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/search_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script/search_index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/variable/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/variable/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,14 +41,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.58387095">
+    <splitter split-orientation="horizontal" split-proportion="0.1">
       <split-first>
         <leaf>
           <file leaf-file-name="reducers.test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/tests/reducers.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
-                  <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+                <state relative-caret-position="435">
+                  <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#65#0" expanded="true" />
                   </folding>
@@ -34,7 +60,7 @@
             <entry file="file://$PROJECT_DIR$/src/state/reducers.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="122">
-                  <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+                  <caret line="47" selection-start-line="47" selection-end-line="47" />
                   <folding>
                     <element signature="e#0#80#0" expanded="true" />
                   </folding>
@@ -45,8 +71,8 @@
           <file leaf-file-name="state.test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/tests/state.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+                <state relative-caret-position="135">
+                  <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
                 </state>
               </provider>
             </entry>
@@ -54,11 +80,8 @@
           <file leaf-file-name="export.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tests/export.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
+                <state relative-caret-position="254">
                   <caret line="25" column="84" selection-start-line="25" selection-start-column="84" selection-end-line="25" selection-end-column="84" />
-                  <folding>
-                    <element signature="e#0#48#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -75,11 +98,10 @@
           <file leaf-file-name="module.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/state/module.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="313">
-                  <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+                <state relative-caret-position="403">
+                  <caret line="51" selection-start-line="51" selection-end-line="51" />
                   <folding>
                     <element signature="e#73#138#0" expanded="true" />
-                    <element signature="e#402#495#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -89,33 +111,35 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="actions.settings.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/state/actions.settings.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" selection-start-line="24" selection-end-line="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="selectors.test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="108">
-                  <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+                  <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#0#93#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="module.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="module.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/state/module.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="126" column="45" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="45" />
-                  <folding>
-                    <element signature="e#73#138#0" expanded="true" />
-                    <element signature="e#855#1036#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="750">
+                  <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="60">
+                    <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -166,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/state/selectors.status.js" />
         <option value="$PROJECT_DIR$/src/state/reducerKeys.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/manual/overview.md" />
         <option value="$PROJECT_DIR$/src/state/selectors.proLocalSettings.js" />
         <option value="$PROJECT_DIR$/src/state/actions.proLocalSettings.js" />
@@ -181,6 +204,7 @@
         <option value="$PROJECT_DIR$/src/state/index.js" />
         <option value="$PROJECT_DIR$/src/state/module.js" />
         <option value="$PROJECT_DIR$/src/tests/export.test.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -245,11 +269,6 @@
               <item name="state" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
-            <path>
-              <item name="state" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -308,7 +327,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40039000" />
+    <option name="totallyTimeSpent" value="40102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="340" y="86" width="1580" height="742" extended-state="0" />
@@ -387,7 +406,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/state/actions.settings.js</url>
           <line>17</line>
-          <properties lambdaOrdinal="-1" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -567,16 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="550">
-            <caret line="81" selection-start-line="81" selection-end-line="81" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manual/overview.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
@@ -624,7 +632,10 @@
     <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -651,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/reducers.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="435">
+          <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
@@ -669,7 +680,7 @@
     <entry file="file://$PROJECT_DIR$/src/state/reducers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#0#80#0" expanded="true" />
           </folding>
@@ -678,8 +689,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/state.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="135">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -702,22 +713,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/state/module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#73#138#0" expanded="true" />
-            <element signature="e#402#495#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="750">
+          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/export.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="254">
           <caret line="25" column="84" selection-start-line="25" selection-start-column="84" selection-end-line="25" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

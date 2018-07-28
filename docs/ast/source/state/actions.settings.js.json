@@ -1,29 +1,29 @@
 {
   "type": "File",
   "start": 0,
-  "end": 748,
+  "end": 725,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 37,
-      "column": 2
+      "line": 39,
+      "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 748,
+    "end": 725,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 37,
-        "column": 2
+        "line": 39,
+        "column": 0
       }
     },
     "sourceType": "module",
@@ -31,7 +31,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 29,
-        "end": 93,
+        "end": 108,
         "loc": {
           "start": {
             "line": 5,
@@ -39,7 +39,7 @@
           },
           "end": {
             "line": 5,
-            "column": 64
+            "column": 79
           }
         },
         "specifiers": [],
@@ -47,7 +47,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 36,
-          "end": 93,
+          "end": 108,
           "loc": {
             "start": {
               "line": 5,
@@ -55,14 +55,14 @@
             },
             "end": {
               "line": 5,
-              "column": 64
+              "column": 79
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
               "start": 42,
-              "end": 92,
+              "end": 107,
               "loc": {
                 "start": {
                   "line": 5,
@@ -70,13 +70,13 @@
                 },
                 "end": {
                   "line": 5,
-                  "column": 63
+                  "column": 78
                 }
               },
               "id": {
                 "type": "Identifier",
                 "start": 42,
-                "end": 61,
+                "end": 65,
                 "loc": {
                   "start": {
                     "line": 5,
@@ -84,32 +84,32 @@
                   },
                   "end": {
                     "line": 5,
-                    "column": 32
+                    "column": 36
                   },
-                  "identifierName": "UPDATE_PRO_SETTINGS"
+                  "identifierName": "SETTINGS_STYLE_INCLUDES"
                 },
-                "name": "UPDATE_PRO_SETTINGS",
+                "name": "SETTINGS_STYLE_INCLUDES",
                 "leadingComments": null
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 64,
-                "end": 92,
+                "start": 68,
+                "end": 107,
                 "loc": {
                   "start": {
                     "line": 5,
-                    "column": 35
+                    "column": 39
                   },
                   "end": {
                     "line": 5,
-                    "column": 63
+                    "column": 78
                   }
                 },
                 "extra": {
-                  "rawValue": "CALDERA_FORMS/PRO/SETTINGS",
-                  "raw": "'CALDERA_FORMS/PRO/SETTINGS'"
+                  "rawValue": "CALDERA_FORMS/SETTINGS/STYLE_INCLUDES",
+                  "raw": "'CALDERA_FORMS/SETTINGS/STYLE_INCLUDES'"
                 },
-                "value": "CALDERA_FORMS/PRO/SETTINGS"
+                "value": "CALDERA_FORMS/SETTINGS/STYLE_INCLUDES"
               },
               "leadingComments": null
             }
@@ -137,8 +137,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n *\n * @type {string}\n ",
-              "start": 95,
-              "end": 123,
+              "start": 110,
+              "end": 138,
               "loc": {
                 "start": {
                   "line": 7,
@@ -174,8 +174,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n *\n * @type {string}\n ",
-            "start": 95,
-            "end": 123,
+            "start": 110,
+            "end": 138,
             "loc": {
               "start": {
                 "line": 7,
@@ -191,8 +191,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 124,
-        "end": 198,
+        "start": 139,
+        "end": 200,
         "loc": {
           "start": {
             "line": 11,
@@ -200,15 +200,15 @@
           },
           "end": {
             "line": 11,
-            "column": 74
+            "column": 61
           }
         },
         "specifiers": [],
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 131,
-          "end": 198,
+          "start": 146,
+          "end": 200,
           "loc": {
             "start": {
               "line": 11,
@@ -216,14 +216,14 @@
             },
             "end": {
               "line": 11,
-              "column": 74
+              "column": 61
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 137,
-              "end": 197,
+              "start": 152,
+              "end": 199,
               "loc": {
                 "start": {
                   "line": 11,
@@ -231,13 +231,13 @@
                 },
                 "end": {
                   "line": 11,
-                  "column": 73
+                  "column": 60
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 137,
-                "end": 161,
+                "start": 152,
+                "end": 166,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -245,32 +245,32 @@
                   },
                   "end": {
                     "line": 11,
-                    "column": 37
+                    "column": 27
                   },
-                  "identifierName": "UPDATE_PRO_FORM_SETTINGS"
+                  "identifierName": "SETTINGS_OTHER"
                 },
-                "name": "UPDATE_PRO_FORM_SETTINGS",
+                "name": "SETTINGS_OTHER",
                 "leadingComments": null
               },
               "init": {
                 "type": "StringLiteral",
-                "start": 164,
-                "end": 197,
+                "start": 169,
+                "end": 199,
                 "loc": {
                   "start": {
                     "line": 11,
-                    "column": 40
+                    "column": 30
                   },
                   "end": {
                     "line": 11,
-                    "column": 73
+                    "column": 60
                   }
                 },
                 "extra": {
-                  "rawValue": "CALDERA_FORMS/PRO/SETTINGS/FORM",
-                  "raw": "'CALDERA_FORMS/PRO/SETTINGS/FORM'"
+                  "rawValue": "CALDERA_FORMS/SETTINGS/OTHER",
+                  "raw": "'CALDERA_FORMS/SETTINGS/OTHER'"
                 },
-                "value": "CALDERA_FORMS/PRO/SETTINGS/FORM"
+                "value": "CALDERA_FORMS/SETTINGS/OTHER"
               },
               "leadingComments": null
             }
@@ -280,8 +280,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n *\n * @type {string}\n ",
-              "start": 95,
-              "end": 123,
+              "start": 110,
+              "end": 138,
               "loc": {
                 "start": {
                   "line": 7,
@@ -297,9 +297,9 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Action creator for updating the CF Pro settings\n * @param  {Object} settings\n * @return {{type: string, settings: *}}\n ",
-              "start": 200,
-              "end": 328,
+              "value": "*\n * Action creator for updating style includes settings\n * @param {Object} styleIncludes\n * @return {{type: string, styleIncludes: *}}\n ",
+              "start": 202,
+              "end": 343,
               "loc": {
                 "start": {
                   "line": 13,
@@ -317,8 +317,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n *\n * @type {string}\n ",
-            "start": 95,
-            "end": 123,
+            "start": 110,
+            "end": 138,
             "loc": {
               "start": {
                 "line": 7,
@@ -334,9 +334,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Action creator for updating the CF Pro settings\n * @param  {Object} settings\n * @return {{type: string, settings: *}}\n ",
-            "start": 200,
-            "end": 328,
+            "value": "*\n * Action creator for updating style includes settings\n * @param {Object} styleIncludes\n * @return {{type: string, styleIncludes: *}}\n ",
+            "start": 202,
+            "end": 343,
             "loc": {
               "start": {
                 "line": 13,
@@ -352,15 +352,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 329,
-        "end": 436,
+        "start": 344,
+        "end": 466,
         "loc": {
           "start": {
             "line": 18,
             "column": 0
           },
           "end": {
-            "line": 23,
+            "line": 24,
             "column": 2
           }
         },
@@ -368,37 +368,37 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 336,
-          "end": 436,
+          "start": 351,
+          "end": 466,
           "loc": {
             "start": {
               "line": 18,
               "column": 7
             },
             "end": {
-              "line": 23,
+              "line": 24,
               "column": 2
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 342,
-              "end": 435,
+              "start": 357,
+              "end": 465,
               "loc": {
                 "start": {
                   "line": 18,
                   "column": 13
                 },
                 "end": {
-                  "line": 23,
+                  "line": 24,
                   "column": 1
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 342,
-                "end": 361,
+                "start": 357,
+                "end": 376,
                 "loc": {
                   "start": {
                     "line": 18,
@@ -408,29 +408,29 @@
                     "line": 18,
                     "column": 32
                   },
-                  "identifierName": "updateCfProSettings"
+                  "identifierName": "updateStyleIncludes"
                 },
-                "name": "updateCfProSettings",
+                "name": "updateStyleIncludes",
                 "leadingComments": null
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 364,
-                "end": 435,
+                "start": 379,
+                "end": 465,
                 "loc": {
                   "start": {
                     "line": 18,
                     "column": 35
                   },
                   "end": {
-                    "line": 23,
+                    "line": 24,
                     "column": 1
                   }
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 342,
-                  "end": 361,
+                  "start": 357,
+                  "end": 376,
                   "loc": {
                     "start": {
                       "line": 18,
@@ -440,9 +440,9 @@
                       "line": 18,
                       "column": 32
                     },
-                    "identifierName": "updateCfProSettings"
+                    "identifierName": "updateStyleIncludes"
                   },
-                  "name": "updateCfProSettings",
+                  "name": "updateStyleIncludes",
                   "leadingComments": null
                 },
                 "generator": false,
@@ -451,8 +451,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 365,
-                    "end": 373,
+                    "start": 380,
+                    "end": 393,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -460,32 +460,32 @@
                       },
                       "end": {
                         "line": 18,
-                        "column": 44
+                        "column": 49
                       },
-                      "identifierName": "settings"
+                      "identifierName": "styleIncludes"
                     },
-                    "name": "settings"
+                    "name": "styleIncludes"
                   }
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 379,
-                  "end": 435,
+                  "start": 398,
+                  "end": 465,
                   "loc": {
                     "start": {
                       "line": 18,
-                      "column": 50
+                      "column": 54
                     },
                     "end": {
-                      "line": 23,
+                      "line": 24,
                       "column": 1
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 382,
-                      "end": 433,
+                      "start": 401,
+                      "end": 462,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -493,13 +493,13 @@
                         },
                         "end": {
                           "line": 22,
-                          "column": 2
+                          "column": 3
                         }
                       },
                       "argument": {
                         "type": "ObjectExpression",
-                        "start": 389,
-                        "end": 433,
+                        "start": 408,
+                        "end": 461,
                         "loc": {
                           "start": {
                             "line": 19,
@@ -513,8 +513,8 @@
                         "properties": [
                           {
                             "type": "ObjectProperty",
-                            "start": 393,
-                            "end": 418,
+                            "start": 412,
+                            "end": 441,
                             "loc": {
                               "start": {
                                 "line": 20,
@@ -522,7 +522,7 @@
                               },
                               "end": {
                                 "line": 20,
-                                "column": 27
+                                "column": 31
                               }
                             },
                             "method": false,
@@ -530,8 +530,8 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 393,
-                              "end": 397,
+                              "start": 412,
+                              "end": 416,
                               "loc": {
                                 "start": {
                                   "line": 20,
@@ -547,8 +547,8 @@
                             },
                             "value": {
                               "type": "Identifier",
-                              "start": 399,
-                              "end": 418,
+                              "start": 418,
+                              "end": 441,
                               "loc": {
                                 "start": {
                                   "line": 20,
@@ -556,17 +556,17 @@
                                 },
                                 "end": {
                                   "line": 20,
-                                  "column": 27
+                                  "column": 31
                                 },
-                                "identifierName": "UPDATE_PRO_SETTINGS"
+                                "identifierName": "SETTINGS_STYLE_INCLUDES"
                               },
-                              "name": "UPDATE_PRO_SETTINGS"
+                              "name": "SETTINGS_STYLE_INCLUDES"
                             }
                           },
                           {
                             "type": "ObjectProperty",
-                            "start": 422,
-                            "end": 430,
+                            "start": 445,
+                            "end": 458,
                             "loc": {
                               "start": {
                                 "line": 21,
@@ -574,7 +574,7 @@
                               },
                               "end": {
                                 "line": 21,
-                                "column": 10
+                                "column": 15
                               }
                             },
                             "method": false,
@@ -582,8 +582,8 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 422,
-                              "end": 430,
+                              "start": 445,
+                              "end": 458,
                               "loc": {
                                 "start": {
                                   "line": 21,
@@ -591,16 +591,16 @@
                                 },
                                 "end": {
                                   "line": 21,
-                                  "column": 10
+                                  "column": 15
                                 },
-                                "identifierName": "settings"
+                                "identifierName": "styleIncludes"
                               },
-                              "name": "settings"
+                              "name": "styleIncludes"
                             },
                             "value": {
                               "type": "Identifier",
-                              "start": 422,
-                              "end": 430,
+                              "start": 445,
+                              "end": 458,
                               "loc": {
                                 "start": {
                                   "line": 21,
@@ -608,11 +608,11 @@
                                 },
                                 "end": {
                                   "line": 21,
-                                  "column": 10
+                                  "column": 15
                                 },
-                                "identifierName": "settings"
+                                "identifierName": "styleIncludes"
                               },
-                              "name": "settings"
+                              "name": "styleIncludes"
                             },
                             "extra": {
                               "shorthand": true
@@ -632,9 +632,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Action creator for updating the CF Pro settings\n * @param  {Object} settings\n * @return {{type: string, settings: *}}\n ",
-              "start": 200,
-              "end": 328,
+              "value": "*\n * Action creator for updating style includes settings\n * @param {Object} styleIncludes\n * @return {{type: string, styleIncludes: *}}\n ",
+              "start": 202,
+              "end": 343,
               "loc": {
                 "start": {
                   "line": 13,
@@ -650,16 +650,16 @@
           "trailingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Action creator for updating the CF Pro settings for one form\n * @param {String} formId\n * @param  {Object} settings\n * @return {{type: string, formId: *, settings: *}}\n ",
-              "start": 438,
-              "end": 616,
+              "value": "*\n * Action creator for updating other global settings\n *\n * @param {Object} settingsOther\n * @return {{type: string, settingsOther: *}}\n ",
+              "start": 468,
+              "end": 610,
               "loc": {
                 "start": {
-                  "line": 25,
+                  "line": 26,
                   "column": 0
                 },
                 "end": {
-                  "line": 30,
+                  "line": 31,
                   "column": 3
                 }
               }
@@ -669,9 +669,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Action creator for updating the CF Pro settings\n * @param  {Object} settings\n * @return {{type: string, settings: *}}\n ",
-            "start": 200,
-            "end": 328,
+            "value": "*\n * Action creator for updating style includes settings\n * @param {Object} styleIncludes\n * @return {{type: string, styleIncludes: *}}\n ",
+            "start": 202,
+            "end": 343,
             "loc": {
               "start": {
                 "line": 13,
@@ -687,16 +687,16 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Action creator for updating the CF Pro settings for one form\n * @param {String} formId\n * @param  {Object} settings\n * @return {{type: string, formId: *, settings: *}}\n ",
-            "start": 438,
-            "end": 616,
+            "value": "*\n * Action creator for updating other global settings\n *\n * @param {Object} settingsOther\n * @return {{type: string, settingsOther: *}}\n ",
+            "start": 468,
+            "end": 610,
             "loc": {
               "start": {
-                "line": 25,
+                "line": 26,
                 "column": 0
               },
               "end": {
-                "line": 30,
+                "line": 31,
                 "column": 3
               }
             }
@@ -705,15 +705,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 617,
-        "end": 748,
+        "start": 611,
+        "end": 724,
         "loc": {
           "start": {
-            "line": 31,
+            "line": 32,
             "column": 0
           },
           "end": {
-            "line": 37,
+            "line": 38,
             "column": 2
           }
         },
@@ -721,81 +721,81 @@
         "source": null,
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 624,
-          "end": 748,
+          "start": 618,
+          "end": 724,
           "loc": {
             "start": {
-              "line": 31,
+              "line": 32,
               "column": 7
             },
             "end": {
-              "line": 37,
+              "line": 38,
               "column": 2
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 630,
-              "end": 747,
+              "start": 624,
+              "end": 723,
               "loc": {
                 "start": {
-                  "line": 31,
+                  "line": 32,
                   "column": 13
                 },
                 "end": {
-                  "line": 37,
+                  "line": 38,
                   "column": 1
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 630,
-                "end": 652,
+                "start": 624,
+                "end": 643,
                 "loc": {
                   "start": {
-                    "line": 31,
+                    "line": 32,
                     "column": 13
                   },
                   "end": {
-                    "line": 31,
-                    "column": 35
+                    "line": 32,
+                    "column": 32
                   },
-                  "identifierName": "updateCfProFormSetting"
+                  "identifierName": "updateOtherSettings"
                 },
-                "name": "updateCfProFormSetting",
+                "name": "updateOtherSettings",
                 "leadingComments": null
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 655,
-                "end": 747,
+                "start": 646,
+                "end": 723,
                 "loc": {
                   "start": {
-                    "line": 31,
-                    "column": 38
+                    "line": 32,
+                    "column": 35
                   },
                   "end": {
-                    "line": 37,
+                    "line": 38,
                     "column": 1
                   }
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 630,
-                  "end": 652,
+                  "start": 624,
+                  "end": 643,
                   "loc": {
                     "start": {
-                      "line": 31,
+                      "line": 32,
                       "column": 13
                     },
                     "end": {
-                      "line": 31,
-                      "column": 35
+                      "line": 32,
+                      "column": 32
                     },
-                    "identifierName": "updateCfProFormSetting"
+                    "identifierName": "updateOtherSettings"
                   },
-                  "name": "updateCfProFormSetting",
+                  "name": "updateOtherSettings",
                   "leadingComments": null
                 },
                 "generator": false,
@@ -804,75 +804,58 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 656,
-                    "end": 662,
+                    "start": 647,
+                    "end": 660,
                     "loc": {
                       "start": {
-                        "line": 31,
-                        "column": 39
+                        "line": 32,
+                        "column": 36
                       },
                       "end": {
-                        "line": 31,
-                        "column": 45
+                        "line": 32,
+                        "column": 49
                       },
-                      "identifierName": "formId"
+                      "identifierName": "settingsOther"
                     },
-                    "name": "formId"
-                  },
-                  {
-                    "type": "Identifier",
-                    "start": 663,
-                    "end": 671,
-                    "loc": {
-                      "start": {
-                        "line": 31,
-                        "column": 46
-                      },
-                      "end": {
-                        "line": 31,
-                        "column": 54
-                      },
-                      "identifierName": "settings"
-                    },
-                    "name": "settings"
+                    "name": "settingsOther"
                   }
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 676,
-                  "end": 747,
+                  "start": 665,
+                  "end": 723,
                   "loc": {
                     "start": {
-                      "line": 31,
-                      "column": 59
+                      "line": 32,
+                      "column": 54
                     },
                     "end": {
-                      "line": 37,
+                      "line": 38,
                       "column": 1
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 679,
-                      "end": 745,
+                      "start": 668,
+                      "end": 720,
                       "loc": {
                         "start": {
-                          "line": 32,
+                          "line": 33,
                           "column": 1
                         },
                         "end": {
                           "line": 36,
-                          "column": 2
+                          "column": 3
                         }
                       },
                       "argument": {
                         "type": "ObjectExpression",
-                        "start": 686,
-                        "end": 745,
+                        "start": 675,
+                        "end": 719,
                         "loc": {
                           "start": {
-                            "line": 32,
+                            "line": 33,
                             "column": 8
                           },
                           "end": {
@@ -883,16 +866,16 @@
                         "properties": [
                           {
                             "type": "ObjectProperty",
-                            "start": 690,
-                            "end": 720,
+                            "start": 679,
+                            "end": 699,
                             "loc": {
                               "start": {
-                                "line": 33,
+                                "line": 34,
                                 "column": 2
                               },
                               "end": {
-                                "line": 33,
-                                "column": 32
+                                "line": 34,
+                                "column": 22
                               }
                             },
                             "method": false,
@@ -900,15 +883,15 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 690,
-                              "end": 694,
+                              "start": 679,
+                              "end": 683,
                               "loc": {
                                 "start": {
-                                  "line": 33,
+                                  "line": 34,
                                   "column": 2
                                 },
                                 "end": {
-                                  "line": 33,
+                                  "line": 34,
                                   "column": 6
                                 },
                                 "identifierName": "type"
@@ -917,81 +900,26 @@
                             },
                             "value": {
                               "type": "Identifier",
-                              "start": 696,
-                              "end": 720,
+                              "start": 685,
+                              "end": 699,
                               "loc": {
                                 "start": {
-                                  "line": 33,
+                                  "line": 34,
                                   "column": 8
                                 },
                                 "end": {
-                                  "line": 33,
-                                  "column": 32
+                                  "line": 34,
+                                  "column": 22
                                 },
-                                "identifierName": "UPDATE_PRO_FORM_SETTINGS"
+                                "identifierName": "SETTINGS_OTHER"
                               },
-                              "name": "UPDATE_PRO_FORM_SETTINGS"
+                              "name": "SETTINGS_OTHER"
                             }
                           },
                           {
                             "type": "ObjectProperty",
-                            "start": 724,
-                            "end": 730,
-                            "loc": {
-                              "start": {
-                                "line": 34,
-                                "column": 2
-                              },
-                              "end": {
-                                "line": 34,
-                                "column": 8
-                              }
-                            },
-                            "method": false,
-                            "shorthand": true,
-                            "computed": false,
-                            "key": {
-                              "type": "Identifier",
-                              "start": 724,
-                              "end": 730,
-                              "loc": {
-                                "start": {
-                                  "line": 34,
-                                  "column": 2
-                                },
-                                "end": {
-                                  "line": 34,
-                                  "column": 8
-                                },
-                                "identifierName": "formId"
-                              },
-                              "name": "formId"
-                            },
-                            "value": {
-                              "type": "Identifier",
-                              "start": 724,
-                              "end": 730,
-                              "loc": {
-                                "start": {
-                                  "line": 34,
-                                  "column": 2
-                                },
-                                "end": {
-                                  "line": 34,
-                                  "column": 8
-                                },
-                                "identifierName": "formId"
-                              },
-                              "name": "formId"
-                            },
-                            "extra": {
-                              "shorthand": true
-                            }
-                          },
-                          {
-                            "type": "ObjectProperty",
-                            "start": 734,
-                            "end": 742,
+                            "start": 703,
+                            "end": 716,
                             "loc": {
                               "start": {
                                 "line": 35,
@@ -999,7 +927,7 @@
                               },
                               "end": {
                                 "line": 35,
-                                "column": 10
+                                "column": 15
                               }
                             },
                             "method": false,
@@ -1007,8 +935,8 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 734,
-                              "end": 742,
+                              "start": 703,
+                              "end": 716,
                               "loc": {
                                 "start": {
                                   "line": 35,
@@ -1016,16 +944,16 @@
                                 },
                                 "end": {
                                   "line": 35,
-                                  "column": 10
+                                  "column": 15
                                 },
-                                "identifierName": "settings"
+                                "identifierName": "settingsOther"
                               },
-                              "name": "settings"
+                              "name": "settingsOther"
                             },
                             "value": {
                               "type": "Identifier",
-                              "start": 734,
-                              "end": 742,
+                              "start": 703,
+                              "end": 716,
                               "loc": {
                                 "start": {
                                   "line": 35,
@@ -1033,11 +961,11 @@
                                 },
                                 "end": {
                                   "line": 35,
-                                  "column": 10
+                                  "column": 15
                                 },
-                                "identifierName": "settings"
+                                "identifierName": "settingsOther"
                               },
-                              "name": "settings"
+                              "name": "settingsOther"
                             },
                             "extra": {
                               "shorthand": true
@@ -1057,16 +985,16 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Action creator for updating the CF Pro settings for one form\n * @param {String} formId\n * @param  {Object} settings\n * @return {{type: string, formId: *, settings: *}}\n ",
-              "start": 438,
-              "end": 616,
+              "value": "*\n * Action creator for updating other global settings\n *\n * @param {Object} settingsOther\n * @return {{type: string, settingsOther: *}}\n ",
+              "start": 468,
+              "end": 610,
               "loc": {
                 "start": {
-                  "line": 25,
+                  "line": 26,
                   "column": 0
                 },
                 "end": {
-                  "line": 30,
+                  "line": 31,
                   "column": 3
                 }
               }
@@ -1077,16 +1005,16 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Action creator for updating the CF Pro settings for one form\n * @param {String} formId\n * @param  {Object} settings\n * @return {{type: string, formId: *, settings: *}}\n ",
-            "start": 438,
-            "end": 616,
+            "value": "*\n * Action creator for updating other global settings\n *\n * @param {Object} settingsOther\n * @return {{type: string, settingsOther: *}}\n ",
+            "start": 468,
+            "end": 610,
             "loc": {
               "start": {
-                "line": 25,
+                "line": 26,
                 "column": 0
               },
               "end": {
-                "line": 30,
+                "line": 31,
                 "column": 3
               }
             }
@@ -1116,8 +1044,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n *\n * @type {string}\n ",
-      "start": 95,
-      "end": 123,
+      "start": 110,
+      "end": 138,
       "loc": {
         "start": {
           "line": 7,
@@ -1131,9 +1059,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Action creator for updating the CF Pro settings\n * @param  {Object} settings\n * @return {{type: string, settings: *}}\n ",
-      "start": 200,
-      "end": 328,
+      "value": "*\n * Action creator for updating style includes settings\n * @param {Object} styleIncludes\n * @return {{type: string, styleIncludes: *}}\n ",
+      "start": 202,
+      "end": 343,
       "loc": {
         "start": {
           "line": 13,
@@ -1147,16 +1075,16 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Action creator for updating the CF Pro settings for one form\n * @param {String} formId\n * @param  {Object} settings\n * @return {{type: string, formId: *, settings: *}}\n ",
-      "start": 438,
-      "end": 616,
+      "value": "*\n * Action creator for updating other global settings\n *\n * @param {Object} settingsOther\n * @return {{type: string, settingsOther: *}}\n ",
+      "start": 468,
+      "end": 610,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 0
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 3
         }
       }
@@ -1247,9 +1175,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "UPDATE_PRO_SETTINGS",
+      "value": "SETTINGS_STYLE_INCLUDES",
       "start": 42,
-      "end": 61,
+      "end": 65,
       "loc": {
         "start": {
           "line": 5,
@@ -1257,7 +1185,7 @@
         },
         "end": {
           "line": 5,
-          "column": 32
+          "column": 36
         }
       }
     },
@@ -1275,16 +1203,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 62,
-      "end": 63,
+      "start": 66,
+      "end": 67,
       "loc": {
         "start": {
           "line": 5,
-          "column": 33
+          "column": 37
         },
         "end": {
           "line": 5,
-          "column": 34
+          "column": 38
         }
       }
     },
@@ -1301,17 +1229,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "CALDERA_FORMS/PRO/SETTINGS",
-      "start": 64,
-      "end": 92,
+      "value": "CALDERA_FORMS/SETTINGS/STYLE_INCLUDES",
+      "start": 68,
+      "end": 107,
       "loc": {
         "start": {
           "line": 5,
-          "column": 35
+          "column": 39
         },
         "end": {
           "line": 5,
-          "column": 63
+          "column": 78
         }
       }
     },
@@ -1328,24 +1256,24 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 92,
-      "end": 93,
+      "start": 107,
+      "end": 108,
       "loc": {
         "start": {
           "line": 5,
-          "column": 63
+          "column": 78
         },
         "end": {
           "line": 5,
-          "column": 64
+          "column": 79
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n *\n * @type {string}\n ",
-      "start": 95,
-      "end": 123,
+      "start": 110,
+      "end": 138,
       "loc": {
         "start": {
           "line": 7,
@@ -1372,8 +1300,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 124,
-      "end": 130,
+      "start": 139,
+      "end": 145,
       "loc": {
         "start": {
           "line": 11,
@@ -1400,8 +1328,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 131,
-      "end": 136,
+      "start": 146,
+      "end": 151,
       "loc": {
         "start": {
           "line": 11,
@@ -1425,9 +1353,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "UPDATE_PRO_FORM_SETTINGS",
-      "start": 137,
-      "end": 161,
+      "value": "SETTINGS_OTHER",
+      "start": 152,
+      "end": 166,
       "loc": {
         "start": {
           "line": 11,
@@ -1435,7 +1363,7 @@
         },
         "end": {
           "line": 11,
-          "column": 37
+          "column": 27
         }
       }
     },
@@ -1453,16 +1381,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 162,
-      "end": 163,
+      "start": 167,
+      "end": 168,
       "loc": {
         "start": {
           "line": 11,
-          "column": 38
+          "column": 28
         },
         "end": {
           "line": 11,
-          "column": 39
+          "column": 29
         }
       }
     },
@@ -1479,17 +1407,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "CALDERA_FORMS/PRO/SETTINGS/FORM",
-      "start": 164,
-      "end": 197,
+      "value": "CALDERA_FORMS/SETTINGS/OTHER",
+      "start": 169,
+      "end": 199,
       "loc": {
         "start": {
           "line": 11,
-          "column": 40
+          "column": 30
         },
         "end": {
           "line": 11,
-          "column": 73
+          "column": 60
         }
       }
     },
@@ -1506,24 +1434,24 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 197,
-      "end": 198,
+      "start": 199,
+      "end": 200,
       "loc": {
         "start": {
           "line": 11,
-          "column": 73
+          "column": 60
         },
         "end": {
           "line": 11,
-          "column": 74
+          "column": 61
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Action creator for updating the CF Pro settings\n * @param  {Object} settings\n * @return {{type: string, settings: *}}\n ",
-      "start": 200,
-      "end": 328,
+      "value": "*\n * Action creator for updating style includes settings\n * @param {Object} styleIncludes\n * @return {{type: string, styleIncludes: *}}\n ",
+      "start": 202,
+      "end": 343,
       "loc": {
         "start": {
           "line": 13,
@@ -1550,8 +1478,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 329,
-      "end": 335,
+      "start": 344,
+      "end": 350,
       "loc": {
         "start": {
           "line": 18,
@@ -1578,8 +1506,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 336,
-      "end": 341,
+      "start": 351,
+      "end": 356,
       "loc": {
         "start": {
           "line": 18,
@@ -1603,9 +1531,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "updateCfProSettings",
-      "start": 342,
-      "end": 361,
+      "value": "updateStyleIncludes",
+      "start": 357,
+      "end": 376,
       "loc": {
         "start": {
           "line": 18,
@@ -1631,8 +1559,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 362,
-      "end": 363,
+      "start": 377,
+      "end": 378,
       "loc": {
         "start": {
           "line": 18,
@@ -1656,8 +1584,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 364,
-      "end": 365,
+      "start": 379,
+      "end": 380,
       "loc": {
         "start": {
           "line": 18,
@@ -1681,9 +1609,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "settings",
-      "start": 365,
-      "end": 373,
+      "value": "styleIncludes",
+      "start": 380,
+      "end": 393,
       "loc": {
         "start": {
           "line": 18,
@@ -1691,7 +1619,7 @@
         },
         "end": {
           "line": 18,
-          "column": 44
+          "column": 49
         }
       }
     },
@@ -1707,16 +1635,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 373,
-      "end": 374,
+      "start": 393,
+      "end": 394,
       "loc": {
         "start": {
           "line": 18,
-          "column": 44
+          "column": 49
         },
         "end": {
           "line": 18,
-          "column": 45
+          "column": 50
         }
       }
     },
@@ -1733,16 +1661,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 376,
-      "end": 378,
+      "start": 395,
+      "end": 397,
       "loc": {
         "start": {
           "line": 18,
-          "column": 47
+          "column": 51
         },
         "end": {
           "line": 18,
-          "column": 49
+          "column": 53
         }
       }
     },
@@ -1758,16 +1686,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 379,
-      "end": 380,
+      "start": 398,
+      "end": 399,
       "loc": {
         "start": {
           "line": 18,
-          "column": 50
+          "column": 54
         },
         "end": {
           "line": 18,
-          "column": 51
+          "column": 55
         }
       }
     },
@@ -1786,8 +1714,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 382,
-      "end": 388,
+      "start": 401,
+      "end": 407,
       "loc": {
         "start": {
           "line": 19,
@@ -1811,8 +1739,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 389,
-      "end": 390,
+      "start": 408,
+      "end": 409,
       "loc": {
         "start": {
           "line": 19,
@@ -1837,8 +1765,8 @@
         "binop": null
       },
       "value": "type",
-      "start": 393,
-      "end": 397,
+      "start": 412,
+      "end": 416,
       "loc": {
         "start": {
           "line": 20,
@@ -1863,8 +1791,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 397,
-      "end": 398,
+      "start": 416,
+      "end": 417,
       "loc": {
         "start": {
           "line": 20,
@@ -1888,9 +1816,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "UPDATE_PRO_SETTINGS",
-      "start": 399,
-      "end": 418,
+      "value": "SETTINGS_STYLE_INCLUDES",
+      "start": 418,
+      "end": 441,
       "loc": {
         "start": {
           "line": 20,
@@ -1898,7 +1826,7 @@
         },
         "end": {
           "line": 20,
-          "column": 27
+          "column": 31
         }
       }
     },
@@ -1915,16 +1843,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 418,
-      "end": 419,
+      "start": 441,
+      "end": 442,
       "loc": {
         "start": {
           "line": 20,
-          "column": 27
+          "column": 31
         },
         "end": {
           "line": 20,
-          "column": 28
+          "column": 32
         }
       }
     },
@@ -1940,9 +1868,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "settings",
-      "start": 422,
-      "end": 430,
+      "value": "styleIncludes",
+      "start": 445,
+      "end": 458,
       "loc": {
         "start": {
           "line": 21,
@@ -1950,7 +1878,7 @@
         },
         "end": {
           "line": 21,
-          "column": 10
+          "column": 15
         }
       }
     },
@@ -1966,8 +1894,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 432,
-      "end": 433,
+      "start": 460,
+      "end": 461,
       "loc": {
         "start": {
           "line": 22,
@@ -1981,6 +1909,32 @@
     },
     {
       "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 461,
+      "end": 462,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
         "label": "}",
         "beforeExpr": false,
         "startsExpr": false,
@@ -1991,15 +1945,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 434,
-      "end": 435,
+      "start": 464,
+      "end": 465,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 24,
           "column": 0
         },
         "end": {
-          "line": 23,
+          "line": 24,
           "column": 1
         }
       }
@@ -2017,31 +1971,31 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 435,
-      "end": 436,
+      "start": 465,
+      "end": 466,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 24,
           "column": 1
         },
         "end": {
-          "line": 23,
+          "line": 24,
           "column": 2
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Action creator for updating the CF Pro settings for one form\n * @param {String} formId\n * @param  {Object} settings\n * @return {{type: string, formId: *, settings: *}}\n ",
-      "start": 438,
-      "end": 616,
+      "value": "*\n * Action creator for updating other global settings\n *\n * @param {Object} settingsOther\n * @return {{type: string, settingsOther: *}}\n ",
+      "start": 468,
+      "end": 610,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 0
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 3
         }
       }
@@ -2061,15 +2015,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 617,
-      "end": 623,
+      "start": 611,
+      "end": 617,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 0
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 6
         }
       }
@@ -2089,15 +2043,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 624,
-      "end": 629,
+      "start": 618,
+      "end": 623,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 7
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 12
         }
       }
@@ -2114,17 +2068,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "updateCfProFormSetting",
-      "start": 630,
-      "end": 652,
+      "value": "updateOtherSettings",
+      "start": 624,
+      "end": 643,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 13
         },
         "end": {
-          "line": 31,
-          "column": 35
+          "line": 32,
+          "column": 32
         }
       }
     },
@@ -2142,16 +2096,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 653,
-      "end": 654,
+      "start": 644,
+      "end": 645,
       "loc": {
         "start": {
-          "line": 31,
-          "column": 36
+          "line": 32,
+          "column": 33
         },
         "end": {
-          "line": 31,
-          "column": 37
+          "line": 32,
+          "column": 34
         }
       }
     },
@@ -2167,16 +2121,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 655,
-      "end": 656,
+      "start": 646,
+      "end": 647,
       "loc": {
         "start": {
-          "line": 31,
-          "column": 38
+          "line": 32,
+          "column": 35
         },
         "end": {
-          "line": 31,
-          "column": 39
+          "line": 32,
+          "column": 36
         }
       }
     },
@@ -2192,69 +2146,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "formId",
-      "start": 656,
-      "end": 662,
+      "value": "settingsOther",
+      "start": 647,
+      "end": 660,
       "loc": {
         "start": {
-          "line": 31,
-          "column": 39
+          "line": 32,
+          "column": 36
         },
         "end": {
-          "line": 31,
-          "column": 45
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 662,
-      "end": 663,
-      "loc": {
-        "start": {
-          "line": 31,
-          "column": 45
-        },
-        "end": {
-          "line": 31,
-          "column": 46
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "settings",
-      "start": 663,
-      "end": 671,
-      "loc": {
-        "start": {
-          "line": 31,
-          "column": 46
-        },
-        "end": {
-          "line": 31,
-          "column": 54
+          "line": 32,
+          "column": 49
         }
       }
     },
@@ -2270,16 +2172,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 671,
-      "end": 672,
+      "start": 660,
+      "end": 661,
       "loc": {
         "start": {
-          "line": 31,
-          "column": 54
+          "line": 32,
+          "column": 49
         },
         "end": {
-          "line": 31,
-          "column": 55
+          "line": 32,
+          "column": 50
         }
       }
     },
@@ -2296,16 +2198,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 673,
-      "end": 675,
+      "start": 662,
+      "end": 664,
       "loc": {
         "start": {
-          "line": 31,
-          "column": 56
+          "line": 32,
+          "column": 51
         },
         "end": {
-          "line": 31,
-          "column": 58
+          "line": 32,
+          "column": 53
         }
       }
     },
@@ -2321,16 +2223,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 676,
-      "end": 677,
+      "start": 665,
+      "end": 666,
       "loc": {
         "start": {
-          "line": 31,
-          "column": 59
+          "line": 32,
+          "column": 54
         },
         "end": {
-          "line": 31,
-          "column": 60
+          "line": 32,
+          "column": 55
         }
       }
     },
@@ -2349,15 +2251,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 679,
-      "end": 685,
+      "start": 668,
+      "end": 674,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 1
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 7
         }
       }
@@ -2374,15 +2276,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 686,
-      "end": 687,
+      "start": 675,
+      "end": 676,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 8
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 9
         }
       }
@@ -2400,15 +2302,15 @@
         "binop": null
       },
       "value": "type",
-      "start": 690,
-      "end": 694,
+      "start": 679,
+      "end": 683,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 34,
           "column": 2
         },
         "end": {
-          "line": 33,
+          "line": 34,
           "column": 6
         }
       }
@@ -2426,15 +2328,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 694,
-      "end": 695,
+      "start": 683,
+      "end": 684,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 34,
           "column": 6
         },
         "end": {
-          "line": 33,
+          "line": 34,
           "column": 7
         }
       }
@@ -2451,17 +2353,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "UPDATE_PRO_FORM_SETTINGS",
-      "start": 696,
-      "end": 720,
+      "value": "SETTINGS_OTHER",
+      "start": 685,
+      "end": 699,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 34,
           "column": 8
         },
         "end": {
-          "line": 33,
-          "column": 32
+          "line": 34,
+          "column": 22
         }
       }
     },
@@ -2478,16 +2380,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 720,
-      "end": 721,
+      "start": 699,
+      "end": 700,
       "loc": {
         "start": {
-          "line": 33,
-          "column": 32
+          "line": 34,
+          "column": 22
         },
         "end": {
-          "line": 33,
-          "column": 33
+          "line": 34,
+          "column": 23
         }
       }
     },
@@ -2503,61 +2405,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "formId",
-      "start": 724,
-      "end": 730,
-      "loc": {
-        "start": {
-          "line": 34,
-          "column": 2
-        },
-        "end": {
-          "line": 34,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 730,
-      "end": 731,
-      "loc": {
-        "start": {
-          "line": 34,
-          "column": 8
-        },
-        "end": {
-          "line": 34,
-          "column": 9
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "settings",
-      "start": 734,
-      "end": 742,
+      "value": "settingsOther",
+      "start": 703,
+      "end": 716,
       "loc": {
         "start": {
           "line": 35,
@@ -2565,7 +2415,7 @@
         },
         "end": {
           "line": 35,
-          "column": 10
+          "column": 15
         }
       }
     },
@@ -2581,8 +2431,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 744,
-      "end": 745,
+      "start": 718,
+      "end": 719,
       "loc": {
         "start": {
           "line": 36,
@@ -2596,6 +2446,32 @@
     },
     {
       "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 719,
+      "end": 720,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 2
+        },
+        "end": {
+          "line": 36,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
         "label": "}",
         "beforeExpr": false,
         "startsExpr": false,
@@ -2606,15 +2482,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 746,
-      "end": 747,
+      "start": 722,
+      "end": 723,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 38,
           "column": 0
         },
         "end": {
-          "line": 37,
+          "line": 38,
           "column": 1
         }
       }
@@ -2632,15 +2508,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 747,
-      "end": 748,
+      "start": 723,
+      "end": 724,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 38,
           "column": 1
         },
         "end": {
-          "line": 37,
+          "line": 38,
           "column": 2
         }
       }
@@ -2658,16 +2534,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 748,
-      "end": 748,
+      "start": 725,
+      "end": 725,
       "loc": {
         "start": {
-          "line": 37,
-          "column": 2
+          "line": 39,
+          "column": 0
         },
         "end": {
-          "line": 37,
-          "column": 2
+          "line": 39,
+          "column": 0
         }
       }
     }

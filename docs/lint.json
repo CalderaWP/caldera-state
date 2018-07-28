@@ -4,35 +4,35 @@
     "filePath": "src/state/reducers.js",
     "lines": [
       {
-        "lineNumber": 38,
+        "lineNumber": 49,
         "line": "/**"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 50,
         "line": " * Reducer for form(s) state"
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 51,
         "line": " *"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 52,
         "line": " * @param {Object}state"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 53,
         "line": " * @param {Object} action"
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 54,
         "line": " * @returns {*}"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 55,
         "line": " */"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 56,
         "line": "export const formsReducer = (state = DEFAULT_STATE, action) => {"
       }
     ],
@@ -50,36 +50,36 @@
     "filePath": "src/state/reducers.js",
     "lines": [
       {
-        "lineNumber": 74,
+        "lineNumber": 85,
         "line": "/**"
       },
       {
-        "lineNumber": 75,
+        "lineNumber": 86,
         "line": " * Reducer for form privacy settings state"
       },
       {
-        "lineNumber": 76,
+        "lineNumber": 87,
         "line": " *"
       },
       {
-        "lineNumber": 77,
+        "lineNumber": 88,
         "line": " * @param {Object}state"
       },
       {
-        "lineNumber": 78,
+        "lineNumber": 89,
         "line": " * @param {Object} action"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 90,
         "line": " * @returns {*}"
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 91,
         "line": " */"
       },
       {
-        "lineNumber": 81,
-        "line": "export const privacySettingsReducer = ( state = {"
+        "lineNumber": 92,
+        "line": "export const privacySettingsReducer = (state = {"
       }
     ],
     "codeParams": [
