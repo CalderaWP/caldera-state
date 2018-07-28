@@ -39,7 +39,7 @@ export const closeStatus = () => {
 /**
  * Update the status indicator
  * 
- * @param {String} message Message to show in status indicator
+ * @param {String|Boolean} message Message to show in status indicator
  * @param {Boolean} success Optional. If true, the default, background is green for success. If false, red for failure.
  * @param {Boolean} show Optional. If true, the default, status indicator will show
  * @returns {{type: string, message: *, show: boolean, success: boolean}}

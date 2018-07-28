@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490e1a86-72c6-4b3e-86ab-43bf0ca8fc43" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/state/actions.settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/actions.proLocalSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/actions.proLocalSettings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/selectors.settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/actions.status.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/actions.status.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/actions.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/actions.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/selectors.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/selectors.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,75 +15,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.57903224">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="actions.status.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/state/actions.status.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="89">
-                  <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="reducers.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/state/reducers.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="229">
-                  <caret line="157" column="36" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="36" />
-                  <folding>
-                    <element signature="e#0#80#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="actions.test.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/tests/actions.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="419">
-                  <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
-                  <folding>
-                    <element signature="e#0#135#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/state/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="134">
-                  <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#65#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="reducers.test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/tests/reducers.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="actions.privacy.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/state/actions.privacy.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="2" selection-end-column="69" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
         <leaf>
           <file leaf-file-name="actions.proLocalSettings.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/state/actions.proLocalSettings.js">
@@ -94,11 +27,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="actions.settings.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/state/actions.settings.js">
+          <file leaf-file-name="selectors.settings.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/state/selectors.settings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="21" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="21" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="29" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -107,7 +40,32 @@
             <entry file="file://$PROJECT_DIR$/src/state/selectors.proLocalSettings.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
-                  <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+                  <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="actions.settings.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/state/actions.settings.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="201">
+                  <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="selectors.test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="453">
+                  <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#0#93#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -132,6 +90,7 @@
       <find>reducerKey</find>
       <find>initialStateWithForms</find>
       <find>CALDERA_FORMS_STORE_SLUG</find>
+      <find>status</find>
     </findStrings>
     <replaceStrings>
       <replace>##</replace>
@@ -155,7 +114,6 @@
         <option value="$PROJECT_DIR$/src/App.test.js" />
         <option value="$PROJECT_DIR$/src/FormList.test.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/state/actions.status.js" />
         <option value="$PROJECT_DIR$/src/state/selectors.status.js" />
         <option value="$PROJECT_DIR$/src/state/reducerKeys.js" />
         <option value="$PROJECT_DIR$/src/tests/state.test.js" />
@@ -164,13 +122,15 @@
         <option value="$PROJECT_DIR$/src/tests/export.test.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/manual/overview.md" />
-        <option value="$PROJECT_DIR$/src/tests/selectors.test.js" />
         <option value="$PROJECT_DIR$/src/state/selectors.proLocalSettings.js" />
         <option value="$PROJECT_DIR$/src/tests/reducers.test.js" />
         <option value="$PROJECT_DIR$/src/state/reducers.js" />
         <option value="$PROJECT_DIR$/src/state/actions.proLocalSettings.js" />
         <option value="$PROJECT_DIR$/src/state/actions.settings.js" />
+        <option value="$PROJECT_DIR$/src/state/actions.status.js" />
         <option value="$PROJECT_DIR$/src/tests/actions.test.js" />
+        <option value="$PROJECT_DIR$/src/state/selectors.settings.js" />
+        <option value="$PROJECT_DIR$/src/tests/selectors.test.js" />
       </list>
     </option>
   </component>
@@ -298,7 +258,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38459000" />
+    <option name="totallyTimeSpent" value="39025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="340" y="86" width="1580" height="742" extended-state="0" />
@@ -310,8 +270,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32916668" />
-      <window_info active="true" anchor="bottom" x="41" y="82" width="1193" height="609" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.27286822" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7875969" visible="true" weight="0.19375813" />
+      <window_info anchor="bottom" x="41" y="82" width="1193" height="609" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.27286822" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7875969" visible="true" weight="0.19375813" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.2124031" side_tool="true" visible="true" weight="0.19375813" />
@@ -371,14 +331,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/state/actions.settings.js</url>
+          <line>17</line>
+          <properties lambdaOrdinal="-1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/state/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/state/module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -566,41 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/actions.privacy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/state/selectors.privacy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/selectors.proLocalSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/actions.status.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -615,23 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/reducers.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="157" column="36" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -665,10 +582,30 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/actions.proLocalSettings.js">
+    <entry file="file://$PROJECT_DIR$/src/tests/actions.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="11" />
+        <state relative-caret-position="407">
+          <caret line="207" column="12" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2393">
+          <caret line="168" column="38" lean-forward="true" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/actions.status.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -682,19 +619,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/actions.settings.js">
+    <entry file="file://$PROJECT_DIR$/src/tests/reducers.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="209">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/actions.test.js">
+    <entry file="file://$PROJECT_DIR$/src/state/actions.privacy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="58" column="56" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+        <state>
+          <caret selection-end-line="2" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/actions.proLocalSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/selectors.proLocalSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/actions.settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/selectors.settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
           <folding>
-            <element signature="e#0#135#0" expanded="true" />
+            <element signature="e#0#93#0" expanded="true" />
           </folding>
         </state>
       </provider>

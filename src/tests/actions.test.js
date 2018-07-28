@@ -190,4 +190,29 @@ describe( 'Status indicator actions', () => {
 		});
 	});
 
+	it( 'creates UPDATE_STATUS_INDICATOR action with the default error ', () => {
+		const data = {
+			show: true,
+			success: false,
+		};
+
+		expect(updateStatus(
+			false,
+			data.success,
+			data.show
+		).message).toEqual('Error');
+	});
+
+	it( 'creates UPDATE_STATUS_INDICATOR action with the default success message ', () => {
+		const data = {
+			show: true,
+			success: true,
+		};
+
+		expect(updateStatus(
+			false,
+			data.success,
+			data.show
+		).message).toEqual('Success');
+	});
 });

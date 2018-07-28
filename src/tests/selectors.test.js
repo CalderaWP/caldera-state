@@ -16,6 +16,30 @@ import {
 	getCfProSettings
 } from "../state/selectors.proLocalSettings";
 
+import {
+	getStyleIncludes,
+	getOtherSettings
+} from "../state/selectors.settings";
+
+describe( 'settings selectors', () => {
+	const mockState = {
+		styleIncludes:{
+			form:false
+		},
+		other: {
+			cdnEnabled:true
+		}
+	};
+
+	it( 'selects styleIncludes settings', () => {
+		expect(getStyleIncludes(mockState)).toEqual(mockState.styleIncludes);
+	});
+
+	it( 'selects other settings', () => {
+		expect(getOtherSettings(mockState)).toEqual(mockState.other);
+	});
+
+});
 describe( 'CF Pro local settings selectors', () => {
 	const mockState = {
 		settings:{
