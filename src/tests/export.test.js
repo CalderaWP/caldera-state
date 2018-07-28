@@ -1,6 +1,14 @@
 import * as calderaState from '../state/module';
-import {CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG, CALDERA_FORMS_SETTINGS_SLUG} from "../state";
 describe( 'root export', () => {
+
+	describe( 'exports actions', () => {
+		it('exports object of actions', () => {
+			expect( typeof calderaState.store.actions ).toBe('object');
+		});
+		it( 'exports newForm action', () => {
+			expect( typeof calderaState.store.actions.newForm ).toBe('function');
+		});
+	});
 	describe( 'exports state', () => {
 		it( 'export has state property', () => {
 			expect( typeof  calderaState.state ).toBe('object');
