@@ -4,7 +4,7 @@ Redux(-like) state management for [Caldera Forms](https://github.com/calderawp/c
 [![Build Status](https://travis-ci.org/CalderaWP/caldera-state.svg?branch=master)](https://travis-ci.org/CalderaWP/caldera-state)
 [![Documentation Status](https://calderalabs.org/caldera-state/badge.svg)](https://calderalabs.org/caldera-state/source.html)
 [![Coverage Status](https://coveralls.io/repos/github/CalderaWP/caldera-state/badge.svg?branch=master)](https://coveralls.io/github/CalderaWP/caldera-state?branch=master)
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/ea1e71a99028918cec68/maintainability)](https://codeclimate.com/github/CalderaWP/caldera-state/maintainability)
 
 🌋 👀[Documentation](https://calderalabs.org/caldera-state/)
 ## Installation
