@@ -10,7 +10,17 @@ import {SET_FORM_PRIVACY_SETTINGS} from './actions.privacy';
 import {
 	setFormInState
 } from './util';
-import {CLOSE_STATUS_INDICATOR, START_SPIN, STOP_SPIN, UPDATE_STATUS_INDICATOR} from "./actions.status";
+
+import {
+	CLOSE_STATUS_INDICATOR,
+	START_SPIN, STOP_SPIN,
+	UPDATE_STATUS_INDICATOR
+} from "./actions.status";
+
+import {
+	UPDATE_PRO_FORM_SETTINGS,
+	UPDATE_PRO_SETTINGS
+} from "./actions.proLocalSettings";
 
 /**
  * Default state for formsReducer
@@ -29,10 +39,10 @@ export const DEFAULT_STATE = {
  * @returns {{} & {forms: *} & {forms: Array, formPreviews: {}}}
  */
 export const initialStateWithForms = (forms) => {
-	if( ! Array.isArray(forms) ){
+	if (!Array.isArray(forms)) {
 		throw 'You must use an array of forms!';
 	}
-	return Object.assign({}, {forms:forms},DEFAULT_STATE );
+	return Object.assign({}, {forms: forms}, DEFAULT_STATE);
 };
 
 
@@ -45,29 +55,29 @@ export const initialStateWithForms = (forms) => {
  */
 export const formsReducer = (state = DEFAULT_STATE, action) => {
 	switch (action.type) {
-	case SET_FORMS:
-		return {
-			...state,
-			forms:action.forms
-		};
-	case ADD_FORM_PREVIEW:
-		state.formPreviews[action.formId] = action.preview;
-		return {
-			...state,
-			formPreviews: state.formPreviews
-		};
-	case SET_FORM :
-		return( setFormInState(state,action.form));
-	case NEW_FORM:
-		const newForm = {
-			ID: '11',
-			name: '...'
-		};
-		state.forms.push(newForm);
-		return Object.assign({},state);
+		case SET_FORMS:
+			return {
+				...state,
+				forms: action.forms
+			};
+		case ADD_FORM_PREVIEW:
+			state.formPreviews[action.formId] = action.preview;
+			return {
+				...state,
+				formPreviews: state.formPreviews
+			};
+		case SET_FORM :
+			return (setFormInState(state, action.form));
+		case NEW_FORM:
+			const newForm = {
+				ID: '11',
+				name: '...'
+			};
+			state.forms.push(newForm);
+			return Object.assign({}, state);
 
-	default:
-		return state;
+		default:
+			return state;
 	}
 
 };
@@ -79,19 +89,19 @@ export const formsReducer = (state = DEFAULT_STATE, action) => {
  * @param {Object} action
  * @returns {*}
  */
-export const privacySettingsReducer = ( state = {
+export const privacySettingsReducer = (state = {
 	...DEFAULT_STATE
-}, action ) => {
-	switch (action.type){
-	case SET_FORM_PRIVACY_SETTINGS :
-		return setFormInState(state, action.form);
-	default:
-		return state;
+}, action) => {
+	switch (action.type) {
+		case SET_FORM_PRIVACY_SETTINGS :
+			return setFormInState(state, action.form);
+		default:
+			return state;
 	}
 };
 
 export const STATUS_DEFULT_STATE = {
-	show:false,
+	show: false,
 	message: '',
 	success: true,
 	spin: false,
@@ -105,8 +115,8 @@ export const STATUS_DEFULT_STATE = {
  * @param {Object} action
  * @returns {*}
  */
-export const statusReducer = (state = STATUS_DEFULT_STATE, action ) => {
-	switch (action.type){
+export const statusReducer = (state = STATUS_DEFULT_STATE, action) => {
+	switch (action.type) {
 		case START_SPIN :
 			return {
 				...state,
@@ -127,7 +137,7 @@ export const statusReducer = (state = STATUS_DEFULT_STATE, action ) => {
 		case UPDATE_STATUS_INDICATOR: {
 			return {
 				...state,
-				show:action.show,
+				show: action.show,
 				message: action.message,
 				success: action.success,
 			};
@@ -138,7 +148,29 @@ export const statusReducer = (state = STATUS_DEFULT_STATE, action ) => {
 
 };
 
-
-const proLocalSettingsReducer = (state = {}, action ) => {
-
-}
+/**
+ * Reducer for CF Pro local settings
+ *
+ * @param {Object} state Current state
+ * @param {Object} action
+ * @return {Object}
+ */
+export const proLocalSettingsReducer = (state = {
+	settings: {},
+	forms: []
+}, action) => {
+	switch (action.type) {
+		case UPDATE_PRO_SETTINGS:
+			return {
+				...state,
+				settings: action.settings
+			};
+		case UPDATE_PRO_FORM_SETTINGS:
+			return setFormInState(state, {
+				...action.settings,
+				ID: action.formId,
+			});
+		default:
+			return state;
+	}
+};

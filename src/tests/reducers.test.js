@@ -13,7 +13,8 @@ import {
 	DEFAULT_STATE,
 	privacySettingsReducer,
 	statusReducer,
-	STATUS_DEFULT_STATE
+	STATUS_DEFULT_STATE,
+	proLocalSettingsReducer
 } from '../state/reducers';
 
 import {
@@ -27,6 +28,43 @@ import {
 	setFormPrivacyForm
 } from '../state/actions.privacy';
 
+
+import {
+	updateCfProFormSetting,
+	updateCfProSettings
+} from "../state/actions.proLocalSettings";
+
+
+describe( 'proLocalSettingsReducer', () => {
+	const formOne = {
+		ID: 'CF1',
+		name: 'Form One',
+		sendLocal: false
+	};
+	const formTwo = {
+		ID: 'CF2',
+		name: 'Form Two',
+		sendLocal: false
+
+	};
+	const mockState = {
+		settings:{
+			connected: false,
+		},
+		forms: [formOne,formTwo]
+	}
+	it( 'updates settings', () => {
+		expect( proLocalSettingsReducer(
+			mockState, updateCfProSettings({connected:true})
+		).settings.connected).toEqual(true);
+	} );
+
+	it( 'updates forms', () => {
+		expect( proLocalSettingsReducer(
+			mockState, updateCfProFormSetting('CF2', {sendLocal:true})
+		).forms.find(form => 'CF2' === form.ID ).sendLocal).toEqual(true);
+	})
+});
 describe('Main form reducer', () => {
 	const formOne = {
 		ID: 'CF1',
