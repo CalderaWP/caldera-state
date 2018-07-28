@@ -1,6 +1,6 @@
 {
-  "coverage": "56.89%",
-  "expectCount": 58,
+  "coverage": "52.38%",
+  "expectCount": 63,
   "actualCount": 33,
   "files": {
     "src/App.js": {
@@ -56,6 +56,16 @@
         3
       ]
     },
+    "src/state/actions.proLocalSettings.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        2,
+        3,
+        4,
+        11
+      ]
+    },
     "src/state/actions.status.js": {
       "expectCount": 8,
       "actualCount": 4,
@@ -75,10 +85,11 @@
       ]
     },
     "src/state/reducers.js": {
-      "expectCount": 6,
+      "expectCount": 7,
       "actualCount": 5,
       "undocumentLines": [
-        93
+        93,
+        142
       ]
     },
     "src/state/selectors.js": {

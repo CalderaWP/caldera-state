@@ -30,6 +30,69 @@ import {
 	setFormPrivacyForm
 } from '../state/actions.privacy';
 
+import {
+	updateCfProFormSetting,
+	updateCfProSettings,
+	UPDATE_PRO_SETTINGS,
+	UPDATE_PRO_FORM_SETTINGS
+} from "../state/actions.proLocalSettings";
+
+import {
+	updateStyleIncludes,
+	updateOtherSettings,
+	SETTINGS_STYLE_INCLUDES,
+	SETTINGS_OTHER,
+}from "../state/actions.settings";
+
+describe( 'settings actions', () => {
+	it( 'creates updateStyleIncludes with the right type', () => {
+		expect(updateStyleIncludes({}).type).toEqual(SETTINGS_STYLE_INCLUDES);
+	});
+	it( 'creates updateOtherSettings with the right type', () => {
+		expect(updateOtherSettings({}).type).toEqual(SETTINGS_OTHER);
+	});
+
+	const update = {
+		cdnEnabled:true,
+	};
+	it( 'creates updateStyleIncludes with the right payload', () => {
+		expect(updateStyleIncludes(update).styleIncludes).toEqual(update);
+	});
+	it( 'creates updateOtherSettings with the right type', () => {
+		expect(updateOtherSettings(update).settingsOther).toEqual(update);
+	});
+});
+describe( 'Pro local settings actions', () => {
+
+	const formSettings = {
+		sendLocal: true,
+		emailLayout: 5
+	}
+	it('creates updateCfProSettings action with the right type', () => {
+		const action = updateCfProSettings({});
+		expect(action.type).toBe(UPDATE_PRO_SETTINGS);
+	});
+	it('creates setForm action with the right data', () => {
+		const data = {
+			apikeys: {}
+		};
+		const action = updateCfProSettings(data);
+		expect(action.settings).toEqual(data);
+
+	});
+	it('creates setForm action with the right type', () => {
+		const action = updateCfProFormSetting('CF1', formSettings);
+		expect(action.type).toBe(UPDATE_PRO_FORM_SETTINGS);
+	});
+	it('creates setForm action with the right data', () => {
+		const action = updateCfProFormSetting('CF2', formSettings);
+		expect(action.settings).toEqual(formSettings);
+		expect(action.formId).toEqual('CF2');
+	});
+
+
+
+});
 
 describe('form actions', () => {
 	const data = {ID: 1};
@@ -127,4 +190,29 @@ describe( 'Status indicator actions', () => {
 		});
 	});
 
+	it( 'creates UPDATE_STATUS_INDICATOR action with the default error ', () => {
+		const data = {
+			show: true,
+			success: false,
+		};
+
+		expect(updateStatus(
+			false,
+			data.success,
+			data.show
+		).message).toEqual('Error');
+	});
+
+	it( 'creates UPDATE_STATUS_INDICATOR action with the default success message ', () => {
+		const data = {
+			show: true,
+			success: true,
+		};
+
+		expect(updateStatus(
+			false,
+			data.success,
+			data.show
+		).message).toEqual('Success');
+	});
 });

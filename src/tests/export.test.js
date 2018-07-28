@@ -1,4 +1,5 @@
 import * as calderaState from '../state/module';
+import {CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG, CALDERA_FORMS_SETTINGS_SLUG} from "../state";
 describe( 'root export', () => {
 	describe( 'exports state', () => {
 		it( 'export has state property', () => {
@@ -15,6 +16,14 @@ describe( 'root export', () => {
 
 		it( 'state exports CALDERA_FORMS_STATUS_STORE_SLUG', () => {
 			expect( typeof  calderaState.state.CALDERA_FORMS_STATUS_STORE_SLUG).toBe('string');
+		});
+
+		it( 'state exports CALDERA_FORMS_SETTINGS_SLUG', () => {
+			expect( typeof  calderaState.state.CALDERA_FORMS_SETTINGS_SLUG).toBe('string');
+		});
+
+		it( 'state exports CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG', () => {
+			expect( typeof  calderaState.state.CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG).toBe('string');
 		});
 
 		it( 'state exports calderaFormsFormState', () => {

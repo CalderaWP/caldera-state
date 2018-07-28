@@ -1331,6 +1331,123 @@
   {
     "__docId__": 79,
     "kind": "file",
+    "name": "src/state/actions.proLocalSettings.js",
+    "content": "\nexport const UPDATE_PRO_SETTINGS = 'CALDERA_FORMS/PRO/SETTINGS/UPDATE';\nexport const UPDATE_PRO_FORM_SETTINGS = 'CALDERA_FORMS/PRO/SETTINGS/FORM/UPDATE';\nexport const updateCfProSettings = (settings)  => {\n\treturn {\n\t\ttype: UPDATE_PRO_SETTINGS,\n\t\tsettings\n\t}\n};\n\nexport const updateCfProFormSetting = (formId,settings) => {\n\treturn {\n\t\ttype: UPDATE_PRO_SETTINGS,\n\t\tformId,\n\t\tsettings\n\t}\n};",
+    "static": true,
+    "longname": "/Users/josh/caldera-js/state/src/state/actions.proLocalSettings.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "variable",
+    "name": "UPDATE_PRO_SETTINGS",
+    "memberof": "src/state/actions.proLocalSettings.js",
+    "static": true,
+    "longname": "src/state/actions.proLocalSettings.js~UPDATE_PRO_SETTINGS",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.proLocalSettings.js",
+    "importStyle": "{UPDATE_PRO_SETTINGS}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "variable",
+    "name": "UPDATE_PRO_FORM_SETTINGS",
+    "memberof": "src/state/actions.proLocalSettings.js",
+    "static": true,
+    "longname": "src/state/actions.proLocalSettings.js~UPDATE_PRO_FORM_SETTINGS",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.proLocalSettings.js",
+    "importStyle": "{UPDATE_PRO_FORM_SETTINGS}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "function",
+    "name": "updateCfProSettings",
+    "memberof": "src/state/actions.proLocalSettings.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/state/actions.proLocalSettings.js~updateCfProSettings",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.proLocalSettings.js",
+    "importStyle": "{updateCfProSettings}",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "settings",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"type\": *, \"settings\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "function",
+    "name": "updateCfProFormSetting",
+    "memberof": "src/state/actions.proLocalSettings.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/state/actions.proLocalSettings.js~updateCfProFormSetting",
+    "access": "public",
+    "export": true,
+    "importPath": "@caldera-labs/state/src/state/actions.proLocalSettings.js",
+    "importStyle": "{updateCfProFormSetting}",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [
+      {
+        "name": "formId",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "settings",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"type\": *, \"formId\": *, \"settings\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
     "name": "src/state/actions.status.js",
     "content": "export const START_SPIN = 'START_SPIN';\nexport const STOP_SPIN = 'STOP_SPIN';\nexport const CLOSE_STATUS_INDICATOR = 'CLOSE_STATUS_INDICATOR';\nexport const UPDATE_STATUS_INDICATOR = 'UPDATE_STATUS_INDICATOR';\n\n/**\n * Dispatch action to start spinner\n * @returns {{type: string}}\n */\nexport const startSpinner = () => {\n\treturn {\n\t\ttype: START_SPIN\n\t}\n};\n\n/**\n * Dispatch action to stop spinner\n *\n *\n * @returns {{type: string}}\n */\nexport const stopSpinner = () => {\n\treturn {\n\t\ttype: STOP_SPIN\n\t}\n};\n\n/**\n * Dispatch action to close (hide) status indicator\n *\n * @returns {{type: string}}\n */\nexport const closeStatus = () => {\n\treturn {\n\t\ttype: CLOSE_STATUS_INDICATOR\n\t}\n};\n\n/**\n * Update the status indicator\n * \n * @param {String} message Message to show in status indicator\n * @param {Boolean} success Optional. If true, the default, background is green for success. If false, red for failure.\n * @param {Boolean} show Optional. If true, the default, status indicator will show\n * @returns {{type: string, message: *, show: boolean, success: boolean}}\n */\nexport const updateStatus = (message, success = true, show = true) => {\n\tif( ! message ){\n\t\tmessage = !success ? 'Error' : 'Success';\n\t}\n\n\treturn {\n\t\ttype: UPDATE_STATUS_INDICATOR,\n\t\tmessage,\n\t\tshow,\n\t\tsuccess\n\t}\n};",
     "static": true,
@@ -1340,7 +1457,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 80,
+    "__docId__": 85,
     "kind": "variable",
     "name": "START_SPIN",
     "memberof": "src/state/actions.status.js",
@@ -1360,7 +1477,7 @@
     }
   },
   {
-    "__docId__": 81,
+    "__docId__": 86,
     "kind": "variable",
     "name": "STOP_SPIN",
     "memberof": "src/state/actions.status.js",
@@ -1380,7 +1497,7 @@
     }
   },
   {
-    "__docId__": 82,
+    "__docId__": 87,
     "kind": "variable",
     "name": "CLOSE_STATUS_INDICATOR",
     "memberof": "src/state/actions.status.js",
@@ -1400,7 +1517,7 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 88,
     "kind": "variable",
     "name": "UPDATE_STATUS_INDICATOR",
     "memberof": "src/state/actions.status.js",
@@ -1420,7 +1537,7 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 89,
     "kind": "function",
     "name": "startSpinner",
     "memberof": "src/state/actions.status.js",
@@ -1451,7 +1568,7 @@
     "params": []
   },
   {
-    "__docId__": 85,
+    "__docId__": 90,
     "kind": "function",
     "name": "stopSpinner",
     "memberof": "src/state/actions.status.js",
@@ -1482,7 +1599,7 @@
     "params": []
   },
   {
-    "__docId__": 86,
+    "__docId__": 91,
     "kind": "function",
     "name": "closeStatus",
     "memberof": "src/state/actions.status.js",
@@ -1513,7 +1630,7 @@
     "params": []
   },
   {
-    "__docId__": 87,
+    "__docId__": 92,
     "kind": "function",
     "name": "updateStatus",
     "memberof": "src/state/actions.status.js",
@@ -1575,7 +1692,7 @@
     }
   },
   {
-    "__docId__": 88,
+    "__docId__": 93,
     "kind": "file",
     "name": "src/state/index.js",
     "content": "import {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n} from './actions';\n\nimport {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n} from './selectors';\n\nimport {\n\tformsReducer, privacySettingsReducer, statusReducer,\n} from './reducers';\n\n\nimport {\n\tcombineReducers,createStore\n} from 'redux';\n\nconst actionFunctions = {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n};\n\nconst selectorFunctions = {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n};\n\n/**\n * The reducer key for the main forms store\n * @type {string}\n */\nexport const CALDERA_FORMS_STORE_SLUG = 'CALDERA_FORMS/FORMS';\n/**\n * The reducer key for the privacy settings store\n * @type {string}\n */\nexport const CALDERA_FORMS_PRIVACY_STORE_SLUG = `${CALDERA_FORMS_STORE_SLUG}/PRIVACY`;\n/**\n * The reducer key for the status store\n * @type {string}\n */\nexport const CALDERA_FORMS_STATUS_STORE_SLUG = `${CALDERA_FORMS_STORE_SLUG}/STATUS`;\n/**\n * Caldera Forms Redux-store\n *\n * @type {{reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}}\n */\nexport const calderaFormsFormState = {\n\treducer: formsReducer,\n\tactions: actionFunctions,\n\tselectors: selectorFunctions,\n};\n\n/**\n * All reducers combined to one indexed object\n *\n * Designed to be passed to redux's combineReducers\n * @type {{}}\n */\nexport const reducers = {};\nreducers[CALDERA_FORMS_STORE_SLUG] = formsReducer;\nreducers[CALDERA_FORMS_PRIVACY_STORE_SLUG] = privacySettingsReducer;\nreducers[CALDERA_FORMS_STATUS_STORE_SLUG] = statusReducer;\n\n/**\n * Redux store with all reducers combined\n *\n * @type {Store<any>}\n */\nexport const calderaFormsReduxStore = createStore(\n\tcombineReducers(reducers),\n\twindow.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()\n);\n\n",
@@ -1586,7 +1703,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 89,
+    "__docId__": 94,
     "kind": "variable",
     "name": "actionFunctions",
     "memberof": "src/state/index.js",
@@ -1607,7 +1724,7 @@
     "ignore": true
   },
   {
-    "__docId__": 90,
+    "__docId__": 95,
     "kind": "variable",
     "name": "selectorFunctions",
     "memberof": "src/state/index.js",
@@ -1628,7 +1745,7 @@
     "ignore": true
   },
   {
-    "__docId__": 91,
+    "__docId__": 96,
     "kind": "variable",
     "name": "CALDERA_FORMS_STORE_SLUG",
     "memberof": "src/state/index.js",
@@ -1650,7 +1767,7 @@
     }
   },
   {
-    "__docId__": 92,
+    "__docId__": 97,
     "kind": "variable",
     "name": "CALDERA_FORMS_PRIVACY_STORE_SLUG",
     "memberof": "src/state/index.js",
@@ -1672,7 +1789,7 @@
     }
   },
   {
-    "__docId__": 93,
+    "__docId__": 98,
     "kind": "variable",
     "name": "CALDERA_FORMS_STATUS_STORE_SLUG",
     "memberof": "src/state/index.js",
@@ -1694,7 +1811,7 @@
     }
   },
   {
-    "__docId__": 94,
+    "__docId__": 99,
     "kind": "variable",
     "name": "calderaFormsFormState",
     "memberof": "src/state/index.js",
@@ -1716,7 +1833,7 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 100,
     "kind": "variable",
     "name": "reducers",
     "memberof": "src/state/index.js",
@@ -1738,7 +1855,7 @@
     }
   },
   {
-    "__docId__": 96,
+    "__docId__": 101,
     "kind": "variable",
     "name": "calderaFormsReduxStore",
     "memberof": "src/state/index.js",
@@ -1760,10 +1877,10 @@
     }
   },
   {
-    "__docId__": 97,
+    "__docId__": 102,
     "kind": "file",
     "name": "src/state/module.js",
-    "content": "/*eslint no-undef: \"error\"*/\n/*eslint-env node*/\n\n/** Store**/\n//Actions\nimport {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n} from './actions';\n\nimport {\n\tsetFormPrivacyForm,\n\tsetEditForm,\n\tunsetEditForm\n} from './actions.privacy';\n\n//Selectors\nimport {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n} from './selectors';\n\nimport {\n\tgetFormPrivacySettings\n} from './selectors.privacy';\n\n//Reducers\nimport {\n\tformsReducer,\n\tprivacySettingsReducer,\n\tinitialStateWithForms,\n} from './reducers';\n\n/** State **/\nimport {\n\tCALDERA_FORMS_STORE_SLUG,\n\tcalderaFormsFormState,\n\tcalderaFormsReduxStore,\n\treducers\n} from './index';\n\n/** Util **/\nimport  {\n\tformHasId,\n\tfindFormById,\n\tsetFormInState,\n\tgenerateId,\n\tmapArrayOfFormsToObject,\n\tgetFormId,\n\tfindFormIndexById,\n} from \"./util\";\n\n/**\n * All of the package in one export\n *\n * @type {{store: {actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}, reducers: {formsReducer: formsReducer}}, state: {CALDERA_FORMS_STORE_SLUG: string, calderaFormsFormState: {reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}, calderaFormsReduxStore}}}\n */\nmodule.exports  = {\n\tstore : {\n\t\tactions: {\n\t\t\tsetForms,\n\t\t\tsetForm,\n\t\t\taddFormPreview,\n\t\t\tsetFormPrivacyForm,\n\t\t\tsetEditForm,\n\t\t\tunsetEditForm\n\t\t},\n\t\tselectors: {\n\t\t\tgetForm,\n\t\t\tgetForms,\n\t\t\tgetFormPreview,\n\t\t\tgetFormPreviews,\n\t\t\tgetFormPrivacySettings\n\n\t\t},\n\t\treducers: {\n\t\t\tformsReducer,\n\t\t\tinitialStateWithForms,\n\t\t\tprivacySettingsReducer\n\t\t}\n\t},\n\tstate: {\n\t\tCALDERA_FORMS_STORE_SLUG,\n\t\tcalderaFormsFormState,\n\t\tcalderaFormsReduxStore,\n\t\treducers\n\t},\n\tutil: {\n\t\tformHasId,\n\t\tfindFormById,\n\t\tsetFormInState,\n\t\tgenerateId,\n\t\tmapArrayOfFormsToObject,\n\t\tgetFormId,\n\t\tfindFormIndexById\n\t}\n};",
+    "content": "/*eslint no-undef: \"error\"*/\n/*eslint-env node*/\n\n/** Store**/\n//Actions\nimport {\n\tsetForms,\n\tsetForm,\n\taddFormPreview\n} from './actions';\n\nimport {\n\tsetFormPrivacyForm,\n\tsetEditForm,\n\tunsetEditForm\n} from './actions.privacy';\n\n//Selectors\nimport {\n\tgetForm,\n\tgetForms,\n\tgetFormPreview,\n\tgetFormPreviews\n} from './selectors';\n\nimport {\n\tgetFormPrivacySettings\n} from './selectors.privacy';\n\n//Reducers\nimport {\n\tformsReducer,\n\tprivacySettingsReducer,\n\tinitialStateWithForms,\n} from './reducers';\n\n/** State **/\nimport {\n\tCALDERA_FORMS_STORE_SLUG,\n\tCALDERA_FORMS_STATUS_STORE_SLUG,\n\tCALDERA_FORMS_PRIVACY_STORE_SLUG,\n\tcalderaFormsFormState,\n\tcalderaFormsReduxStore,\n\treducers\n} from './index';\n\n/** Util **/\nimport  {\n\tformHasId,\n\tfindFormById,\n\tsetFormInState,\n\tgenerateId,\n\tmapArrayOfFormsToObject,\n\tgetFormId,\n\tfindFormIndexById,\n} from \"./util\";\n\n/**\n * All of the package in one export\n *\n * @type {{store: {actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}, reducers: {formsReducer: formsReducer}}, state: {CALDERA_FORMS_STORE_SLUG: string, calderaFormsFormState: {reducer: formsReducer, actions: {setForms: setForms, setForm: setForm, addFormPreview: addFormPreview}, selectors: {getForm: getForm, getForms: getForms, getFormPreview: getFormPreview, getFormPreviews: getFormPreviews}}, calderaFormsReduxStore}}}\n */\nmodule.exports  = {\n\tstore : {\n\t\tactions: {\n\t\t\tsetForms,\n\t\t\tsetForm,\n\t\t\taddFormPreview,\n\t\t\tsetFormPrivacyForm,\n\t\t\tsetEditForm,\n\t\t\tunsetEditForm\n\t\t},\n\t\tselectors: {\n\t\t\tgetForm,\n\t\t\tgetForms,\n\t\t\tgetFormPreview,\n\t\t\tgetFormPreviews,\n\t\t\tgetFormPrivacySettings\n\n\t\t},\n\t\treducers: {\n\t\t\tformsReducer,\n\t\t\tinitialStateWithForms,\n\t\t\tprivacySettingsReducer\n\t\t}\n\t},\n\tstate: {\n\t\tCALDERA_FORMS_STORE_SLUG,\n\t\tCALDERA_FORMS_STATUS_STORE_SLUG,\n\t\tCALDERA_FORMS_PRIVACY_STORE_SLUG,\n\t\tcalderaFormsFormState,\n\t\tcalderaFormsReduxStore,\n\t\treducers\n\t},\n\tutil: {\n\t\tformHasId,\n\t\tfindFormById,\n\t\tsetFormInState,\n\t\tgenerateId,\n\t\tmapArrayOfFormsToObject,\n\t\tgetFormId,\n\t\tfindFormIndexById\n\t}\n};",
     "static": true,
     "longname": "/Users/josh/caldera-js/state/src/state/module.js",
     "access": "public",
@@ -1771,10 +1888,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 98,
+    "__docId__": 103,
     "kind": "file",
     "name": "src/state/reducers.js",
-    "content": "import {\n\tSET_FORMS,\n\tSET_FORM,\n\tADD_FORM_PREVIEW,\n\tNEW_FORM\n} from './actions';\n\nimport {SET_FORM_PRIVACY_SETTINGS} from './actions.privacy';\n\nimport {\n\tsetFormInState\n} from './util';\nimport {CLOSE_STATUS_INDICATOR, START_SPIN, STOP_SPIN, UPDATE_STATUS_INDICATOR} from \"./actions.status\";\n\n/**\n * Default state for formsReducer\n *\n * @type {{forms: Array, formPreviews: {}}}\n */\nexport const DEFAULT_STATE = {\n\tforms: [],\n\tformPreviews: {},\n};\n\n/**\n * Create inertial state from an array of forms.\n *\n * @param {Object} forms\n * @returns {{} & {forms: *} & {forms: Array, formPreviews: {}}}\n */\nexport const initialStateWithForms = (forms) => {\n\tif( ! Array.isArray(forms) ){\n\t\tthrow 'You must use an array of forms!';\n\t}\n\treturn Object.assign({}, {forms:forms},DEFAULT_STATE );\n};\n\n\n/**\n * Reducer for form(s) state\n *\n * @param {Object}state\n * @param {Object} action\n * @returns {*}\n */\nexport const formsReducer = (state = DEFAULT_STATE, action) => {\n\tswitch (action.type) {\n\tcase SET_FORMS:\n\t\treturn {\n\t\t\t...state,\n\t\t\tforms:action.forms\n\t\t};\n\tcase ADD_FORM_PREVIEW:\n\t\tstate.formPreviews[action.formId] = action.preview;\n\t\treturn {\n\t\t\t...state,\n\t\t\tformPreviews: state.formPreviews\n\t\t};\n\tcase SET_FORM :\n\t\treturn( setFormInState(state,action.form));\n\tcase NEW_FORM:\n\t\tconst newForm = {\n\t\t\tID: '11',\n\t\t\tname: '...'\n\t\t};\n\t\tstate.forms.push(newForm);\n\t\treturn Object.assign({},state);\n\n\tdefault:\n\t\treturn state;\n\t}\n\n};\n\n/**\n * Reducer for form privacy settings state\n *\n * @param {Object}state\n * @param {Object} action\n * @returns {*}\n */\nexport const privacySettingsReducer = ( state = {\n\t...DEFAULT_STATE\n}, action ) => {\n\tswitch (action.type){\n\tcase SET_FORM_PRIVACY_SETTINGS :\n\t\treturn setFormInState(state, action.form);\n\tdefault:\n\t\treturn state;\n\t}\n};\n\nexport const STATUS_DEFULT_STATE = {\n\tshow:false,\n\tmessage: '',\n\tsuccess: true,\n\tspin: false,\n};\n\n\n/**\n * Reducer for redux(-like) store managing spinner and success\n *\n * @param {Object} state\n * @param {Object} action\n * @returns {*}\n */\nexport const statusReducer = (state = STATUS_DEFULT_STATE, action ) => {\n\tswitch (action.type){\n\t\tcase START_SPIN :\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tspin: true\n\t\t\t};\n\t\tcase STOP_SPIN : {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tspin: false\n\t\t\t};\n\t\t}\n\t\tcase CLOSE_STATUS_INDICATOR: {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tshow: false\n\t\t\t};\n\t\t}\n\t\tcase UPDATE_STATUS_INDICATOR: {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tshow:action.show,\n\t\t\t\tmessage: action.message,\n\t\t\t\tsuccess: action.success,\n\t\t\t};\n\t\t}\n\t\tdefault:\n\t\t\treturn state;\n\t}\n\n};\n\n",
+    "content": "import {\n\tSET_FORMS,\n\tSET_FORM,\n\tADD_FORM_PREVIEW,\n\tNEW_FORM\n} from './actions';\n\nimport {SET_FORM_PRIVACY_SETTINGS} from './actions.privacy';\n\nimport {\n\tsetFormInState\n} from './util';\nimport {CLOSE_STATUS_INDICATOR, START_SPIN, STOP_SPIN, UPDATE_STATUS_INDICATOR} from \"./actions.status\";\n\n/**\n * Default state for formsReducer\n *\n * @type {{forms: Array, formPreviews: {}}}\n */\nexport const DEFAULT_STATE = {\n\tforms: [],\n\tformPreviews: {},\n};\n\n/**\n * Create inertial state from an array of forms.\n *\n * @param {Object} forms\n * @returns {{} & {forms: *} & {forms: Array, formPreviews: {}}}\n */\nexport const initialStateWithForms = (forms) => {\n\tif( ! Array.isArray(forms) ){\n\t\tthrow 'You must use an array of forms!';\n\t}\n\treturn Object.assign({}, {forms:forms},DEFAULT_STATE );\n};\n\n\n/**\n * Reducer for form(s) state\n *\n * @param {Object}state\n * @param {Object} action\n * @returns {*}\n */\nexport const formsReducer = (state = DEFAULT_STATE, action) => {\n\tswitch (action.type) {\n\tcase SET_FORMS:\n\t\treturn {\n\t\t\t...state,\n\t\t\tforms:action.forms\n\t\t};\n\tcase ADD_FORM_PREVIEW:\n\t\tstate.formPreviews[action.formId] = action.preview;\n\t\treturn {\n\t\t\t...state,\n\t\t\tformPreviews: state.formPreviews\n\t\t};\n\tcase SET_FORM :\n\t\treturn( setFormInState(state,action.form));\n\tcase NEW_FORM:\n\t\tconst newForm = {\n\t\t\tID: '11',\n\t\t\tname: '...'\n\t\t};\n\t\tstate.forms.push(newForm);\n\t\treturn Object.assign({},state);\n\n\tdefault:\n\t\treturn state;\n\t}\n\n};\n\n/**\n * Reducer for form privacy settings state\n *\n * @param {Object}state\n * @param {Object} action\n * @returns {*}\n */\nexport const privacySettingsReducer = ( state = {\n\t...DEFAULT_STATE\n}, action ) => {\n\tswitch (action.type){\n\tcase SET_FORM_PRIVACY_SETTINGS :\n\t\treturn setFormInState(state, action.form);\n\tdefault:\n\t\treturn state;\n\t}\n};\n\nexport const STATUS_DEFULT_STATE = {\n\tshow:false,\n\tmessage: '',\n\tsuccess: true,\n\tspin: false,\n};\n\n\n/**\n * Reducer for redux(-like) store managing spinner and success\n *\n * @param {Object} state\n * @param {Object} action\n * @returns {*}\n */\nexport const statusReducer = (state = STATUS_DEFULT_STATE, action ) => {\n\tswitch (action.type){\n\t\tcase START_SPIN :\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tspin: true\n\t\t\t};\n\t\tcase STOP_SPIN : {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tspin: false\n\t\t\t};\n\t\t}\n\t\tcase CLOSE_STATUS_INDICATOR: {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tshow: false\n\t\t\t};\n\t\t}\n\t\tcase UPDATE_STATUS_INDICATOR: {\n\t\t\treturn {\n\t\t\t\t...state,\n\t\t\t\tshow:action.show,\n\t\t\t\tmessage: action.message,\n\t\t\t\tsuccess: action.success,\n\t\t\t};\n\t\t}\n\t\tdefault:\n\t\t\treturn state;\n\t}\n\n};\n\n\nconst proLocalSettingsReducer = (state = {}, action ) => {\n\n}\n",
     "static": true,
     "longname": "/Users/josh/caldera-js/state/src/state/reducers.js",
     "access": "public",
@@ -1782,7 +1899,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 99,
+    "__docId__": 104,
     "kind": "variable",
     "name": "DEFAULT_STATE",
     "memberof": "src/state/reducers.js",
@@ -1804,7 +1921,7 @@
     }
   },
   {
-    "__docId__": 100,
+    "__docId__": 105,
     "kind": "function",
     "name": "initialStateWithForms",
     "memberof": "src/state/reducers.js",
@@ -1846,7 +1963,7 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 106,
     "kind": "function",
     "name": "formsReducer",
     "memberof": "src/state/reducers.js",
@@ -1898,7 +2015,7 @@
     }
   },
   {
-    "__docId__": 102,
+    "__docId__": 107,
     "kind": "function",
     "name": "privacySettingsReducer",
     "memberof": "src/state/reducers.js",
@@ -1950,7 +2067,7 @@
     }
   },
   {
-    "__docId__": 103,
+    "__docId__": 108,
     "kind": "variable",
     "name": "STATUS_DEFULT_STATE",
     "memberof": "src/state/reducers.js",
@@ -1970,7 +2087,7 @@
     }
   },
   {
-    "__docId__": 104,
+    "__docId__": 109,
     "kind": "function",
     "name": "statusReducer",
     "memberof": "src/state/reducers.js",
@@ -2022,7 +2139,43 @@
     }
   },
   {
-    "__docId__": 105,
+    "__docId__": 110,
+    "kind": "function",
+    "name": "proLocalSettingsReducer",
+    "memberof": "src/state/reducers.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/state/reducers.js~proLocalSettingsReducer",
+    "access": "public",
+    "export": false,
+    "importPath": "@caldera-labs/state/src/state/reducers.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 142,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 111,
     "kind": "file",
     "name": "src/state/selectors.js",
     "content": "import {\n\tfindFormById,\n\tmapArrayOfFormsToObject\n} from './util';\n\n/**\n * Selector to find forms in state\n *\n * @param {Object}state\n * @param {String}formId\n * @returns {boolean|*}\n */\nexport const getForm = ( state, formId )  => {\n\treturn findFormById(state.forms, formId);\n};\n\n/**\n * Selector to get all forms in state\n *\n * @param {Object} state\n * @returns {*}\n */\nexport const getForms = ( state ) => {\n\tlet forms = {};\n\tif( Array.isArray(state.forms)&&state.forms.length){\n\t\tforms = mapArrayOfFormsToObject(state.forms);\n\t}else{\n\t\tforms = state.forms;\n\t}\n\treturn forms;\n};\n\n\n/**\n * Get a form preview from state\n *\n * @param {Object}state\n * @param {String}formId\n * @returns {string}\n */\nexport const getFormPreview = ( state,formId ) => {\n\treturn state.formPreviews.hasOwnProperty( formId )\n\t\t?state.formPreviews[ formId ]\n\t\t: '';\n\n};\n\n/**\n * Get all form previews in state\n *\n * @param {Object}state\n * @returns {{}|DEFAULT_STATE.formPreviews|formPreviews|{CF2}}\n */\nexport const getFormPreviews = (state) => {\n\treturn state.formPreviews;\n};\n",
@@ -2033,7 +2186,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 106,
+    "__docId__": 112,
     "kind": "function",
     "name": "getForm",
     "memberof": "src/state/selectors.js",
@@ -2086,7 +2239,7 @@
     }
   },
   {
-    "__docId__": 107,
+    "__docId__": 113,
     "kind": "function",
     "name": "getForms",
     "memberof": "src/state/selectors.js",
@@ -2128,7 +2281,7 @@
     }
   },
   {
-    "__docId__": 108,
+    "__docId__": 114,
     "kind": "function",
     "name": "getFormPreview",
     "memberof": "src/state/selectors.js",
@@ -2180,7 +2333,7 @@
     }
   },
   {
-    "__docId__": 109,
+    "__docId__": 115,
     "kind": "function",
     "name": "getFormPreviews",
     "memberof": "src/state/selectors.js",
@@ -2222,7 +2375,7 @@
     }
   },
   {
-    "__docId__": 110,
+    "__docId__": 116,
     "kind": "file",
     "name": "src/state/selectors.privacy.js",
     "content": "import {findFormById} from './util';\n\n/**\n * Get all of a form's privacy settings.\n\n * @param {String} formId\n * @param {Object} state\n * @returns {*}\n */\nexport const getFormPrivacySettings = (formId,state) =>{\n\tconst settings = findFormById(state.forms, formId);\n\treturn 'object' === typeof settings ? settings : false;\n};\n\n",
@@ -2233,7 +2386,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 111,
+    "__docId__": 117,
     "kind": "function",
     "name": "getFormPrivacySettings",
     "memberof": "src/state/selectors.privacy.js",
@@ -2285,7 +2438,7 @@
     }
   },
   {
-    "__docId__": 112,
+    "__docId__": 118,
     "kind": "file",
     "name": "src/state/util.js",
     "content": "/**\n * Check if a form has the provided ID\n *\n * @param {Object} form Form config\n * @param {String} formId\n * @return {boolean}\n */\nexport const formHasId = ( form, formId ) => {\n\tif( 'object' !== typeof  form ){\n\t\treturn false;\n\t}\n\tif( form.hasOwnProperty('ID') ){\n\t\treturn formId === form.ID;\n\t}\n\tif( form.hasOwnProperty('formId') ){\n\t\treturn formId === form.formId;\n\t}\n\treturn false;\n};\n\n/**\n * Get form ID\n *\n * @param {Object} form\n * @returns {String|bool}\n */\nexport const getFormId = (form) => {\n\tif( form.hasOwnProperty('ID') ){\n\t\treturn form.ID;\n\t}\n\tif( form.hasOwnProperty('formId') ){\n\t\treturn form.formId;\n\t}\n\treturn false;\n};\n\n/**\n * Makes sure forms are an array keyed by ID\n *\n * @param {Object|Array}forms\n * @returns {Object}\n */\nexport const mapArrayOfFormsToObject = (forms ) => {\n\n\tif (Array.isArray(forms)) {\n\t\tlet preparedForms = {};\n\t\tforms.map((form) => {\n\t\t\tif (false !== getFormId(form)) {\n\t\t\t\tpreparedForms[getFormId(form)] = form;\n\t\t\t}\n\t\t\treturn true;\n\t\t});\n\n\t\treturn preparedForms;\n\t}else if( 'object' === typeof forms ){\n\t\treturn forms;\n\t}else{\n\t\treturn {};\n\t}\n\n};\n\n/**\n * Find form by form ID ID in an array of forms\n *\n * @param {Array} forms\n * @param {String} formId\n */\nexport const findFormById = (forms, formId,) => {\n\tif(!Array.isArray(forms) || ! forms.length ){\n\t\treturn false;\n\t}\n\treturn forms.find(form => {\n\t\treturn formHasId(form,formId);\n\t});\n};\n\n/**\n * Find array index  in an array of forms by form ID\n *\n * @param {Array} forms\n * @param {String} formId\n */\nexport const findFormIndexById = (forms, formId) => {\n\tif(!Array.isArray(forms) || ! forms.length ){\n\t\treturn false;\n\t}\n\treturn forms.findIndex(form => {\n\t\treturn formHasId(form,formId);\n\t});\n};\n\n/**\n * Generate ID for things\n *\n * @param {String} generateFor\n * @returns {string}\n */\nexport const generateId = (generateFor) =>{\n\tconst id =  Math.round( Math.random() * 10000000 );\n\tlet prefix = 'cf_';\n\tswitch (generateFor) {\n\tcase 'row':\n\t\tprefix = 'row_';\n\t\tbreak;\n\tcase 'column':\n\t\tprefix = 'col_';\n\t\tbreak;\n\tdefault:\n\t\tprefix = 'cf_';\n\t\tbreak;\n\n\t}\n\n\treturn `${prefix}${id}`;\n};\n\nexport const setFormInState = (state,form) => {\n\tif( ! Array.isArray( state.forms) || ! state.forms.length) {\n\t\treturn {\n\t\t\t...state,\n\t\t\tforms: [form]\n\t\t};\n\t}else{\n\t\tconst index = findFormIndexById(state.forms, form.ID);\n\t\tif (-1 <= index) {\n\t\t\tstate.forms.splice(index, 1, form);\n\t\t} else {\n\t\t\tstate.forms.push(form);\n\t\t}\n\n\t}\n\treturn {\n\t\t...state,\n\t\tforms:state.forms\n\t};\n};",
@@ -2296,7 +2449,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 113,
+    "__docId__": 119,
     "kind": "function",
     "name": "formHasId",
     "memberof": "src/state/util.js",
@@ -2342,7 +2495,7 @@
     }
   },
   {
-    "__docId__": 114,
+    "__docId__": 120,
     "kind": "function",
     "name": "getFormId",
     "memberof": "src/state/util.js",
@@ -2385,7 +2538,7 @@
     }
   },
   {
-    "__docId__": 115,
+    "__docId__": 121,
     "kind": "function",
     "name": "mapArrayOfFormsToObject",
     "memberof": "src/state/util.js",
@@ -2427,7 +2580,7 @@
     }
   },
   {
-    "__docId__": 116,
+    "__docId__": 122,
     "kind": "function",
     "name": "findFormById",
     "memberof": "src/state/util.js",
@@ -2470,7 +2623,7 @@
     }
   },
   {
-    "__docId__": 117,
+    "__docId__": 123,
     "kind": "function",
     "name": "findFormIndexById",
     "memberof": "src/state/util.js",
@@ -2513,7 +2666,7 @@
     }
   },
   {
-    "__docId__": 118,
+    "__docId__": 124,
     "kind": "function",
     "name": "generateId",
     "memberof": "src/state/util.js",
@@ -2555,7 +2708,7 @@
     }
   },
   {
-    "__docId__": 119,
+    "__docId__": 125,
     "kind": "function",
     "name": "setFormInState",
     "memberof": "src/state/util.js",

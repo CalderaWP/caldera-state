@@ -102,6 +102,18 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "@caldera-labs/state/src/state/actions.prolocalsettings.js~update_pro_form_settings",
+    "variable/index.html#static-variable-UPDATE_PRO_FORM_SETTINGS",
+    "<span>UPDATE_PRO_FORM_SETTINGS</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.proLocalSettings.js</span>",
+    "variable"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.prolocalsettings.js~update_pro_settings",
+    "variable/index.html#static-variable-UPDATE_PRO_SETTINGS",
+    "<span>UPDATE_PRO_SETTINGS</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.proLocalSettings.js</span>",
+    "variable"
+  ],
+  [
     "@caldera-labs/state/src/state/actions.status.js~update_status_indicator",
     "variable/index.html#static-variable-UPDATE_STATUS_INDICATOR",
     "<span>UPDATE_STATUS_INDICATOR</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.status.js</span>",
@@ -291,6 +303,18 @@ window.esdocSearchIndex = [
     "@caldera-labs/state/src/state/actions.privacy.js~unseteditform",
     "function/index.html#static-function-unsetEditForm",
     "<span>unsetEditForm</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.privacy.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.prolocalsettings.js~updatecfproformsetting",
+    "function/index.html#static-function-updateCfProFormSetting",
+    "<span>updateCfProFormSetting</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.proLocalSettings.js</span>",
+    "function"
+  ],
+  [
+    "@caldera-labs/state/src/state/actions.prolocalsettings.js~updatecfprosettings",
+    "function/index.html#static-function-updateCfProSettings",
+    "<span>updateCfProSettings</span> <span class=\"search-result-import-path\">@caldera-labs/state/src/state/actions.proLocalSettings.js</span>",
     "function"
   ],
   [
@@ -621,6 +645,12 @@ window.esdocSearchIndex = [
     "src/state/actions.privacy.js",
     "file/src/state/actions.privacy.js.html",
     "src/state/actions.privacy.js",
+    "file"
+  ],
+  [
+    "src/state/actions.prolocalsettings.js",
+    "file/src/state/actions.proLocalSettings.js.html",
+    "src/state/actions.proLocalSettings.js",
     "file"
   ],
   [

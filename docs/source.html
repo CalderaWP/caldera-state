@@ -40,6 +40,8 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setEditForm">setEditForm</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setFormPrivacyForm">setFormPrivacyForm</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-unsetEditForm">unsetEditForm</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateCfProFormSetting">updateCfProFormSetting</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-updateCfProSettings">updateCfProSettings</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-closeStatus">closeStatus</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-startSpinner">startSpinner</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stopSpinner">stopSpinner</a></span></span></li>
@@ -67,6 +69,8 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SET_EDIT_FORM">SET_EDIT_FORM</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SET_FORM_PRIVACY_SETTINGS">SET_FORM_PRIVACY_SETTINGS</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UNSET_EDIT_FORM">UNSET_EDIT_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_PRO_FORM_SETTINGS">UPDATE_PRO_FORM_SETTINGS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-UPDATE_PRO_SETTINGS">UPDATE_PRO_SETTINGS</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-CLOSE_STATUS_INDICATOR">CLOSE_STATUS_INDICATOR</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-START_SPIN">START_SPIN</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STOP_SPIN">STOP_SPIN</a></span></span></li>
@@ -83,7 +87,7 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1>Source <img data-ice="coverageBadge" src="./badge.svg"><span data-ice="totalCoverageCount" class="total-coverage-count">33/58</span></h1>
+<div class="content" data-ice="content"><h1>Source <img data-ice="coverageBadge" src="./badge.svg"><span data-ice="totalCoverageCount" class="total-coverage-count">33/63</span></h1>
 
 <table class="files-summary" data-ice="files" data-use-coverage="true">
   <thead>
@@ -168,6 +172,17 @@
       <td style="display: none;" data-ice="updated">2018-06-03 16:52:11 (UTC)</td>
     </tr>
 <tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/state/actions.proLocalSettings.js.html#errorLines=11,2,3,4">src/state/actions.proLocalSettings.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-UPDATE_PRO_FORM_SETTINGS">UPDATE_PRO_FORM_SETTINGS</a></span>
+<span><a href="variable/index.html#static-variable-UPDATE_PRO_SETTINGS">UPDATE_PRO_SETTINGS</a></span>
+<span><a href="function/index.html#static-function-updateCfProFormSetting">updateCfProFormSetting</a></span>
+<span><a href="function/index.html#static-function-updateCfProSettings">updateCfProSettings</a></span></td>
+      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/4</span></td>
+      <td style="display: none;" data-ice="size">390 byte</td>
+      <td style="display: none;" data-ice="lines">16</td>
+      <td style="display: none;" data-ice="updated">2018-07-07 20:52:35 (UTC)</td>
+    </tr>
+<tr data-ice="file">
       <td data-ice="filePath"><span><a href="file/src/state/actions.status.js.html#errorLines=1,2,3,4">src/state/actions.status.js</a></span></td>
       <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-CLOSE_STATUS_INDICATOR">CLOSE_STATUS_INDICATOR</a></span>
 <span><a href="variable/index.html#static-variable-START_SPIN">START_SPIN</a></span>
@@ -199,22 +214,22 @@
       <td data-ice="filePath"><span><a href="file/src/state/module.js.html">src/state/module.js</a></span></td>
       <td data-ice="identifier" class="identifiers">-</td>
       <td class="coverage"><span data-ice="coverage">-</span></td>
-      <td style="display: none;" data-ice="size">1990 byte</td>
-      <td style="display: none;" data-ice="lines">99</td>
-      <td style="display: none;" data-ice="updated">2018-07-07 20:40:36 (UTC)</td>
+      <td style="display: none;" data-ice="size">2130 byte</td>
+      <td style="display: none;" data-ice="lines">103</td>
+      <td style="display: none;" data-ice="updated">2018-07-07 20:42:24 (UTC)</td>
     </tr>
 <tr data-ice="file">
-      <td data-ice="filePath"><span><a href="file/src/state/reducers.js.html#errorLines=93">src/state/reducers.js</a></span></td>
+      <td data-ice="filePath"><span><a href="file/src/state/reducers.js.html#errorLines=142,93">src/state/reducers.js</a></span></td>
       <td data-ice="identifier" class="identifiers"><span><a href="variable/index.html#static-variable-DEFAULT_STATE">DEFAULT_STATE</a></span>
 <span><a href="variable/index.html#static-variable-STATUS_DEFULT_STATE">STATUS_DEFULT_STATE</a></span>
 <span><a href="function/index.html#static-function-formsReducer">formsReducer</a></span>
 <span><a href="function/index.html#static-function-initialStateWithForms">initialStateWithForms</a></span>
 <span><a href="function/index.html#static-function-privacySettingsReducer">privacySettingsReducer</a></span>
 <span><a href="function/index.html#static-function-statusReducer">statusReducer</a></span></td>
-      <td class="coverage"><span data-ice="coverage">83 %</span><span data-ice="coverageCount" class="coverage-count">5/6</span></td>
-      <td style="display: none;" data-ice="size">2509 byte</td>
-      <td style="display: none;" data-ice="lines">140</td>
-      <td style="display: none;" data-ice="updated">2018-07-07 20:40:36 (UTC)</td>
+      <td class="coverage"><span data-ice="coverage">71 %</span><span data-ice="coverageCount" class="coverage-count">5/7</span></td>
+      <td style="display: none;" data-ice="size">2572 byte</td>
+      <td style="display: none;" data-ice="lines">144</td>
+      <td style="display: none;" data-ice="updated">2018-07-07 20:46:24 (UTC)</td>
     </tr>
 <tr data-ice="file">
       <td data-ice="filePath"><span><a href="file/src/state/selectors.js.html">src/state/selectors.js</a></span></td>
