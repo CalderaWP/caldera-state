@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490e1a86-72c6-4b3e-86ab-43bf0ca8fc43" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/export.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/export.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/state.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/state.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/selectors.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/selectors.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,12 +60,12 @@
           <file leaf-file-name="module.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/state/module.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+                <state relative-caret-position="250">
+                  <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
                   <folding>
                     <element signature="e#73#148#0" expanded="true" />
                     <element signature="e#522#607#0" expanded="true" />
-                    <element signature="e#851#1003#0" expanded="true" />
+                    <element signature="e#1139#1419#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -109,7 +105,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="export.test.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="export.test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/tests/export.test.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="408">
@@ -124,8 +120,8 @@
           <file leaf-file-name="reducers.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/state/reducers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="268">
-                  <caret line="213" column="13" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
+                <state relative-caret-position="242">
+                  <caret line="213" column="27" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#80#0" expanded="true" />
                   </folding>
@@ -133,23 +129,29 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="selectors.entries.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/state/selectors.entries.js">
+          <file leaf-file-name="selectors.settings.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/state/selectors.settings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+                <state relative-caret-position="285">
+                  <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="selectors.test.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="selectors.entries.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/state/selectors.entries.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="selectors.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="389">
-                  <caret line="175" column="30" selection-start-line="175" selection-start-column="30" selection-end-line="175" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#93#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="190">
+                  <caret line="22" selection-start-line="22" selection-end-line="22" />
                 </state>
               </provider>
             </entry>
@@ -187,9 +189,9 @@
       <find>status</find>
       <find>red</find>
       <find>settings</find>
-      <find>entriesReducer</find>
       <find>jest</find>
       <find>prefer-to-have-length</find>
+      <find>entriesReducer</find>
     </findStrings>
     <replaceStrings>
       <replace>##</replace>
@@ -225,13 +227,13 @@
         <option value="$PROJECT_DIR$/src/state/reducers.js" />
         <option value="$PROJECT_DIR$/src/state/actions.entries.js" />
         <option value="$PROJECT_DIR$/src/tests/reducers.test.js" />
-        <option value="$PROJECT_DIR$/src/tests/selectors.test.js" />
         <option value="$PROJECT_DIR$/src/state/selectors.entries.js" />
         <option value="$PROJECT_DIR$/.eslintrc.json" />
         <option value="$PROJECT_DIR$/src/state/index.js" />
         <option value="$PROJECT_DIR$/src/tests/state.test.js" />
         <option value="$PROJECT_DIR$/src/tests/export.test.js" />
         <option value="$PROJECT_DIR$/src/state/module.js" />
+        <option value="$PROJECT_DIR$/src/tests/selectors.test.js" />
       </list>
     </option>
   </component>
@@ -355,7 +357,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45394000" />
+    <option name="totallyTimeSpent" value="45459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="200" y="121" width="1746" height="742" extended-state="0" />
@@ -367,8 +369,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32916668" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="216" y="265" width="1704" height="454" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.2511628" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8806202" visible="true" weight="0.1367371" />
+      <window_info anchor="bottom" x="216" y="265" width="1704" height="454" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.2511628" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8806202" visible="true" weight="0.1367371" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.11937985" side_tool="true" visible="true" weight="0.1367371" />
@@ -612,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/selectors.settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
@@ -671,26 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="175" column="30" selection-start-line="175" selection-start-column="30" selection-end-line="175" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="213" column="13" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/reducers.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -705,13 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/selectors.entries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -739,6 +707,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/state.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/export.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -749,22 +724,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/state.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/state/module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+        <state relative-caret-position="250">
+          <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
           <folding>
             <element signature="e#73#148#0" expanded="true" />
             <element signature="e#522#607#0" expanded="true" />
-            <element signature="e#851#1003#0" expanded="true" />
+            <element signature="e#1139#1419#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="213" column="27" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/selectors.settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/selectors.entries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/selectors.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

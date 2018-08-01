@@ -20,7 +20,6 @@ import {
 	getStyleIncludes,
 	getOtherSettings
 } from "../state/selectors.settings";
-import {entriesReducer} from "../state/reducers";
 import {getPageOfEntries} from "../state/selectors.entries";
 
 describe( 'settings selectors', () => {
