@@ -43,6 +43,7 @@ import {
 	SETTINGS_STYLE_INCLUDES,
 	SETTINGS_OTHER,
 }from "../state/actions.settings";
+import {SET_ENTRIES, setEntries} from "../state/actions.entries";
 
 describe( 'settings actions', () => {
 	it( 'creates updateStyleIncludes with the right type', () => {
@@ -216,3 +217,23 @@ describe( 'Status indicator actions', () => {
 		).message).toEqual('Success');
 	});
 });
+
+describe( 'entry reducer actions', () => {
+	describe( 'setEntries action', () => {
+		it( 'has the right type',() => {
+			expect( setEntries(1,1,{}).type).toEqual( SET_ENTRIES );
+		});
+
+		it( 'has the right data',() => {
+			const action =setEntries('CF1',1,{
+				fields: {}
+			});
+			expect(action.pageNumber).toEqual( 1 );
+			expect(action.formId).toEqual( 'CF1' );
+			expect(action.entries).toEqual( {
+				fields: {}
+			} );
+		});
+
+	});
+})
