@@ -1,3 +1,8 @@
+/**
+ * Name of action to set a page of entries
+ *
+ * @type {string}
+ */
 export const SET_ENTRIES = 'SET_ENTRIES';
 
 /**
@@ -13,6 +18,6 @@ export const setEntries = (formId, pageNumber, entries) => {
 		formId,
 		pageNumber,
 		entries
-	}
-}
+	};
+};
 

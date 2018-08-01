@@ -43,6 +43,9 @@ import {
 import {setEntries} from "../state/actions.entries";
 
 describe( 'entriesReducer', () => {
+	it( 'does not effect other actions', () => {
+		expect( entriesReducer({a:1},{type:'INIT'})).toEqual({a:1});
+	});
 	it( 'adds a page of entries', () => {
 		const state = entriesReducer({}, setEntries(
 			'CF1',
