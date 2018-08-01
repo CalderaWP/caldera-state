@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="490e1a86-72c6-4b3e-86ab-43bf0ca8fc43" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/state/actions.entries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/actions.entries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/selectors.entries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/selectors.entries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/reducers.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/reducers.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/selectors.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/selectors.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/export.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/export.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,11 +49,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="actions.entries.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="actions.entries.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/state/actions.entries.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="47" />
+                <state relative-caret-position="45">
+                  <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="module.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/state/module.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="404">
+                  <caret line="133" column="28" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#73#148#0" expanded="true" />
+                    <element signature="e#522#607#0" expanded="true" />
+                    <element signature="e#851#1003#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -73,11 +85,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="export.test.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="export.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tests/export.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+                <state relative-caret-position="244">
+                  <caret line="43" column="71" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
                   <folding>
                     <element signature="e#0#48#0" expanded="true" />
                   </folding>
@@ -106,7 +118,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="selectors.entries.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="selectors.entries.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/state/selectors.entries.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="60">
@@ -194,8 +206,6 @@
         <option value="$PROJECT_DIR$/src/tests/state.test.js" />
         <option value="$PROJECT_DIR$/src/state/index.js" />
         <option value="$PROJECT_DIR$/src/state/actions.proLocalSettings.js" />
-        <option value="$PROJECT_DIR$/src/state/module.js" />
-        <option value="$PROJECT_DIR$/src/tests/export.test.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/tests/actions.test.js" />
@@ -204,6 +214,8 @@
         <option value="$PROJECT_DIR$/src/tests/reducers.test.js" />
         <option value="$PROJECT_DIR$/src/tests/selectors.test.js" />
         <option value="$PROJECT_DIR$/src/state/selectors.entries.js" />
+        <option value="$PROJECT_DIR$/src/state/module.js" />
+        <option value="$PROJECT_DIR$/src/tests/export.test.js" />
       </list>
     </option>
   </component>
@@ -327,7 +339,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44924000" />
+    <option name="totallyTimeSpent" value="45089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="200" y="121" width="1746" height="742" extended-state="0" />
@@ -598,23 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/export.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/state/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -720,8 +715,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/state/actions.entries.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="45">
+          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -729,6 +724,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="67" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="133" column="28" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="28" />
+          <folding>
+            <element signature="e#73#148#0" expanded="true" />
+            <element signature="e#522#607#0" expanded="true" />
+            <element signature="e#851#1003#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/export.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="43" column="71" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

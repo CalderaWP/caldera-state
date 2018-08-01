@@ -35,7 +35,7 @@ import {
 	updateCfProSettings
 } from "./actions.proLocalSettings";
 
-
+import {setEntries} from "./actions.entries";
 //Selectors
 import {
 	getForm,
@@ -58,6 +58,10 @@ import {
 	getCfProSettings
 } from "./selectors.proLocalSettings";
 
+import {
+	getPageOfEntries
+} from "./selectors.entries";
+
 //Reducers
 import {
 	formsReducer,
@@ -65,7 +69,8 @@ import {
 	initialStateWithForms,
 	settingsReducer,
 	proLocalSettingsReducer,
-	statusReducer
+	statusReducer,
+	entriesReducer
 } from './reducers';
 
 /** State **/
@@ -113,7 +118,8 @@ module.exports  = {
 			startSpinner,
 			stopSpinner,
 			closeStatus,
-			updateStatus
+			updateStatus,
+			setEntries
 		},
 		selectors: {
 			getForm,
@@ -124,7 +130,8 @@ module.exports  = {
 			getStyleIncludes,
 			getOtherSettings,
 			getCfProFormSetting,
-			getCfProSettings
+			getCfProSettings,
+			getPageOfEntries
 		},
 		reducers: {
 			formsReducer,

@@ -1,5 +1,7 @@
 import * as calderaState from '../state/module';
 import {closeStatus, startSpinner, stopSpinner, updateStatus} from "../state/actions.status";
+import {setEntries} from "../state/actions.entries";
+import {getPageOfEntries} from "../state/selectors.entries";
 
 describe('root export', () => {
 
@@ -22,11 +24,24 @@ describe('root export', () => {
 		it('exports updateStatus action', () => {
 			expect(typeof calderaState.store.actions.updateStatus).toBe('function');
 		});
+		it('exports setEntries action', () => {
+			expect(typeof calderaState.store.actions.setEntries).toBe('function');
+		});
 	});
 
 	describe( 'exports reducers', () => {
 		it( 'exports status reducer', () => {
 			expect(typeof calderaState.store.reducers.statusReducer).toBe('function');
+		});
+	});
+
+	describe( 'exports selectors', () => {
+		it( 'exports object of selectors reducer', () => {
+			expect(typeof calderaState.store.selectors).toBe('object');
+		});
+
+		it( 'exports getPageOfEntries reducer', () => {
+			expect(typeof calderaState.store.selectors.getPageOfEntries).toBe('function');
 		});
 	});
 	describe('exports state', () => {
