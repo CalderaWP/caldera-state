@@ -2,6 +2,7 @@ import * as calderaState from '../state/module';
 import {closeStatus, startSpinner, stopSpinner, updateStatus} from "../state/actions.status";
 import {setEntries} from "../state/actions.entries";
 import {getPageOfEntries} from "../state/selectors.entries";
+import {CALDERA_FORMS_ENTRIES_SLUG} from "../state";
 
 describe('root export', () => {
 
@@ -68,6 +69,9 @@ describe('root export', () => {
 		it('state exports CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG', () => {
 			expect(typeof  calderaState.state.CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG).toBe('string');
 		});
+		it('state exports CALDERA_FORMS_ENTRIES_SLUG', () => {
+			expect(typeof  calderaState.state.CALDERA_FORMS_ENTRIES_SLUG).toBe('string');
+		});
 
 		it('state exports calderaFormsFormState', () => {
 			expect(typeof  calderaState.state.calderaFormsFormState).toBe('object');
@@ -76,6 +80,7 @@ describe('root export', () => {
 		it('state exports calderaFormsReduxStore', () => {
 			expect(typeof  calderaState.state.calderaFormsReduxStore).toBe('object');
 		});
+
 		it('state exports reducers', () => {
 			expect(typeof  calderaState.state.reducers).toBe('object');
 		});

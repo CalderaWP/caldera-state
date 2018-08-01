@@ -80,6 +80,7 @@ import {
 	CALDERA_FORMS_PRIVACY_STORE_SLUG,
 	CALDERA_FORMS_SETTINGS_SLUG,
 	CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG,
+	CALDERA_FORMS_ENTRIES_SLUG,
 	calderaFormsFormState,
 	calderaFormsReduxStore,
 	reducers
@@ -139,7 +140,8 @@ module.exports  = {
 			privacySettingsReducer,
 			settingsReducer,
 			proLocalSettingsReducer,
-			statusReducer
+			statusReducer,
+			entriesReducer
 		}
 	},
 	state: {
@@ -148,6 +150,7 @@ module.exports  = {
 		CALDERA_FORMS_PRIVACY_STORE_SLUG,
 		CALDERA_FORMS_SETTINGS_SLUG,
 		CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG,
+		CALDERA_FORMS_ENTRIES_SLUG,
 		calderaFormsFormState,
 		calderaFormsReduxStore,
 		reducers

@@ -2,7 +2,10 @@ import {
 	reducers,
 	CALDERA_FORMS_STORE_SLUG,
 	CALDERA_FORMS_PRIVACY_STORE_SLUG,
-	CALDERA_FORMS_STATUS_STORE_SLUG, CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG, CALDERA_FORMS_SETTINGS_SLUG
+	CALDERA_FORMS_STATUS_STORE_SLUG,
+	CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG,
+	CALDERA_FORMS_SETTINGS_SLUG,
+	CALDERA_FORMS_ENTRIES_SLUG
 } from "../state";
 
 describe( 'state exports', () => {
@@ -21,6 +24,9 @@ describe( 'state exports', () => {
 		});
 		it( 'Has settings reducer', () => {
 			expect( typeof reducers[CALDERA_FORMS_SETTINGS_SLUG] ).toBe('function');
+		});
+		it( 'Has entries reducer', () => {
+			expect( typeof reducers[CALDERA_FORMS_ENTRIES_SLUG] ).toBe('function');
 		});
 	});
 });
