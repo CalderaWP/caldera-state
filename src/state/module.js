@@ -35,7 +35,7 @@ import {
 	updateCfProSettings
 } from "./actions.proLocalSettings";
 
-
+import {setEntries} from "./actions.entries";
 //Selectors
 import {
 	getForm,
@@ -58,6 +58,10 @@ import {
 	getCfProSettings
 } from "./selectors.proLocalSettings";
 
+import {
+	getPageOfEntries
+} from "./selectors.entries";
+
 //Reducers
 import {
 	formsReducer,
@@ -65,7 +69,8 @@ import {
 	initialStateWithForms,
 	settingsReducer,
 	proLocalSettingsReducer,
-	statusReducer
+	statusReducer,
+	entriesReducer
 } from './reducers';
 
 /** State **/
@@ -75,6 +80,7 @@ import {
 	CALDERA_FORMS_PRIVACY_STORE_SLUG,
 	CALDERA_FORMS_SETTINGS_SLUG,
 	CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG,
+	CALDERA_FORMS_ENTRIES_SLUG,
 	calderaFormsFormState,
 	calderaFormsReduxStore,
 	reducers
@@ -113,7 +119,8 @@ module.exports  = {
 			startSpinner,
 			stopSpinner,
 			closeStatus,
-			updateStatus
+			updateStatus,
+			setEntries
 		},
 		selectors: {
 			getForm,
@@ -124,7 +131,8 @@ module.exports  = {
 			getStyleIncludes,
 			getOtherSettings,
 			getCfProFormSetting,
-			getCfProSettings
+			getCfProSettings,
+			getPageOfEntries
 		},
 		reducers: {
 			formsReducer,
@@ -132,7 +140,8 @@ module.exports  = {
 			privacySettingsReducer,
 			settingsReducer,
 			proLocalSettingsReducer,
-			statusReducer
+			statusReducer,
+			entriesReducer
 		}
 	},
 	state: {
@@ -141,6 +150,7 @@ module.exports  = {
 		CALDERA_FORMS_PRIVACY_STORE_SLUG,
 		CALDERA_FORMS_SETTINGS_SLUG,
 		CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG,
+		CALDERA_FORMS_ENTRIES_SLUG,
 		calderaFormsFormState,
 		calderaFormsReduxStore,
 		reducers

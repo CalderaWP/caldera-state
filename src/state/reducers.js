@@ -22,6 +22,7 @@ import {
 	UPDATE_PRO_SETTINGS
 } from "./actions.proLocalSettings";
 import {SETTINGS_OTHER, SETTINGS_STYLE_INCLUDES} from "./actions.settings";
+import {SET_ENTRIES} from "./actions.entries";
 
 /**
  * Default state for formsReducer
@@ -200,5 +201,29 @@ export const settingsReducer = (state = {
 			};
 		default:
 			return state;
+	}
+};
+
+
+/**
+ * Reducer for entries
+ * @param state
+ * @param action
+ * @return {{}}
+ */
+export const entriesReducer = ( state = {
+}, action ) => {
+	switch(action.type ){
+		case SET_ENTRIES:
+			return{
+				...state,
+				[action.formId] : {
+					...state[action.formId],
+					[action.pageNumber]: action.entries
+				}
+			};
+		default:
+			return state;
+
 	}
 };

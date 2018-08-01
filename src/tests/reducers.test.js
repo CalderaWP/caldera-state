@@ -15,7 +15,8 @@ import {
 	statusReducer,
 	STATUS_DEFULT_STATE,
 	proLocalSettingsReducer,
-	settingsReducer
+	settingsReducer,
+	entriesReducer
 } from '../state/reducers';
 
 import {
@@ -39,7 +40,50 @@ import {
 	updateStyleIncludes,
 	updateOtherSettings
 } from "../state/actions.settings";
+import {setEntries} from "../state/actions.entries";
 
+describe( 'entriesReducer', () => {
+	it( 'does not effect other actions', () => {
+		expect( entriesReducer({a:1},{type:'INIT'})).toEqual({a:1});
+	});
+	it( 'adds a page of entries', () => {
+		const state = entriesReducer({}, setEntries(
+			'CF1',
+			2,
+			[
+				{
+					id: 33,
+					fields: {}
+				}
+
+			]
+		));
+		expect(  state['CF1'][2]).toEqual(
+			[{"fields": {}, "id": 33}]
+		)
+	});
+	it( 'updates', () => {
+		const state = entriesReducer({
+			'CF1' : {
+				2: []
+
+			}
+		}, setEntries(
+			'CF1',
+			2,
+			[
+				{
+					id: 33,
+					fields: {}
+				}
+
+			]
+		));
+		expect(  state['CF1'][2]).toEqual(
+			[{"fields": {}, "id": 33}]
+		)
+	});
+});
 
 describe( 'settingsReducer', () => {
 	it( 'updates styleIncludes settings', () => {

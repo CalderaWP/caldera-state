@@ -20,6 +20,7 @@ import {
 	getStyleIncludes,
 	getOtherSettings
 } from "../state/selectors.settings";
+import {getPageOfEntries} from "../state/selectors.entries";
 
 describe( 'settings selectors', () => {
 	const mockState = {
@@ -153,4 +154,37 @@ describe('Privacy settings selectors', () => {
 		expect(getFormPrivacySettings( 'CF7', state ) ).toBe(false);
 	});
 });
+
+describe( 'entries selector', () => {
+	it( 'finds entries', () => {
+		expect( getPageOfEntries(
+			'CF1',
+			2,
+			{
+				CF1 :{
+					2: {
+						a:1
+					}
+				}
+			}
+
+		) ).toEqual( {a:1})
+	});
+
+	it( 'Returns empty array for invalid page', () => {
+		expect(  getPageOfEntries(
+			'CF1',
+			2,
+			{
+				CF1 :{
+					1: {
+						a:1
+					}
+				}
+			}
+
+		) ).toEqual([]);
+	})
+});
+
 

@@ -12,6 +12,7 @@ import {
 } from './selectors';
 
 import {
+	entriesReducer,
 	formsReducer,
 	privacySettingsReducer,
 	proLocalSettingsReducer,
@@ -62,6 +63,12 @@ export const CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG = `${CALDERA_FORMS_STORE_SLUG
  * @type {string}
  */
 export const CALDERA_FORMS_SETTINGS_SLUG = `${CALDERA_FORMS_STORE_SLUG}/SETTINGS`;
+
+/**
+ * The reducer key for the entries  store
+ * @type {string}
+ */
+export const CALDERA_FORMS_ENTRIES_SLUG = `${CALDERA_FORMS_STORE_SLUG}/ENTRIES`;
 /**
  * Caldera Forms Redux-store
  *
@@ -85,6 +92,7 @@ reducers[CALDERA_FORMS_PRIVACY_STORE_SLUG] = privacySettingsReducer;
 reducers[CALDERA_FORMS_STATUS_STORE_SLUG] = statusReducer;
 reducers[CALDERA_FORMS_PRO_LOCAL_SETTINGS_SLUG] = proLocalSettingsReducer;
 reducers[CALDERA_FORMS_SETTINGS_SLUG] = settingsReducer;
+reducers[CALDERA_FORMS_ENTRIES_SLUG] = entriesReducer;
 
 /**
  * Redux store with all reducers combined
