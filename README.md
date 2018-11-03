@@ -42,7 +42,6 @@ Also, an example app and test coverage for all of that.
 * Once source of single source of state
     - We need to state management in CF core, pro, and add-ons.
 * Isolated testing.
-    - This package had 28 tests at initial commit.
     - Test basic functionality with mocks here.
     - Test that it actually works with CF REST API in CF.
 
@@ -85,7 +84,7 @@ export const STORE = {
 * ✔️ State management for settings.
 * ✖️ Migrate CF Pro state from Vuex to Redux.
 * ✔️ Integration with wp.data. 
-* ✖️ Entries
+* ✔️ Entries
 
 ## Available Scripts
 
